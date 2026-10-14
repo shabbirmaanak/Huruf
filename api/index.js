@@ -359,6 +359,20 @@ module.exports = async function handler(req, res) {
         const review_status = body.review_status || 'edited';
         const curator_notes = (body.curator_notes || '').trim();
 
+        let orthography_flags = null;
+        if (body.orthography_rule !== undefined) {
+          if (body.orthography_rule && body.orthography_rule.trim()) {
+            orthography_flags = JSON.stringify([{
+              code: 'orthographic_alert',
+              severity: 'high',
+              label: 'Orthographic Alert',
+              message: body.orthography_rule.trim()
+            }]);
+          } else {
+            orthography_flags = '[]';
+          }
+        }
+
         await tursoQuery(`
           UPDATE words SET
             word_name = ?,
@@ -371,11 +385,12 @@ module.exports = async function handler(req, res) {
             plural = ?,
             review_status = ?,
             curator_notes = ?,
+            orthography_flags = COALESCE(?, orthography_flags),
             updated_at = ?
           WHERE id = ?;
         `, [
           word_name, transliteration, level, english_meaning, french_meaning,
-          sentence, singular, plural, review_status, curator_notes, now, wordId
+          sentence, singular, plural, review_status, curator_notes, orthography_flags, now, wordId
         ]);
 
         if (Array.isArray(body.categories)) {
@@ -508,6 +523,22 @@ function formatLexiconEntry(r) {
   if (categories.some(c => c.toLowerCase().includes('gujarati'))) origin = 'Gujarati';
   else if (categories.some(c => c.toLowerCase().includes('persian') || c.toLowerCase().includes('urdu'))) origin = 'Persian';
 
+  let alertLabel = 'Orthographic Alert';
+  let alertRule = '';
+
+  if (flags.length > 0) {
+    alertLabel = flags[0].label || 'Orthographic Alert';
+    alertRule = flags.map(f => f.message).join(' ');
+  } else if (misspellings.length > 0) {
+    alertRule = `Standardized from legacy orthography (${misspellings.join(', ')}).`;
+  }
+
+  if (r.curator_notes && r.curator_notes.trim()) {
+    alertRule = alertRule ? `${alertRule} · ${r.curator_notes}` : r.curator_notes;
+  }
+
+  const hasAlert = flags.length > 0 || misspellings.length > 0 || (r.curator_notes && r.curator_notes.trim());
+
   return {
     id: `qamoos-${r.id}`,
     tursoId: r.id,
@@ -521,11 +552,10 @@ function formatLexiconEntry(r) {
     notes: r.curator_notes || (r.plural && r.plural !== '-' ? `Plural: ${r.plural}` : ''),
     audioUrl: r.audio_url || '',
     reviewStatus: r.review_status,
-    spellingGuide: misspellings.length > 0 ? {
+    spellingGuide: hasAlert ? {
+      label: alertLabel,
       commonMisspellings: misspellings,
-      rule: r.suggested_spelling 
-        ? `Standardized from legacy orthography (${misspellings.join(', ')}).`
-        : `Verified modern Lisan al-Dawat orthography.`
+      rule: alertRule || 'Standardized modern Lisan al-Dawat orthography.'
     } : null,
     sentenceReference: {
       arabic: r.sentence || '',

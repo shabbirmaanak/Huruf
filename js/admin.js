@@ -57,6 +57,7 @@
   const fieldPlural = document.getElementById('field-plural');
   const fieldCategories = document.getElementById('field-categories');
   const fieldCuratorNotes = document.getElementById('field-curator-notes');
+  const fieldOrthographyRule = document.getElementById('field-orthography-rule');
 
   // Buttons & Audio
   const btnPlayAudio = document.getElementById('btn-play-audio');
@@ -291,6 +292,15 @@
       fieldCategories.value = (word.categories || []).join(', ');
       fieldCuratorNotes.value = word.curator_notes || '';
 
+      if (fieldOrthographyRule) {
+        const flags = word.orthography_flags || [];
+        if (flags.length > 0) {
+          fieldOrthographyRule.value = flags.map(f => f.message).join(' ');
+        } else {
+          fieldOrthographyRule.value = '';
+        }
+      }
+
     } catch (err) {
       console.error('Failed to load word details:', err);
     }
@@ -334,6 +344,9 @@
 
   // Save Word Changes (Update or Create)
   async function saveWord(newStatus = null) {
+    const orthographyRule = fieldOrthographyRule ? fieldOrthographyRule.value.trim() : '';
+    const internalNotes = fieldCuratorNotes.value.trim();
+
     const payload = {
       word_name: fieldWordName.value.trim(),
       transliteration: fieldTranslit.value.trim(),
@@ -346,7 +359,8 @@
       singular: fieldSingular.value.trim(),
       plural: fieldPlural.value.trim(),
       categories: fieldCategories.value.split(',').map(s => s.trim()).filter(Boolean),
-      curator_notes: fieldCuratorNotes.value.trim()
+      orthography_rule: orthographyRule,
+      curator_notes: internalNotes
     };
 
     if (!payload.word_name) {

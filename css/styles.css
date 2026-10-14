@@ -367,6 +367,23 @@ body::before {
   color: #FFFFFF;
 }
 
+.pill-btn.pill-alerts {
+  border-color: #F0DCD7;
+  color: var(--accent-crimson);
+  font-weight: 500;
+}
+
+.pill-btn.pill-alerts:hover {
+  background-color: #FFF0EB;
+  border-color: var(--accent-crimson);
+}
+
+.pill-btn.pill-alerts.active {
+  background-color: var(--accent-crimson);
+  border-color: var(--accent-crimson);
+  color: #FFFFFF;
+}
+
 /* Secondary Spell Bank Sub-Filters (shown in Spell Bank tab) */
 .spell-bank-subfilters {
   display: none;

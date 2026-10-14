@@ -197,14 +197,25 @@ export function scoreMatch(entry, query) {
     return 45;
   }
 
-  // 10. Check common misspellings defined in the spelling guide
+  // 10. Match on Orthographic Alert rule text or label (e.g. "sukun", "alif", "orthography", "artifact")
+  const guideRule = (entry.spellingGuide?.rule || '').toLowerCase();
+  const guideLabel = (entry.spellingGuide?.label || '').toLowerCase();
+  if (guideRule.includes(qLower) || guideLabel.includes(qLower)) {
+    return 42;
+  }
+
+  // 11. Check common misspellings defined in the spelling guide
   if (entry.spellingGuide?.commonMisspellings) {
     for (const misspelling of entry.spellingGuide.commonMisspellings) {
+      const normMisspelling = normalizeArabic(misspelling);
       if (
-        normalizeArabic(misspelling) === qArabic ||
+        normMisspelling === qArabic ||
         normalizeTransliteration(misspelling) === qTranslit
       ) {
         return 40;
+      }
+      if (qArabic && normMisspelling.includes(qArabic)) {
+        return 38;
       }
     }
   }

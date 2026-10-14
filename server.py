@@ -268,6 +268,13 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
             rows = db.query(sql)
             words = []
             for r in rows:
+                flags = []
+                if r.get('orthography_flags'):
+                    try:
+                        flags = json.loads(r['orthography_flags'])
+                    except Exception:
+                        pass
+
                 misspellings = []
                 if r.get('original_word_name') and r['original_word_name'] != r['word_name']:
                     misspellings.append(r['original_word_name'])
@@ -278,6 +285,15 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
                     origin = 'Gujarati'
                 elif any('persian' in c.lower() or 'urdu' in c.lower() for c in cats):
                     origin = 'Persian'
+
+                alert_label = flags[0].get('label', 'Orthographic Alert') if flags else 'Orthographic Alert'
+                alert_rule = ' '.join(f.get('message', '') for f in flags) if flags else ''
+                if not alert_rule and misspellings:
+                    alert_rule = f"Standardized from legacy orthography ({', '.join(misspellings)})."
+                if r.get('curator_notes'):
+                    alert_rule = f"{alert_rule} · {r['curator_notes']}" if alert_rule else r['curator_notes']
+
+                has_alert = bool(flags or misspellings or r.get('curator_notes'))
 
                 words.append({
                     'id': f"qamoos-{r['id']}",
@@ -293,9 +309,10 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
                     'audioUrl': r['audio_url'] or '',
                     'reviewStatus': r['review_status'],
                     'spellingGuide': {
+                        'label': alert_label,
                         'commonMisspellings': misspellings,
-                        'rule': f"Standardized from legacy orthography ({', '.join(misspellings)})." if r.get('suggested_spelling') else "Verified modern Lisan al-Dawat orthography."
-                    } if misspellings else None,
+                        'rule': alert_rule or 'Standardized modern Lisan al-Dawat orthography.'
+                    } if has_alert else None,
                     'sentenceReference': {
                         'arabic': r['sentence'] or '',
                         'translation': r.get('french_meaning') or '',
@@ -488,6 +505,19 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
             review_status = body.get('review_status', 'edited')
             curator_notes = body.get('curator_notes', '').strip()
 
+            orthography_flags = None
+            if 'orthography_rule' in body:
+                rule_text = (body.get('orthography_rule') or '').strip()
+                if rule_text:
+                    orthography_flags = json.dumps([{
+                        'code': 'orthographic_alert',
+                        'severity': 'high',
+                        'label': 'Orthographic Alert',
+                        'message': rule_text
+                    }])
+                else:
+                    orthography_flags = '[]'
+
             db.execute("""
                 UPDATE words SET
                     word_name = ?,
@@ -500,11 +530,12 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
                     plural = ?,
                     review_status = ?,
                     curator_notes = ?,
+                    orthography_flags = COALESCE(?, orthography_flags),
                     updated_at = ?
                 WHERE id = ?;
             """, [
                 word_name, transliteration, level, english_meaning, french_meaning,
-                sentence, singular, plural, review_status, curator_notes, now, wid
+                sentence, singular, plural, review_status, curator_notes, orthography_flags, now, wid
             ])
 
             # Update categories if passed
@@ -528,18 +559,20 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
     def handle_apply_suggestion(self, word_id):
         try:
             wid = int(word_id)
-            rows = db.query("SELECT suggested_spelling FROM words WHERE id = ?;", [wid])
+            rows = db.query("SELECT suggested_spelling, word_name, original_word_name FROM words WHERE id = ?;", [wid])
             if not rows or not rows[0]['suggested_spelling']:
                 return self.send_json({'error': 'No suggestion available'}, status=400)
 
             now = datetime.utcnow().isoformat() + 'Z'
+            orig = rows[0].get('original_word_name') or rows[0]['word_name']
             db.execute("""
                 UPDATE words 
                 SET word_name = suggested_spelling, 
+                    original_word_name = ?,
                     review_status = 'edited',
                     updated_at = ?
                 WHERE id = ?;
-            """, [now, wid])
+            """, [orig, now, wid])
 
             return self.handle_get_word(wid)
         except Exception as e:

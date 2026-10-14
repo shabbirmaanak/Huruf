@@ -91,8 +91,9 @@ async function loadCloudLexicon() {
     const res = await fetch('/api/lexicon');
     if (!res.ok) return;
     const data = await res.json();
-    if (data.words && Array.isArray(data.words)) {
-      state.cloudLexicon = data.words.map(w => ({
+    const rawWords = Array.isArray(data) ? data : (data.words || []);
+    if (rawWords.length > 0) {
+      state.cloudLexicon = rawWords.map(w => ({
         ...w,
         arabicNormalized: normalizeArabic(w.arabic),
         transliterationNormalized: normalizeTransliteration(w.transliteration)
@@ -140,9 +141,12 @@ function getFilteredLexicon() {
     return true;
   });
 
-  // 2. Filter by Etymological Origin
+  // 2. Filter by Etymological Origin & Orthographic Alerts
   if (state.originFilter !== 'all') {
     list = list.filter(entry => {
+      if (state.originFilter === 'alerts') {
+        return !!(entry.spellingGuide && (entry.spellingGuide.rule || (entry.spellingGuide.commonMisspellings && entry.spellingGuide.commonMisspellings.length > 0)));
+      }
       if (state.originFilter === 'Arabic') return entry.origin.toLowerCase().includes('arabic');
       if (state.originFilter === 'Persian') return entry.origin.toLowerCase().includes('persian') || entry.origin.toLowerCase().includes('urdu');
       if (state.originFilter === 'Gujarati') return entry.origin.toLowerCase().includes('gujarati');
@@ -232,18 +236,20 @@ function renderWordCard(entry) {
   const highlightedSentence = sentenceArabic ? highlightArabicWord(sentenceArabic, entry.arabic) : '';
   const highlightedParagraph = paraArabic ? highlightArabicWord(paraArabic, entry.arabic) : '';
 
-  // Render Spelling Pitfall Guide if available
+  // Render Spelling Pitfall / Orthographic Alert Guide if available
   let spellingGuideHtml = '';
-  if (entry.spellingGuide && entry.spellingGuide.commonMisspellings && entry.spellingGuide.commonMisspellings.length > 0) {
-    const misspellings = entry.spellingGuide.commonMisspellings
-      .map(m => `<span class="misspelling-item" title="Avoid archaic spelling">${m}</span>`)
+  if (entry.spellingGuide && (entry.spellingGuide.rule || (entry.spellingGuide.commonMisspellings && entry.spellingGuide.commonMisspellings.length > 0))) {
+    const misspellings = (entry.spellingGuide.commonMisspellings || [])
+      .map(m => `<span class="misspelling-item" title="Avoid legacy/archaic spelling: ${m}">${m}</span>`)
       .join('<span style="color: var(--ink-muted); font-size: 0.9rem;"> · </span>');
+
+    const labelText = entry.spellingGuide.label || 'Orthographic Alert';
 
     spellingGuideHtml = `
       <div class="spelling-guide-block">
         <div class="spelling-guide-header">
-          <span class="spelling-guide-label">Orthographic Alert</span>
-          <div class="misspelled-variants">${misspellings}</div>
+          <span class="spelling-guide-label">⚠ ${labelText}</span>
+          ${misspellings ? `<div class="misspelled-variants">${misspellings}</div>` : ''}
         </div>
         <p class="spelling-rule">${entry.spellingGuide.rule || 'Verified standard orthography.'}</p>
       </div>
@@ -324,6 +330,7 @@ function renderWordCard(entry) {
             <span class="origin-badge">✦ ${entry.origin} ${rootHtml}</span>
             ${entry.isCustom ? `<span class="pos-tag" style="background-color: var(--accent-soft); color: var(--accent-crimson);">Custom</span>` : ''}
             ${entry.reviewStatus === 'approved' ? `<span class="pos-tag" style="background-color: #EBF7F0; color: #246B43; border: 1px solid #B8E5CC;">✓ Approved</span>` : ''}
+            ${entry.spellingGuide ? `<span class="pos-tag" style="background-color: #FFF0EB; color: var(--accent-crimson); border: 1px solid #F0DCD7; font-weight: 600;">⚠ Alert</span>` : ''}
           </div>
         </div>
 
