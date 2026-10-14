@@ -3,6 +3,65 @@
    Conforms strictly to Section 2: "The Anti-AI Editorial Aesthetic"
    ========================================================================== */
 
+/* Authentic Bohra Calligraphy Font Declarations */
+@font-face {
+  font-family: 'Kanz al Lulu';
+  src: local('Kanz al Lulu'), local('Kanz-al-Lulu'), local('KanzalLulu'), local('KanzalLulu-Regular'), local('AL-KANZ'), local('Al-Kanz'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kanz-al-Lulu';
+  src: local('Kanz-al-Lulu'), local('Kanz al Lulu'), local('KanzalLulu'), local('KanzalLulu-Regular'), local('AL-KANZ'), local('Al-Kanz'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Al-Kanz';
+  src: local('AL-KANZ'), local('Al-Kanz'), local('AlKanzfonts'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlKanzfonts';
+  src: local('AlKanzfonts'), local('AL-KANZ'), local('Al-Kanz'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kanz-al-Marjaan';
+  src: local('Kanz-al-Marjaan'), local('KANZ AL MARJAAN'),
+       url('/fonts/kanz_al_marjaan.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/kanz_al_marjaan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Color Palette */
   --surface-paper: #FBF9F5;
@@ -27,7 +86,7 @@
   --status-mastered-text: #23692E;
 
   /* Typography Stacks */
-  --font-arabic: 'Amiri', 'Scheherazade New', 'Traditional Arabic', 'Geeza Pro', 'Noto Naskh Arabic', serif;
+  --font-arabic: 'Kanz al Lulu', 'Kanz-al-Lulu', 'Al-Kanz', 'AlKanzfonts', 'Kanz-al-Marjaan', 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
   --font-editorial: 'Newsreader', 'Charter', 'Baskerville', 'Georgia', serif;
   --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
@@ -222,7 +281,7 @@ body::before {
 
 .search-input {
   width: 100%;
-  font-family: var(--font-editorial);
+  font-family: var(--font-editorial), var(--font-arabic);
   font-size: 1.125rem;
   padding: 0.85rem 3.25rem 0.85rem 1.15rem;
   background-color: #FFFFFF;

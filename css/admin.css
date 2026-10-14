@@ -4,9 +4,58 @@
  */
 
 @font-face {
-  font-family: 'Al-Kanz';
-  src: url('/fonts/al_kanz.ttf') format('truetype'),
+  font-family: 'Kanz al Lulu';
+  src: local('Kanz al Lulu'), local('Kanz-al-Lulu'), local('KanzalLulu'), local('KanzalLulu-Regular'), local('AL-KANZ'), local('Al-Kanz'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
        url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kanz-al-Lulu';
+  src: local('Kanz-al-Lulu'), local('Kanz al Lulu'), local('KanzalLulu'), local('KanzalLulu-Regular'), local('AL-KANZ'), local('Al-Kanz'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Al-Kanz';
+  src: local('AL-KANZ'), local('Al-Kanz'), local('AlKanzfonts'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlKanzfonts';
+  src: local('AlKanzfonts'), local('AL-KANZ'), local('Al-Kanz'),
+       url('/fonts/KanzalLulu-Regular.ttf') format('truetype'),
+       url('/fonts/al_kanz.ttf') format('truetype'),
+       url('/fonts/kanz_al_lulu.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/al_kanz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kanz-al-Marjaan';
+  src: local('Kanz-al-Marjaan'), local('KANZ AL MARJAAN'),
+       url('/fonts/kanz_al_marjaan.ttf') format('truetype'),
+       url('/data/qamoos53/fonts/kanz_al_marjaan.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -35,7 +84,7 @@
   --border-focus: #842816;
   --font-serif: 'Newsreader', 'Charter', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-arabic: 'Al-Kanz', 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+  --font-arabic: 'Kanz al Lulu', 'Kanz-al-Lulu', 'Al-Kanz', 'AlKanzfonts', 'Kanz-al-Marjaan', 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
   --shadow-sm: 0 1px 3px rgba(35, 33, 31, 0.05);
   --shadow-md: 0 4px 12px rgba(35, 33, 31, 0.08);
 }

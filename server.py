@@ -134,9 +134,13 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
             self.path = '/admin.html'
             return super().do_GET()
 
-        # Static fonts alias: /fonts/... -> /data/qamoos53/fonts/...
+        # Static fonts alias: /fonts/... -> fonts/ or data/qamoos53/fonts/
         if path.startswith('/fonts/'):
             font_file = path[len('/fonts/'):]
+            direct_target = os.path.join(BASE_DIR, 'fonts', font_file)
+            if os.path.exists(direct_target):
+                self.path = '/fonts/' + font_file
+                return super().do_GET()
             target = os.path.join(BASE_DIR, 'data', 'qamoos53', 'fonts', font_file)
             if os.path.exists(target):
                 self.path = '/data/qamoos53/fonts/' + font_file
