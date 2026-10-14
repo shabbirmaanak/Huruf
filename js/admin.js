@@ -78,12 +78,6 @@
   const cloudModal = document.getElementById('cloud-modal');
   const btnCloudModal = document.getElementById('btn-cloud-modal');
   const btnCloseCloudModal = document.getElementById('btn-close-cloud-modal');
-  const btnSaveCloudConfig = document.getElementById('btn-save-cloud-config');
-  const btnCloudPush = document.getElementById('btn-cloud-push');
-  const btnCloudPull = document.getElementById('btn-cloud-pull');
-  const cloudProviderSelect = document.getElementById('cloud-provider-select');
-  const supaFields = document.getElementById('supa-fields');
-  const firebaseFields = document.getElementById('firebase-fields');
 
   // Toast
   const toastEl = document.getElementById('toast');
@@ -98,14 +92,10 @@
     }, duration);
   }
 
-  // Auth Guard
+  // Auth Guard: Auto-authenticate and load data immediately
   function initAuth() {
-    if (!sessionStorage.getItem('editorial_authenticated')) {
-      authModal.style.display = 'flex';
-      inputPasskey.focus();
-    } else {
-      initApp();
-    }
+    sessionStorage.setItem('editorial_authenticated', 'true');
+    initApp();
   }
 
   btnVerifyPasscode.addEventListener('click', async () => {
@@ -342,10 +332,8 @@
     }
   });
 
-  // Save Word Changes
+  // Save Word Changes (Update or Create)
   async function saveWord(newStatus = null) {
-    if (!state.selectedWordId) return;
-
     const payload = {
       word_name: fieldWordName.value.trim(),
       transliteration: fieldTranslit.value.trim(),
@@ -361,15 +349,24 @@
       curator_notes: fieldCuratorNotes.value.trim()
     };
 
+    if (!payload.word_name) {
+      alert('Please enter the Arabic headword.');
+      fieldWordName.focus();
+      return;
+    }
+
     try {
-      const res = await fetch(`/api/words/${state.selectedWordId}`, {
-        method: 'PUT',
+      const url = state.selectedWordId ? `/api/words/${state.selectedWordId}` : '/api/words';
+      const method = state.selectedWordId ? 'PUT' : 'POST';
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
       const updated = await res.json();
-      showToast(`✓ Word ${updated.id} (${updated.word_name}) saved`);
-      await selectWord(state.selectedWordId);
+      showToast(`✓ Word ${updated.id} (${updated.word_name}) saved to Turso!`);
+      state.selectedWordId = updated.id;
+      await selectWord(updated.id);
       await loadStats();
       await loadWords(state.page);
     } catch (err) {
@@ -383,6 +380,55 @@
   btnApproveWord.addEventListener('click', async () => {
     await saveWord('approved');
     nextWord();
+  });
+
+  // New Word
+  btnNewWord.addEventListener('click', () => {
+    state.selectedWordId = null;
+    state.currentWord = null;
+    document.getElementById('crumb-id').textContent = 'NEW';
+    document.getElementById('crumb-status').textContent = 'CREATING';
+    heroArabic.textContent = 'كلمة جديدة';
+    heroTranslit.textContent = 'New Word';
+    diffOriginal.textContent = '—';
+    diffCurrent.textContent = '—';
+    audioContainer.style.display = 'none';
+    diagnosticBanner.style.display = 'none';
+
+    fieldWordName.value = '';
+    fieldTranslit.value = '';
+    fieldEnglish.value = '';
+    fieldFrench.value = '';
+    fieldLisan.value = '';
+    fieldSentence.value = '';
+    fieldLevel.value = 'intermediate';
+    fieldReviewStatus.value = 'edited';
+    fieldSingular.value = '';
+    fieldPlural.value = '';
+    fieldCategories.value = '';
+    fieldCuratorNotes.value = '';
+    fieldWordName.focus();
+    showToast('Ready to enter new word');
+  });
+
+  // Delete Word
+  btnDeleteWord.addEventListener('click', async () => {
+    if (!state.selectedWordId) return;
+    if (!confirm(`Are you sure you want to delete word #${state.selectedWordId} (${state.currentWord ? state.currentWord.word_name : ''}) from Turso database?`)) {
+      return;
+    }
+    try {
+      const res = await fetch(`/api/words/${state.selectedWordId}`, { method: 'DELETE' });
+      const data = await res.json();
+      if (data.success) {
+        showToast('✓ Word deleted');
+        state.selectedWordId = null;
+        await loadStats();
+        await loadWords(state.page);
+      }
+    } catch (err) {
+      alert('Delete error: ' + err.message);
+    }
   });
 
   // Next / Previous Navigation
@@ -447,109 +493,13 @@
     }
   });
 
-  // Cloud Sync Modal Logic
-  btnCloudModal.addEventListener('click', async () => {
+  // Cloud Status Modal Logic
+  btnCloudModal.addEventListener('click', () => {
     cloudModal.style.display = 'flex';
-    try {
-      const res = await fetch('/api/cloud/config');
-      const cfg = await res.json();
-      if (cfg.provider) cloudProviderSelect.value = cfg.provider;
-      if (cfg.supabase) {
-        document.getElementById('supa-url').value = cfg.supabase.url || '';
-        document.getElementById('supa-key').value = cfg.supabase.anonKey || '';
-      }
-      if (cfg.firebase) {
-        document.getElementById('fb-project').value = cfg.firebase.projectId || '';
-        document.getElementById('fb-collection').value = cfg.firebase.collection || 'qamoos_words';
-      }
-      toggleCloudProviderFields();
-    } catch (err) {
-      console.error('Failed to load cloud config:', err);
-    }
   });
 
   btnCloseCloudModal.addEventListener('click', () => {
     cloudModal.style.display = 'none';
-  });
-
-  cloudProviderSelect.addEventListener('change', toggleCloudProviderFields);
-
-  function toggleCloudProviderFields() {
-    if (cloudProviderSelect.value === 'supabase') {
-      supaFields.style.display = 'block';
-      firebaseFields.style.display = 'none';
-    } else {
-      supaFields.style.display = 'none';
-      firebaseFields.style.display = 'block';
-    }
-  }
-
-  btnSaveCloudConfig.addEventListener('click', async () => {
-    const payload = {
-      provider: cloudProviderSelect.value,
-      supabase: {
-        url: document.getElementById('supa-url').value.trim(),
-        anonKey: document.getElementById('supa-key').value.trim(),
-        table: 'qamoos_words'
-      },
-      firebase: {
-        projectId: document.getElementById('fb-project').value.trim(),
-        collection: document.getElementById('fb-collection').value.trim()
-      }
-    };
-
-    try {
-      const res = await fetch('/api/cloud/config', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const data = await res.json();
-      showToast('✓ Cloud credentials saved!');
-    } catch (err) {
-      alert('Error saving cloud config: ' + err.message);
-    }
-  });
-
-  btnCloudPush.addEventListener('click', async () => {
-    btnCloudPush.disabled = true;
-    btnCloudPush.textContent = 'Pushing...';
-    try {
-      const res = await fetch('/api/cloud/push', { method: 'POST' });
-      const data = await res.json();
-      if (data.success) {
-        showToast(`✓ ${data.message}`);
-        await loadStats();
-      } else {
-        alert(data.message);
-      }
-    } catch (err) {
-      alert('Cloud Push Error: ' + err.message);
-    } finally {
-      btnCloudPush.disabled = false;
-      btnCloudPush.textContent = '↑ Push to Cloud';
-    }
-  });
-
-  btnCloudPull.addEventListener('click', async () => {
-    btnCloudPull.disabled = true;
-    btnCloudPull.textContent = 'Pulling...';
-    try {
-      const res = await fetch('/api/cloud/pull', { method: 'POST' });
-      const data = await res.json();
-      if (data.success) {
-        showToast(`✓ ${data.message}`);
-        await loadStats();
-        await loadWords(state.page);
-      } else {
-        alert(data.message);
-      }
-    } catch (err) {
-      alert('Cloud Pull Error: ' + err.message);
-    } finally {
-      btnCloudPull.disabled = false;
-      btnCloudPull.textContent = '↓ Pull from Cloud';
-    }
   });
 
   // Setup Event Listeners
