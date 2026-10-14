@@ -1,0 +1,12 @@
+{
+  "name": "huruf-spell-bank",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lisan al-Dawat Lexicon & Orthography Desk with Turso libSQL Cloud Database",
+  "scripts": {
+    "start": "python3 server.py"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
