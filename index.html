@@ -103,6 +103,18 @@
       <!-- Word cards will be rendered dynamically here -->
     </main>
 
+    <!-- Pagination & Archive Exploration Bar -->
+    <div id="lexicon-pagination" class="lexicon-pagination" style="display: none;">
+      <div class="pagination-meta">
+        <span class="pagination-ornament">❦</span>
+        <span id="pagination-status" class="pagination-status">Showing 100 of 8,587 words</span>
+      </div>
+      <button id="load-more-btn" class="btn btn-outline load-more-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <span>Load More Words</span>
+      </button>
+    </div>
+
     <!-- Empty State -->
     <div id="empty-state" class="empty-state" style="display: none;">
       <div class="empty-icon">❦</div>

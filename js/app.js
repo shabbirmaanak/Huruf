@@ -28,11 +28,17 @@ import {
 const state = {
   searchQuery: '',
   activeTab: 'all', // 'all' | 'spellbank'
-  originFilter: 'all', // 'all' | 'Arabic' | 'Persian' | 'Gujarati' | 'Compound'
+  originFilter: 'all', // 'all' | 'alerts' | 'Arabic' | 'Persian' | 'Gujarati' | 'Compound'
   masteryFilter: 'all', // 'all' | 'learning' | 'reviewing' | 'mastered'
   customEntries: [],
   spellBankRecords: [],
-  cloudLexicon: [] // Live approved & edited words from Turso cloud database
+  cloudLexicon: [], // Live approved & edited words from Turso cloud database
+  totalDbCount: 8587,
+  totalMatching: 8587,
+  currentPage: 1,
+  pageSize: 100,
+  hasMore: true,
+  isLoading: false
 };
 
 // DOM Element References
@@ -52,6 +58,10 @@ const dom = {
   emptyTitle: document.getElementById('empty-title'),
   emptyMessage: document.getElementById('empty-message'),
   resetFiltersBtn: document.getElementById('reset-filters-btn'),
+  // Pagination
+  lexiconPagination: document.getElementById('lexicon-pagination'),
+  paginationStatus: document.getElementById('pagination-status'),
+  loadMoreBtn: document.getElementById('load-more-btn'),
   // Drawer & Form
   addWordBtn: document.getElementById('add-word-btn'),
   addWordDrawer: document.getElementById('add-word-drawer'),
@@ -84,24 +94,70 @@ async function initApp() {
 }
 
 /**
- * Fetch approved & edited words from Turso cloud database
+ * Fetch approved & edited words from Turso cloud database with pagination support
  */
-async function loadCloudLexicon() {
+async function loadCloudLexicon(page = 1, append = false) {
+  if (state.isLoading) return;
+  state.isLoading = true;
+  if (dom.loadMoreBtn) {
+    dom.loadMoreBtn.disabled = true;
+    dom.loadMoreBtn.innerHTML = `<span>Loading entries...</span>`;
+  }
+
   try {
-    const res = await fetch('/api/lexicon');
-    if (!res.ok) return;
-    const data = await res.json();
-    const rawWords = Array.isArray(data) ? data : (data.words || []);
-    if (rawWords.length > 0) {
-      state.cloudLexicon = rawWords.map(w => ({
-        ...w,
-        arabicNormalized: normalizeArabic(w.arabic),
-        transliterationNormalized: normalizeTransliteration(w.transliteration)
-      }));
-      render();
+    const params = new URLSearchParams({
+      page: String(page),
+      limit: String(state.pageSize)
+    });
+    if (state.searchQuery.trim()) {
+      params.set('search', state.searchQuery.trim());
     }
+    if (state.originFilter && state.originFilter !== 'all') {
+      params.set('origin', state.originFilter);
+    }
+
+    const res = await fetch(`/api/lexicon?${params.toString()}`);
+    if (!res.ok) throw new Error('API returned status: ' + res.status);
+    const data = await res.json();
+
+    const rawWords = Array.isArray(data) ? data : (data.words || []);
+    if (typeof data.totalDbWords === 'number') {
+      state.totalDbCount = data.totalDbWords;
+    }
+    state.totalMatching = (typeof data.total === 'number') ? data.total : state.totalDbCount;
+    state.currentPage = page;
+    state.hasMore = typeof data.hasMore === 'boolean' ? data.hasMore : (rawWords.length >= state.pageSize);
+
+    const formatted = rawWords.map(w => ({
+      ...w,
+      arabicNormalized: normalizeArabic(w.arabic),
+      transliterationNormalized: normalizeTransliteration(w.transliteration)
+    }));
+
+    if (append) {
+      const existingIds = new Set(state.cloudLexicon.map(w => w.id));
+      for (const w of formatted) {
+        if (!existingIds.has(w.id)) {
+          state.cloudLexicon.push(w);
+          existingIds.add(w.id);
+        }
+      }
+    } else {
+      state.cloudLexicon = formatted;
+    }
+
+    render();
   } catch (err) {
     console.log('Operating in offline seed mode:', err.message);
+  } finally {
+    state.isLoading = false;
+    if (dom.loadMoreBtn) {
+      dom.loadMoreBtn.disabled = false;
+      dom.loadMoreBtn.innerHTML = `
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <span>Load More Words</span>
+      `;
+    }
   }
 }
 
@@ -112,36 +168,9 @@ let searchDebounceTimer = null;
  */
 function searchCloudLexicon(query) {
   clearTimeout(searchDebounceTimer);
-  const q = (query || '').trim();
-  if (!q) return;
-
-  searchDebounceTimer = setTimeout(async () => {
-    try {
-      const res = await fetch(`/api/lexicon?search=${encodeURIComponent(q)}`);
-      if (!res.ok) return;
-      const data = await res.json();
-      const rawWords = Array.isArray(data) ? data : (data.words || []);
-      if (rawWords.length > 0) {
-        const existingIds = new Set(state.cloudLexicon.map(w => w.id));
-        let added = false;
-        for (const w of rawWords) {
-          if (!existingIds.has(w.id)) {
-            state.cloudLexicon.push({
-              ...w,
-              arabicNormalized: normalizeArabic(w.arabic),
-              transliterationNormalized: normalizeTransliteration(w.transliteration)
-            });
-            existingIds.add(w.id);
-            added = true;
-          }
-        }
-        if (added) {
-          render();
-        }
-      }
-    } catch (err) {
-      console.log('Remote search unavailable:', err.message);
-    }
+  searchDebounceTimer = setTimeout(() => {
+    state.currentPage = 1;
+    loadCloudLexicon(1, false);
   }, 250);
 }
 
@@ -219,9 +248,20 @@ function render() {
   const filteredList = getFilteredLexicon();
 
   // Update Badge Counts
-  dom.countAll.textContent = allEntries.length;
+  const isSearchOrFilterActive = Boolean(state.searchQuery.trim() || (state.originFilter && state.originFilter !== 'all'));
+  
+  if (state.activeTab === 'all') {
+    if (isSearchOrFilterActive) {
+      dom.countAll.textContent = state.totalMatching ? state.totalMatching.toLocaleString() : filteredList.length.toLocaleString();
+    } else {
+      dom.countAll.textContent = state.totalDbCount ? state.totalDbCount.toLocaleString() : allEntries.length.toLocaleString();
+    }
+  } else {
+    dom.countAll.textContent = state.totalDbCount ? state.totalDbCount.toLocaleString() : allEntries.length.toLocaleString();
+  }
+
   const validSavedCount = state.spellBankRecords.filter(r => allEntries.some(e => e.id === r.entryId)).length;
-  dom.countSpellBank.textContent = validSavedCount;
+  dom.countSpellBank.textContent = validSavedCount.toLocaleString();
 
   // Toggle Spell Bank Sub-Filters Visibility
   if (state.activeTab === 'spellbank') {
@@ -234,6 +274,7 @@ function render() {
   if (filteredList.length === 0) {
     dom.lexiconList.innerHTML = '';
     dom.emptyState.style.display = 'block';
+    if (dom.lexiconPagination) dom.lexiconPagination.style.display = 'none';
 
     if (state.activeTab === 'spellbank' && state.spellBankRecords.length === 0) {
       dom.emptyTitle.textContent = 'Your Spell Bank is Empty';
@@ -249,6 +290,25 @@ function render() {
 
   // Render Word Cards
   dom.lexiconList.innerHTML = filteredList.map(entry => renderWordCard(entry)).join('');
+
+  // Render Pagination / Load More Status Bar
+  if (dom.lexiconPagination) {
+    if (state.activeTab === 'all') {
+      dom.lexiconPagination.style.display = 'flex';
+      const loadedCount = filteredList.length;
+      const targetTotal = isSearchOrFilterActive ? state.totalMatching : state.totalDbCount;
+
+      if (state.hasMore) {
+        dom.paginationStatus.textContent = `Showing ${loadedCount.toLocaleString()} of ${targetTotal.toLocaleString()} words in archive`;
+        dom.loadMoreBtn.style.display = 'inline-flex';
+      } else {
+        dom.paginationStatus.textContent = `Showing all ${loadedCount.toLocaleString()} words in archive`;
+        dom.loadMoreBtn.style.display = 'none';
+      }
+    } else {
+      dom.lexiconPagination.style.display = 'none';
+    }
+  }
 }
 
 /**
@@ -441,6 +501,8 @@ function setupEventListeners() {
     } else {
       dom.clearSearchBtn.style.display = 'none';
       dom.searchShortcutHint.style.display = 'flex';
+      state.currentPage = 1;
+      loadCloudLexicon(1, false);
     }
     render();
   });
@@ -451,7 +513,8 @@ function setupEventListeners() {
     dom.clearSearchBtn.style.display = 'none';
     dom.searchShortcutHint.style.display = 'flex';
     dom.searchInput.focus();
-    render();
+    state.currentPage = 1;
+    loadCloudLexicon(1, false);
   });
 
   // 2. Tab Navigation
@@ -475,7 +538,8 @@ function setupEventListeners() {
       dom.originPills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       state.originFilter = pill.getAttribute('data-origin');
-      render();
+      state.currentPage = 1;
+      loadCloudLexicon(1, false);
     });
   });
 
@@ -494,14 +558,35 @@ function setupEventListeners() {
     state.searchQuery = '';
     state.originFilter = 'all';
     state.masteryFilter = 'all';
+    state.currentPage = 1;
     dom.searchInput.value = '';
     dom.clearSearchBtn.style.display = 'none';
     dom.searchShortcutHint.style.display = 'flex';
 
     dom.originPills.forEach(p => p.classList.toggle('active', p.getAttribute('data-origin') === 'all'));
     dom.masteryPills.forEach(p => p.classList.toggle('active', p.getAttribute('data-mastery') === 'all'));
-    render();
+    loadCloudLexicon(1, false);
   });
+
+  // 5b. Pagination & Load More Words
+  if (dom.loadMoreBtn) {
+    dom.loadMoreBtn.addEventListener('click', () => {
+      if (state.hasMore && !state.isLoading) {
+        loadCloudLexicon(state.currentPage + 1, true);
+      }
+    });
+  }
+
+  // Automatic Infinite Scroll
+  if ('IntersectionObserver' in window && dom.lexiconPagination) {
+    const scrollObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry && entry.isIntersecting && state.activeTab === 'all' && state.hasMore && !state.isLoading) {
+        loadCloudLexicon(state.currentPage + 1, true);
+      }
+    }, { rootMargin: '350px' });
+    scrollObserver.observe(dom.lexiconPagination);
+  }
 
   // 6. Global Click Delegation for Word Cards
   dom.lexiconList.addEventListener('click', (e) => {

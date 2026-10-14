@@ -1094,6 +1094,73 @@ mark.rubric-highlight {
   margin: 0 auto 1.5rem auto;
 }
 
+/* Pagination & Progressive Archive Loader */
+.lexicon-pagination {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 1.75rem 1rem;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.pagination-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-editorial);
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+}
+
+.pagination-ornament {
+  color: var(--accent-crimson);
+  font-size: 1.15rem;
+}
+
+.pagination-status {
+  font-style: italic;
+}
+
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.45rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--card-surface);
+  color: var(--ink-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(35, 33, 31, 0.04);
+}
+
+.load-more-btn:hover {
+  background-color: var(--accent-soft);
+  color: var(--accent-crimson);
+  border-color: var(--accent-soft-border);
+}
+
+.load-more-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.load-more-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.load-more-btn:hover svg {
+  transform: translateY(2px);
+}
+
 /* Toast Notification */
 .toast-notice {
   position: fixed;

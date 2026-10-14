@@ -156,54 +156,80 @@ module.exports = async function handler(req, res) {
     // Route: /api/lexicon (words for public lexicon and spell bank from Turso cloud)
     if (pathname === '/api/lexicon' && req.method === 'GET') {
       const search = (query.search || '').trim();
-      let sql;
-      let params = [];
+      const origin = (query.origin || 'all').trim();
+      const page = Math.max(1, parseInt(query.page || '1', 10));
+      const limit = Math.min(Math.max(1, parseInt(query.limit || '100', 10)), 500);
+      const offset = (page - 1) * limit;
+
+      const conditions = [];
+      const params = [];
 
       if (search) {
         const sp = `%${search}%`;
-        sql = `
-          SELECT 
-            w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
-            w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
-            w.alphabet, w.audio_url, w.image_url, w.review_status,
-            w.suggested_spelling, w.orthography_flags, w.curator_notes,
-            (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
-          FROM words w
-          WHERE (w.word_name LIKE ? OR w.original_word_name LIKE ? OR w.transliteration LIKE ? OR w.english_meaning LIKE ? OR w.french_meaning LIKE ?)
-          ORDER BY 
-            CASE 
-              WHEN w.review_status = 'approved' THEN 1 
-              WHEN w.review_status = 'edited' THEN 2 
-              WHEN w.review_status = 'flagged' THEN 3 
-              ELSE 4 
-            END ASC,
-            w.id ASC
-          LIMIT 60;
-        `;
-        params = [sp, sp, sp, sp, sp];
-      } else {
-        sql = `
-          SELECT 
-            w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
-            w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
-            w.alphabet, w.audio_url, w.image_url, w.review_status,
-            w.suggested_spelling, w.orthography_flags, w.curator_notes,
-            (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
-          FROM words w
-          ORDER BY 
-            CASE 
-              WHEN w.review_status = 'approved' THEN 1 
-              WHEN w.review_status = 'edited' THEN 2 
-              WHEN w.review_status = 'flagged' THEN 3 
-              ELSE 4 
-            END ASC, 
-            w.id ASC
-          LIMIT 100;
-        `;
+        conditions.push('(w.word_name LIKE ? OR w.original_word_name LIKE ? OR w.transliteration LIKE ? OR w.english_meaning LIKE ? OR w.french_meaning LIKE ? OR w.sentence LIKE ?)');
+        params.push(sp, sp, sp, sp, sp, sp);
       }
-      const rows = await tursoQuery(sql, params);
+
+      if (origin === 'alerts') {
+        conditions.push(`(
+          (w.orthography_flags IS NOT NULL AND w.orthography_flags != '' AND w.orthography_flags != '[]')
+          OR (w.original_word_name IS NOT NULL AND w.original_word_name != '' AND w.original_word_name != w.word_name)
+          OR (w.curator_notes IS NOT NULL AND w.curator_notes != '')
+        )`);
+      } else if (origin === 'Arabic') {
+        conditions.push(`w.id IN (SELECT word_id FROM word_categories WHERE category_name LIKE '%Arabic%')`);
+      } else if (origin === 'Persian') {
+        conditions.push(`w.id IN (SELECT word_id FROM word_categories WHERE category_name LIKE '%Persian%' OR category_name LIKE '%Urdu%')`);
+      } else if (origin === 'Gujarati') {
+        conditions.push(`w.id IN (SELECT word_id FROM word_categories WHERE category_name LIKE '%Gujarati%')`);
+      } else if (origin === 'Compound') {
+        conditions.push(`w.id IN (SELECT word_id FROM word_categories WHERE category_name LIKE '%Compound%')`);
+      }
+
+      const whereClause = conditions.length ? 'WHERE ' + conditions.join(' AND ') : '';
+
+      const countSql = `SELECT COUNT(*) as c FROM words w ${whereClause};`;
+      const totalDbSql = `SELECT COUNT(*) as c FROM words;`;
+      const selectSql = `
+        SELECT 
+          w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+          w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+          w.alphabet, w.audio_url, w.image_url, w.review_status,
+          w.suggested_spelling, w.orthography_flags, w.curator_notes,
+          (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+        FROM words w
+        ${whereClause}
+        ORDER BY 
+          CASE 
+            WHEN w.review_status = 'approved' THEN 1 
+            WHEN w.review_status = 'edited' THEN 2 
+            WHEN w.review_status = 'flagged' THEN 3 
+            ELSE 4 
+          END ASC, 
+          w.id ASC
+        LIMIT ? OFFSET ?;
+      `;
+
+      const selectParams = [...params, limit, offset];
+
+      const [countRows, totalDbRows, rows] = await Promise.all([
+        tursoQuery(countSql, params),
+        tursoQuery(totalDbSql),
+        tursoQuery(selectSql, selectParams)
+      ]);
+
+      const totalMatching = countRows[0] ? countRows[0].c : 0;
+      const totalDbWords = totalDbRows[0] ? totalDbRows[0].c : 8587;
       const words = rows.map(formatLexiconEntry);
-      return res.status(200).json({ total: words.length, words });
+
+      return res.status(200).json({
+        total: totalMatching,
+        totalDbWords: totalDbWords,
+        page,
+        limit,
+        hasMore: (offset + words.length) < totalMatching,
+        words
+      });
     }
 
     // Route: /api/categories
