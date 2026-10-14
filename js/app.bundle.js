@@ -1038,7 +1038,8 @@ const state = {
   originFilter: 'all', // 'all' | 'Arabic' | 'Persian' | 'Gujarati' | 'Compound'
   masteryFilter: 'all', // 'all' | 'learning' | 'reviewing' | 'mastered'
   customEntries: [],
-  spellBankRecords: []
+  spellBankRecords: [],
+  cloudLexicon: [] // Live approved & edited words from Turso cloud database
 };
 
 // DOM Element References
@@ -1078,19 +1079,50 @@ const dom = {
 /**
  * Initialize Application
  */
-function initApp() {
+async function initApp() {
   state.customEntries = getCustomLexicon();
   state.spellBankRecords = getSpellBank();
 
   setupEventListeners();
   render();
+
+  // Load verified & approved words from Turso cloud database
+  await loadCloudLexicon();
 }
 
 /**
- * Get unified lexicon combining curated seed and user additions
+ * Fetch approved & edited words from Turso cloud database
+ */
+async function loadCloudLexicon() {
+  try {
+    const res = await fetch('/api/lexicon');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.words && Array.isArray(data.words)) {
+      state.cloudLexicon = data.words.map(w => ({
+        ...w,
+        arabicNormalized: normalizeArabic(w.arabic),
+        transliterationNormalized: normalizeTransliteration(w.transliteration)
+      }));
+      render();
+    }
+  } catch (err) {
+    console.log('Operating in offline seed mode:', err.message);
+  }
+}
+
+/**
+ * Get unified lexicon combining curated seed, cloud database, and user additions
  */
 function getActiveLexicon() {
-  return [...state.customEntries, ...SEED_LEXICON];
+  const list = [...state.customEntries, ...state.cloudLexicon];
+  const seen = new Set(list.map(e => normalizeArabic(e.arabic)));
+  for (const seed of SEED_LEXICON) {
+    if (!seen.has(normalizeArabic(seed.arabic))) {
+      list.push(seed);
+    }
+  }
+  return list;
 }
 
 /**
@@ -1196,15 +1228,22 @@ function renderWordCard(entry) {
   const isSaved = !!spellRecord;
   const mastery = spellRecord ? spellRecord.masteryLevel : 'learning';
 
-  // Highlight target word in sentences and paragraphs
-  const highlightedSentence = highlightArabicWord(entry.sentenceReference.arabic, entry.arabic);
-  const highlightedParagraph = highlightArabicWord(entry.paragraphReference.arabic, entry.arabic);
+  // Highlight target word in sentences and paragraphs (with safe fallbacks)
+  const sentenceArabic = (entry.sentenceReference && entry.sentenceReference.arabic) || '';
+  const sentenceTrans = (entry.sentenceReference && entry.sentenceReference.translation) || '';
+  const sentenceGloss = (entry.sentenceReference && entry.sentenceReference.gloss) || '';
+  const paraArabic = (entry.paragraphReference && entry.paragraphReference.arabic) || '';
+  const paraTrans = (entry.paragraphReference && entry.paragraphReference.translation) || '';
+  const paraContext = (entry.paragraphReference && entry.paragraphReference.contextType) || 'Lisan al-Dawat';
+
+  const highlightedSentence = sentenceArabic ? highlightArabicWord(sentenceArabic, entry.arabic) : '';
+  const highlightedParagraph = paraArabic ? highlightArabicWord(paraArabic, entry.arabic) : '';
 
   // Render Spelling Pitfall Guide if available
   let spellingGuideHtml = '';
-  if (entry.spellingGuide) {
+  if (entry.spellingGuide && entry.spellingGuide.commonMisspellings && entry.spellingGuide.commonMisspellings.length > 0) {
     const misspellings = entry.spellingGuide.commonMisspellings
-      .map(m => `<span class="misspelling-item" title="Common error: Avoid this spelling">${m}</span>`)
+      .map(m => `<span class="misspelling-item" title="Avoid archaic spelling">${m}</span>`)
       .join('<span style="color: var(--ink-muted); font-size: 0.9rem;"> · </span>');
 
     spellingGuideHtml = `
@@ -1213,7 +1252,7 @@ function renderWordCard(entry) {
           <span class="spelling-guide-label">Orthographic Alert</span>
           <div class="misspelled-variants">${misspellings}</div>
         </div>
-        <p class="spelling-rule">${entry.spellingGuide.rule}</p>
+        <p class="spelling-rule">${entry.spellingGuide.rule || 'Verified standard orthography.'}</p>
       </div>
     `;
   }
@@ -1228,6 +1267,54 @@ function renderWordCard(entry) {
     ? `<button class="btn-text delete-custom-btn" data-entry-id="${entry.id}" title="Delete custom word" style="font-size: 0.75rem; color: var(--accent-crimson);">Delete Entry</button>`
     : '';
 
+  // Render audio button if available
+  const audioBtnHtml = entry.audioUrl ? `
+    <button 
+      class="play-audio-btn" 
+      data-audio="${entry.audioUrl}" 
+      title="Listen to authentic pronunciation" 
+      style="background: #FDF3EB; border: 1px solid #E6DFD3; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--accent-crimson); margin-left: 8px; vertical-align: middle;"
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+    </button>
+  ` : '';
+
+  // Context references block (rendered if either Tier 1 or Tier 2 exists)
+  let contextHtml = '';
+  if (sentenceArabic || paraArabic) {
+    contextHtml = `
+      <div class="context-references">
+        ${sentenceArabic ? `
+        <!-- Tier 1: Sentence Reference -->
+        <div class="reference-card tier-1">
+          <div class="reference-header">
+            <span class="tier-label"><span>Tier 1 · Sentence Context</span></span>
+            <span class="tier-arabic-title">مثال في الجملة</span>
+          </div>
+          <p class="arabic-reference-text">${highlightedSentence}</p>
+          ${sentenceTrans ? `<p class="translation-text">${sentenceTrans}</p>` : ''}
+          ${sentenceGloss ? `<p class="gloss-text">Grammatical Gloss: ${sentenceGloss}</p>` : ''}
+        </div>
+        ` : ''}
+
+        ${paraArabic ? `
+        <!-- Tier 2: Passage Reference -->
+        <div class="reference-card tier-2">
+          <div class="reference-header">
+            <span class="tier-label"><span>Tier 2 · Textual Passage</span></span>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="context-type-badge">${paraContext}</span>
+              <span class="tier-arabic-title">سياق العبارة</span>
+            </div>
+          </div>
+          <p class="arabic-reference-text">${highlightedParagraph}</p>
+          ${paraTrans ? `<p class="translation-text">${paraTrans}</p>` : ''}
+        </div>
+        ` : ''}
+      </div>
+    `;
+  }
+
   return `
     <article class="word-card" id="card-${entry.id}">
       <!-- Card Header -->
@@ -1235,6 +1322,7 @@ function renderWordCard(entry) {
         <div class="card-titles">
           <div class="arabic-headword-wrap">
             <h2 class="arabic-headword">${entry.arabic}</h2>
+            ${audioBtnHtml}
             ${entry.gujaratiPhonetic ? `<span class="gujarati-phonetic">(${entry.gujaratiPhonetic})</span>` : ''}
           </div>
           <div class="translit-and-pos">
@@ -1242,6 +1330,7 @@ function renderWordCard(entry) {
             <span class="pos-tag">${entry.partOfSpeech}</span>
             <span class="origin-badge">✦ ${entry.origin} ${rootHtml}</span>
             ${entry.isCustom ? `<span class="pos-tag" style="background-color: var(--accent-soft); color: var(--accent-crimson);">Custom</span>` : ''}
+            ${entry.reviewStatus === 'approved' ? `<span class="pos-tag" style="background-color: #EBF7F0; color: #246B43; border: 1px solid #B8E5CC;">✓ Approved</span>` : ''}
           </div>
         </div>
 
@@ -1266,35 +1355,7 @@ function renderWordCard(entry) {
       ${spellingGuideHtml}
 
       <!-- Dual-Tier Context Blocks -->
-      <div class="context-references">
-        <!-- Tier 1: Sentence Reference -->
-        <div class="reference-card tier-1">
-          <div class="reference-header">
-            <span class="tier-label">
-              <span>Tier 1 · Sentence Context</span>
-            </span>
-            <span class="tier-arabic-title">مثال في الجملة</span>
-          </div>
-          <p class="arabic-reference-text">${highlightedSentence}</p>
-          <p class="translation-text">${entry.sentenceReference.translation}</p>
-          ${entry.sentenceReference.gloss ? `<p class="gloss-text">Grammatical Gloss: ${entry.sentenceReference.gloss}</p>` : ''}
-        </div>
-
-        <!-- Tier 2: Passage Reference -->
-        <div class="reference-card tier-2">
-          <div class="reference-header">
-            <span class="tier-label">
-              <span>Tier 2 · Textual Passage</span>
-            </span>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="context-type-badge">${entry.paragraphReference.contextType}</span>
-              <span class="tier-arabic-title">سياق العبارة</span>
-            </div>
-          </div>
-          <p class="arabic-reference-text">${highlightedParagraph}</p>
-          <p class="translation-text">${entry.paragraphReference.translation}</p>
-        </div>
-      </div>
+      ${contextHtml}
 
       <!-- Card Bottom Strip -->
       <div class="card-bottom-strip">
@@ -1398,6 +1459,18 @@ function setupEventListeners() {
 
   // 6. Global Click Delegation for Word Cards
   dom.lexiconList.addEventListener('click', (e) => {
+    // Play Audio Pronunciation
+    const audioBtn = e.target.closest('.play-audio-btn');
+    if (audioBtn) {
+      const audioUrl = audioBtn.getAttribute('data-audio');
+      if (audioUrl) {
+        const audio = new Audio(audioUrl);
+        audio.play().catch(err => console.warn('Audio playback error:', err));
+        showToast('Playing authentic pronunciation ♫');
+      }
+      return;
+    }
+
     // Spell Bank Toggle
     const toggleBtn = e.target.closest('.spellbank-toggle-btn');
     if (toggleBtn) {

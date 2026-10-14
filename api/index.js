@@ -153,6 +153,24 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    // Route: /api/lexicon (approved & edited words for public lexicon and spell bank)
+    if (pathname === '/api/lexicon' && req.method === 'GET') {
+      const sql = `
+        SELECT 
+          w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+          w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+          w.alphabet, w.audio_url, w.image_url, w.review_status,
+          w.suggested_spelling, w.orthography_flags, w.curator_notes,
+          (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+        FROM words w
+        WHERE w.review_status IN ('approved', 'edited')
+        ORDER BY w.id ASC;
+      `;
+      const rows = await tursoQuery(sql);
+      const words = rows.map(formatLexiconEntry);
+      return res.status(200).json({ total: words.length, words });
+    }
+
     // Route: /api/categories
     if (pathname === '/api/categories' && req.method === 'GET') {
       const rows = await tursoQuery('SELECT name, word_count FROM categories ORDER BY word_count DESC;');
@@ -471,5 +489,53 @@ async function fetchWordDetails(wordId) {
     meanings,
     translations: trans,
     categories
+  };
+}
+
+function formatLexiconEntry(r) {
+  let flags = [];
+  if (r.orthography_flags) {
+    try { flags = JSON.parse(r.orthography_flags); } catch (e) {}
+  }
+
+  const misspellings = [];
+  if (r.original_word_name && r.original_word_name !== r.word_name) {
+    misspellings.push(r.original_word_name);
+  }
+
+  const categories = r.categories_list ? r.categories_list.split(', ') : [];
+  let origin = 'Arabic';
+  if (categories.some(c => c.toLowerCase().includes('gujarati'))) origin = 'Gujarati';
+  else if (categories.some(c => c.toLowerCase().includes('persian') || c.toLowerCase().includes('urdu'))) origin = 'Persian';
+
+  return {
+    id: `qamoos-${r.id}`,
+    tursoId: r.id,
+    arabic: r.word_name,
+    transliteration: r.transliteration || '',
+    gujaratiPhonetic: r.singular && r.singular !== '-' ? r.singular : '',
+    origin: origin,
+    rootLetters: '',
+    partOfSpeech: r.level ? (r.level.charAt(0).toUpperCase() + r.level.slice(1)) : 'Noun',
+    definition: r.english_meaning || r.french_meaning || 'Term recorded in Lisan al-Dawat reference lexicon.',
+    notes: r.curator_notes || (r.plural && r.plural !== '-' ? `Plural: ${r.plural}` : ''),
+    audioUrl: r.audio_url || '',
+    reviewStatus: r.review_status,
+    spellingGuide: misspellings.length > 0 ? {
+      commonMisspellings: misspellings,
+      rule: r.suggested_spelling 
+        ? `Standardized from legacy orthography (${misspellings.join(', ')}).`
+        : `Verified modern Lisan al-Dawat orthography.`
+    } : null,
+    sentenceReference: {
+      arabic: r.sentence || '',
+      translation: r.french_meaning || '',
+      gloss: r.sentence ? 'Authentic contextual citation from Qamoos53 archive.' : ''
+    },
+    paragraphReference: {
+      arabic: '',
+      translation: '',
+      contextType: 'Lisan al-Dawat'
+    }
   };
 }

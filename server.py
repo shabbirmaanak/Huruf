@@ -154,6 +154,8 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
             return self.handle_get_cloud_config()
         elif path == '/api/categories':
             return self.handle_get_categories()
+        elif path == '/api/lexicon':
+            return self.handle_get_lexicon()
 
         return super().do_GET()
 
@@ -247,6 +249,65 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
             rows = db.query("SELECT name, word_count FROM categories ORDER BY word_count DESC;")
             cats = [{'name': r['name'], 'count': r['word_count']} for r in rows]
             self.send_json({'categories': cats})
+        except Exception as e:
+            self.send_json({'error': str(e)}, status=500)
+
+    def handle_get_lexicon(self):
+        try:
+            sql = """
+                SELECT 
+                    w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+                    w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+                    w.alphabet, w.audio_url, w.image_url, w.review_status,
+                    w.suggested_spelling, w.orthography_flags, w.curator_notes,
+                    (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+                FROM words w
+                WHERE w.review_status IN ('approved', 'edited')
+                ORDER BY w.id ASC;
+            """
+            rows = db.query(sql)
+            words = []
+            for r in rows:
+                misspellings = []
+                if r.get('original_word_name') and r['original_word_name'] != r['word_name']:
+                    misspellings.append(r['original_word_name'])
+                
+                cats = r['categories_list'].split(', ') if r.get('categories_list') else []
+                origin = 'Arabic'
+                if any('gujarati' in c.lower() for c in cats):
+                    origin = 'Gujarati'
+                elif any('persian' in c.lower() or 'urdu' in c.lower() for c in cats):
+                    origin = 'Persian'
+
+                words.append({
+                    'id': f"qamoos-{r['id']}",
+                    'tursoId': r['id'],
+                    'arabic': r['word_name'],
+                    'transliteration': r['transliteration'] or '',
+                    'gujaratiPhonetic': r['singular'] if r.get('singular') and r['singular'] != '-' else '',
+                    'origin': origin,
+                    'rootLetters': '',
+                    'partOfSpeech': r['level'].capitalize() if r.get('level') else 'Noun',
+                    'definition': r['english_meaning'] or r.get('french_meaning') or 'Term recorded in Lisan al-Dawat lexicon.',
+                    'notes': r.get('curator_notes') or (f"Plural: {r['plural']}" if r.get('plural') and r['plural'] != '-' else ''),
+                    'audioUrl': r['audio_url'] or '',
+                    'reviewStatus': r['review_status'],
+                    'spellingGuide': {
+                        'commonMisspellings': misspellings,
+                        'rule': f"Standardized from legacy orthography ({', '.join(misspellings)})." if r.get('suggested_spelling') else "Verified modern Lisan al-Dawat orthography."
+                    } if misspellings else None,
+                    'sentenceReference': {
+                        'arabic': r['sentence'] or '',
+                        'translation': r.get('french_meaning') or '',
+                        'gloss': 'Authentic contextual citation from Qamoos53 archive.' if r.get('sentence') else ''
+                    },
+                    'paragraphReference': {
+                        'arabic': '',
+                        'translation': '',
+                        'contextType': 'Lisan al-Dawat'
+                    }
+                })
+            self.send_json({'total': len(words), 'words': words})
         except Exception as e:
             self.send_json({'error': str(e)}, status=500)
 
