@@ -113,10 +113,10 @@
         initApp();
         showToast('✓ Editorial Studio Unlocked');
       } else {
-        alert('Invalid passkey. Please try again.');
+        showToast('Invalid passkey. Please try again.', 4000);
       }
     } catch (err) {
-      alert('Authentication error: ' + err.message);
+      showToast('Authentication error: ' + err.message, 4000);
     }
   });
 
@@ -328,7 +328,7 @@
       await loadStats();
       await loadWords(state.page);
     } catch (err) {
-      alert('Error applying suggestion: ' + err.message);
+      showToast('Error applying suggestion: ' + err.message, 4000);
     }
   });
 
@@ -350,7 +350,7 @@
     };
 
     if (!payload.word_name) {
-      alert('Please enter the Arabic headword.');
+      showToast('Please enter the Arabic headword.', 4000);
       fieldWordName.focus();
       return;
     }
@@ -370,7 +370,7 @@
       await loadStats();
       await loadWords(state.page);
     } catch (err) {
-      alert('Save error: ' + err.message);
+      showToast('Save error: ' + err.message, 4000);
     }
   }
 
@@ -412,22 +412,47 @@
   });
 
   // Delete Word
+  // Delete Word with smooth non-blocking two-step confirmation
+  let deleteConfirmTimeout = null;
   btnDeleteWord.addEventListener('click', async () => {
     if (!state.selectedWordId) return;
-    if (!confirm(`Are you sure you want to delete word #${state.selectedWordId} (${state.currentWord ? state.currentWord.word_name : ''}) from Turso database?`)) {
+
+    if (btnDeleteWord.getAttribute('data-confirming') !== 'true') {
+      btnDeleteWord.setAttribute('data-confirming', 'true');
+      btnDeleteWord.textContent = 'Confirm Delete?';
+      btnDeleteWord.style.background = '#842816';
+      btnDeleteWord.style.color = '#fff';
+      showToast(`Click again to permanently delete Word #${state.selectedWordId}`);
+      deleteConfirmTimeout = setTimeout(() => {
+        btnDeleteWord.removeAttribute('data-confirming');
+        btnDeleteWord.textContent = 'Delete Word';
+        btnDeleteWord.style.background = '';
+        btnDeleteWord.style.color = '';
+      }, 4000);
       return;
     }
+
+    clearTimeout(deleteConfirmTimeout);
+    btnDeleteWord.removeAttribute('data-confirming');
+    btnDeleteWord.textContent = 'Deleting...';
+    btnDeleteWord.disabled = true;
+
     try {
       const res = await fetch(`/api/words/${state.selectedWordId}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
-        showToast('✓ Word deleted');
+        showToast('✓ Word permanently deleted from Turso database');
         state.selectedWordId = null;
         await loadStats();
         await loadWords(state.page);
       }
     } catch (err) {
-      alert('Delete error: ' + err.message);
+      showToast('Delete error: ' + err.message, 4000);
+    } finally {
+      btnDeleteWord.disabled = false;
+      btnDeleteWord.textContent = 'Delete Word';
+      btnDeleteWord.style.background = '';
+      btnDeleteWord.style.color = '';
     }
   });
 
@@ -455,20 +480,18 @@
   btnNextPage.addEventListener('click', () => loadWords(state.page + 1));
   btnPrevPage.addEventListener('click', () => loadWords(state.page - 1));
 
-  // Sync to Public Spell Bank
+  // Sync to Public Spell Bank (100% non-blocking, zero INP latency)
   btnSyncSpellbank.addEventListener('click', async () => {
-    if (!confirm('Sync all approved and edited words to the public Spell Bank lexicon? This will update data/lexicon.json and rebuild the offline app.')) {
-      return;
-    }
+    btnSyncSpellbank.disabled = true;
+    btnSyncSpellbank.textContent = 'Syncing...';
+    showToast('Syncing approved words with live Spell Bank...');
 
     try {
-      btnSyncSpellbank.disabled = true;
-      btnSyncSpellbank.textContent = 'Syncing...';
       const res = await fetch('/api/sync/spellbank', { method: 'POST' });
       const data = await res.json();
-      showToast(`✓ Published ${data.approved_synced} words to Spell Bank! (Total in lexicon: ${data.total_in_lexicon})`, 4000);
+      showToast(data.message || '✓ Synced approved words to live Spell Bank!', 4000);
     } catch (err) {
-      alert('Sync failed: ' + err.message);
+      showToast('Sync error: ' + err.message, 4000);
     } finally {
       btnSyncSpellbank.disabled = false;
       btnSyncSpellbank.textContent = '✓ Sync Approved to Spell Bank';
@@ -486,7 +509,7 @@
       await loadStats();
       await loadWords(1);
     } catch (err) {
-      alert('Diagnostics failed: ' + err.message);
+      showToast('Diagnostics failed: ' + err.message, 4000);
     } finally {
       btnRunDiagnostics.disabled = false;
       btnRunDiagnostics.textContent = '✦ Run Diagnostics';
