@@ -621,8 +621,93 @@ body::before {
 }
 
 /* ==========================================================================
-   Dual-Reference Context Blocks (Section 1.1 & 3.1)
+   Collapsible Sentence & Context Blocks
    ========================================================================== */
+.context-accordion {
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background-color: #FAF8F5;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.context-accordion[open] {
+  border-color: #E6DFD3;
+  background-color: #FFFDFB;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.context-accordion-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.15rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-ui);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  background-color: #FAF8F5;
+  list-style: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.context-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.context-accordion-summary:hover {
+  background-color: #F4EFE6;
+  color: var(--accent-crimson);
+}
+
+.context-accordion[open] .context-accordion-summary {
+  background-color: #F8F3EA;
+  border-bottom: 1px solid var(--border-hairline);
+  color: var(--accent-crimson);
+}
+
+.context-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.context-toggle-icon {
+  transition: transform 0.2s ease;
+  color: var(--accent-crimson);
+  flex-shrink: 0;
+}
+
+.context-accordion[open] .context-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.context-summary-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  direction: rtl;
+}
+
+.context-accordion[open] .context-summary-arabic {
+  color: var(--accent-crimson);
+}
+
+.context-accordion-body {
+  padding: 1.15rem;
+  background-color: #FFFFFF;
+}
+
+.context-accordion-body .context-references {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
 .context-references {
   display: flex;
   flex-direction: column;

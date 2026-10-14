@@ -312,39 +312,50 @@ function renderWordCard(entry) {
     </button>
   ` : '';
 
-  // Context references block (rendered if either Tier 1 or Tier 2 exists)
+  // Collapsible context references block (collapsed by default)
   let contextHtml = '';
   if (sentenceArabic || paraArabic) {
     contextHtml = `
-      <div class="context-references">
-        ${sentenceArabic ? `
-        <!-- Tier 1: Sentence Reference -->
-        <div class="reference-card tier-1">
-          <div class="reference-header">
-            <span class="tier-label"><span>Tier 1 · Sentence Context</span></span>
-            <span class="tier-arabic-title">مثال في الجملة</span>
-          </div>
-          <p class="arabic-reference-text">${highlightedSentence}</p>
-          ${sentenceTrans ? `<p class="translation-text">${sentenceTrans}</p>` : ''}
-          ${sentenceGloss ? `<p class="gloss-text">Grammatical Gloss: ${sentenceGloss}</p>` : ''}
-        </div>
-        ` : ''}
-
-        ${paraArabic ? `
-        <!-- Tier 2: Passage Reference -->
-        <div class="reference-card tier-2">
-          <div class="reference-header">
-            <span class="tier-label"><span>Tier 2 · Textual Passage</span></span>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="context-type-badge">${paraContext}</span>
-              <span class="tier-arabic-title">سياق العبارة</span>
+      <details class="context-accordion">
+        <summary class="context-accordion-summary">
+          <span class="context-summary-left">
+            <svg class="context-toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <span>Sentence Context & Textual Usage</span>
+          </span>
+          <span class="context-summary-arabic">مثال وسياق في الجملة</span>
+        </summary>
+        <div class="context-accordion-body">
+          <div class="context-references">
+            ${sentenceArabic ? `
+            <!-- Tier 1: Sentence Reference -->
+            <div class="reference-card tier-1">
+              <div class="reference-header">
+                <span class="tier-label"><span>Tier 1 · Sentence Context</span></span>
+                <span class="tier-arabic-title">مثال في الجملة</span>
+              </div>
+              <p class="arabic-reference-text">${highlightedSentence}</p>
+              ${sentenceTrans ? `<p class="translation-text">${sentenceTrans}</p>` : ''}
+              ${sentenceGloss ? `<p class="gloss-text">Grammatical Gloss: ${sentenceGloss}</p>` : ''}
             </div>
+            ` : ''}
+
+            ${paraArabic ? `
+            <!-- Tier 2: Passage Reference -->
+            <div class="reference-card tier-2">
+              <div class="reference-header">
+                <span class="tier-label"><span>Tier 2 · Textual Passage</span></span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span class="context-type-badge">${paraContext}</span>
+                  <span class="tier-arabic-title">سياق العبارة</span>
+                </div>
+              </div>
+              <p class="arabic-reference-text">${highlightedParagraph}</p>
+              ${paraTrans ? `<p class="translation-text">${paraTrans}</p>` : ''}
+            </div>
+            ` : ''}
           </div>
-          <p class="arabic-reference-text">${highlightedParagraph}</p>
-          ${paraTrans ? `<p class="translation-text">${paraTrans}</p>` : ''}
         </div>
-        ` : ''}
-      </div>
+      </details>
     `;
   }
 
