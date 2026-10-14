@@ -1,12 +1,62 @@
 /**
  * Vercel Serverless API Handler for Huruf / Spell Bank
- * Connects directly to Turso (libSQL Cloud Database)
+ * Connects directly to Turso (libSQL Cloud Database) via Node https
  * Database URL: https://lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io/v2/pipeline
  */
 
-const TURSO_URL = process.env.TURSO_URL || 'https://lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io/v2/pipeline';
+const https = require('https');
+
+const TURSO_HOST = process.env.TURSO_HOST || 'lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io';
+const TURSO_PATH = '/v2/pipeline';
 const TURSO_TOKEN = process.env.TURSO_TOKEN || 'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3OTE5NzMxNzAsImlkIjoiMDFhMTM5ZWMtODQwMS03MWQ4LTlkOTMtNzhkODc0YTAyMGYwIiwia2lkIjoicnNxM3J2QXI5MFloTkV0SGltMjhrRjVoUzBTbG1xcHc0M3JOVFRCaEZPUSIsInJpZCI6IjQxYmFhNzgyLTE3YWItNDA1OS1iYjNjLTFhMWZiOWQ0MGVlYSJ9.tbXd-bx8rF6-CVOlCmIwAgJZZzzCNCDqLG_w8iguGuOKLoKmgncFlFcnt5plBzRikzmYcAanKJKlgy3eOAenAw';
 const ADMIN_PASSKEY = process.env.ADMIN_PASSKEY || 'qamoos53';
+
+function tursoRequest(payload) {
+  return new Promise((resolve, reject) => {
+    const postData = JSON.stringify(payload);
+    const options = {
+      hostname: TURSO_HOST,
+      port: 443,
+      path: TURSO_PATH,
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${TURSO_TOKEN}`,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(postData),
+        'User-Agent': 'Huruf-Vercel/1.0'
+      },
+      timeout: 15000
+    };
+
+    const req = https.request(options, (res) => {
+      let responseBody = '';
+      res.setEncoding('utf8');
+      res.on('data', chunk => { responseBody += chunk; });
+      res.on('end', () => {
+        if (res.statusCode >= 400) {
+          return reject(new Error(`Turso HTTP ${res.statusCode}: ${responseBody}`));
+        }
+        try {
+          resolve(JSON.parse(responseBody));
+        } catch (err) {
+          reject(new Error(`Invalid JSON from Turso: ${responseBody.slice(0, 100)}`));
+        }
+      });
+    });
+
+    req.on('error', (err) => {
+      reject(new Error(`Turso connection error: ${err.message || err.code}`));
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      reject(new Error('Turso connection timed out after 15s'));
+    });
+
+    req.write(postData);
+    req.end();
+  });
+}
 
 async function tursoQuery(sql, args = []) {
   const convertedArgs = args.map(a => {
@@ -24,21 +74,7 @@ async function tursoQuery(sql, args = []) {
     ]
   };
 
-  const response = await fetch(TURSO_URL, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${TURSO_TOKEN}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  });
-
-  if (!response.ok) {
-    const errText = await response.text();
-    throw new Error(`Turso HTTP error ${response.status}: ${errText}`);
-  }
-
-  const data = await response.json();
+  const data = await tursoRequest(payload);
   const res = data.results && data.results[0];
   if (!res) throw new Error('Empty result from Turso pipeline');
   if (res.type === 'error') {
@@ -104,7 +140,7 @@ module.exports = async function handler(req, res) {
 
       return res.status(200).json({
         database: 'Turso (libSQL Cloud)',
-        turso_host: 'lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io',
+        turso_host: TURSO_HOST,
         total_words: total,
         pending: statusMap['pending'] || 0,
         flagged: statusMap['flagged'] || 0,
@@ -379,7 +415,10 @@ module.exports = async function handler(req, res) {
     return res.status(404).json({ error: `Not found: ${req.method} ${pathname}` });
   } catch (err) {
     console.error('API Error:', err);
-    return res.status(500).json({ error: err.message || 'Internal server error' });
+    return res.status(500).json({
+      error: err.message || 'Internal server error',
+      code: err.code || null
+    });
   }
 };
 
