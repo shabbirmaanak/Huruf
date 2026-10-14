@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisan al-Dawat Lexicon & Spell Bank | لسان الدعوة الغراء</title>
+  
+  <!-- Typography Pairing: Amiri & Scheherazade New for Arabic; Newsreader for Editorial Latin; Inter for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-meta">
+        <span class="manuscript-stamp">Scholarly Lexicon & Orthography Archive</span>
+        <div class="header-actions">
+          <button id="add-word-btn" class="btn btn-primary" title="Add a new term to your personal lexicon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Word
+          </button>
+          <button id="export-btn" class="btn btn-outline" title="Export lexicon and spell bank as portable JSON">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Export
+          </button>
+          <button id="import-trigger-btn" class="btn btn-outline" title="Import JSON backup">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            Import
+          </button>
+          <input type="file" id="import-file-input" accept=".json" style="display: none;">
+        </div>
+      </div>
+
+      <div class="title-row">
+        <h1 class="arabic-main-title">لسان الدعوة الغراء — المعجم وبنك الإملاء</h1>
+        <h2 class="english-main-title">Lisan al-Dawat Lexicon & Spell Bank</h2>
+      </div>
+
+      <p class="app-description">
+        A distraction-free reference dictionary and active orthography coach for Lisan al-Dawat. Every term is grounded in dual-tier context: everyday sentence usage and classical textual prose.
+      </p>
+    </header>
+
+    <!-- Filter & Search Section -->
+    <section class="filter-section">
+      <div class="search-box-wrapper">
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Search in Arabic script, Roman transliteration, Gujarati, or English..." 
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button id="clear-search-btn" class="clear-search-btn" title="Clear search">×</button>
+        <div class="search-shortcut-hint" id="search-shortcut-hint">
+          <span class="kbd">/</span>
+        </div>
+      </div>
+
+      <div class="nav-and-origins">
+        <!-- Main Tabs -->
+        <nav class="tab-nav">
+          <button class="tab-btn active" data-tab="all" id="tab-all">
+            All Words <span class="tab-count" id="count-all">0</span>
+          </button>
+          <button class="tab-btn" data-tab="spellbank" id="tab-spellbank">
+            My Spell Bank <span class="tab-count" id="count-spellbank">0</span>
+          </button>
+        </nav>
+
+        <!-- Etymological Origin Filter Pills -->
+        <div class="origin-pills">
+          <button class="pill-btn active" data-origin="all">All Origins</button>
+          <button class="pill-btn" data-origin="Arabic">Arabic Roots</button>
+          <button class="pill-btn" data-origin="Persian">Persian / Urdu</button>
+          <button class="pill-btn" data-origin="Gujarati">Gujarati Idioms</button>
+          <button class="pill-btn" data-origin="Compound">Compounds</button>
+        </div>
+      </div>
+
+      <!-- Spell Bank Mastery Level Sub-Filters -->
+      <div class="spell-bank-subfilters" id="spellbank-subfilters">
+        <span class="subfilter-label">Mastery Filter:</span>
+        <button class="pill-btn active" data-mastery="all">All Saved</button>
+        <button class="pill-btn" data-mastery="learning">Learning</button>
+        <button class="pill-btn" data-mastery="reviewing">Reviewing</button>
+        <button class="pill-btn" data-mastery="mastered">Mastered</button>
+      </div>
+    </section>
+
+    <!-- Word Cards Stack -->
+    <main id="lexicon-list" class="lexicon-list">
+      <!-- Word cards will be rendered dynamically here -->
+    </main>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state" style="display: none;">
+      <div class="empty-icon">❦</div>
+      <h3 class="empty-title" id="empty-title">No Entries Found</h3>
+      <p class="empty-text" id="empty-message">No lexicon records match your search criteria. Try modifying your search term or filter selection.</p>
+      <button id="reset-filters-btn" class="btn btn-outline">Clear Filters & Search</button>
+    </div>
+
+  </div>
+
+  <!-- Slide-Over Add Word Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="slide-drawer" id="add-word-drawer" aria-labelledby="drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <h3 class="drawer-title" id="drawer-title">Add New Word Entry</h3>
+      <button class="close-drawer-btn" id="close-drawer-btn" title="Close drawer">&times;</button>
+    </div>
+
+    <form id="add-word-form" class="drawer-body">
+      <!-- Arabic Headword & Transliteration -->
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="input-arabic">
+            Arabic Script <span class="required-mark">*</span>
+          </label>
+          <input type="text" id="input-arabic" class="form-input arabic-input" placeholder="مثلاً: بَرَكَت" required>
+          <span class="form-hint">Supports Tashkeel diacritics</span>
+          <span class="form-error" id="error-arabic">Valid Arabic script is required.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-transliteration">
+            Transliteration <span class="required-mark">*</span>
+          </label>
+          <input type="text" id="input-transliteration" class="form-input" placeholder="e.g. Barakat" required>
+          <span class="form-hint">Latin scholarly spelling</span>
+          <span class="form-error" id="error-transliteration">Transliteration is required.</span>
+        </div>
+      </div>
+
+      <!-- Gujarati Phonetic & Part of Speech -->
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="input-gujarati">Gujarati Transcription</label>
+          <input type="text" id="input-gujarati" class="form-input" placeholder="દા.ત. બરકત">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-pos">Part of Speech</label>
+          <select id="input-pos" class="form-select">
+            <option value="Noun">Noun</option>
+            <option value="Verb">Verb</option>
+            <option value="Adjective">Adjective</option>
+            <option value="Particle">Particle</option>
+            <option value="Compound">Compound</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Origin & Root Letters -->
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="input-origin">Language Origin</label>
+          <select id="input-origin" class="form-select">
+            <option value="Arabic">Arabic</option>
+            <option value="Persian">Persian / Urdu</option>
+            <option value="Gujarati">Gujarati / Vernacular</option>
+            <option value="Compound">Compound / Hybrid</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-root">Root Letters (جذر)</label>
+          <input type="text" id="input-root" class="form-input arabic-input" placeholder="مثلاً: ب-ر-ك">
+        </div>
+      </div>
+
+      <!-- Primary Definition -->
+      <div class="form-group">
+        <label class="form-label" for="input-definition">
+          English Definition <span class="required-mark">*</span>
+        </label>
+        <textarea id="input-definition" class="form-textarea" placeholder="Concise English definition..." required></textarea>
+        <span class="form-error" id="error-definition">Definition is required.</span>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label class="form-label" for="input-notes">Editorial / Cultural Notes</label>
+        <textarea id="input-notes" class="form-textarea" placeholder="Register, ritual context, or Bohra custom notes..."></textarea>
+      </div>
+
+      <!-- Spelling Pitfall & Orthographic Rule -->
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="input-misspellings">Common Misspellings</label>
+          <input type="text" id="input-misspellings" class="form-input arabic-input" placeholder="Comma separated, e.g. اخلاس, سواب">
+          <span class="form-hint">Words often confused phonetically</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-spelling-rule">Orthographic Rule</label>
+          <input type="text" id="input-spelling-rule" class="form-input" placeholder="e.g. Always written with Ṣād (ص), never Sīn.">
+        </div>
+      </div>
+
+      <!-- Tier 1 Context: Sentence Reference -->
+      <div style="border-top: 1px solid var(--border-hairline); padding-top: 1rem; margin-top: 0.5rem;">
+        <span class="manuscript-stamp" style="font-size: 0.7rem; margin-bottom: 0.5rem; display: block;">Tier 1 Context (Sentence Reference)</span>
+        
+        <div class="form-group">
+          <label class="form-label" for="input-sentence-arabic">
+            Sentence in Lisan al-Dawat <span class="required-mark">*</span>
+          </label>
+          <textarea id="input-sentence-arabic" class="form-textarea arabic-input" placeholder="આ સાલ મૌલાનાના કરમ સી રોઝી માં ઘણી બَرَكَت થઈ છે." required></textarea>
+          <span class="form-error" id="error-sentence">Arabic sentence example is required.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-sentence-trans">Sentence English Translation</label>
+          <input type="text" id="input-sentence-trans" class="form-input" placeholder="Idiomatic translation...">
+        </div>
+      </div>
+
+      <!-- Tier 2 Context: Paragraph Reference -->
+      <div style="border-top: 1px solid var(--border-hairline); padding-top: 1rem; margin-top: 0.5rem;">
+        <span class="manuscript-stamp" style="font-size: 0.7rem; margin-bottom: 0.5rem; display: block;">Tier 2 Context (Passage Reference)</span>
+        
+        <div class="form-group">
+          <label class="form-label" for="input-para-context">Passage Context Type</label>
+          <select id="input-para-context" class="form-select">
+            <option value="Bayaan">Bayaan (Sermon / Discourse)</option>
+            <option value="Kalam">Kalam (Poetry / Ode)</option>
+            <option value="Correspondence">Correspondence (Official / Scholarly)</option>
+            <option value="Narrative">Narrative (Historical / Traditional)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-para-arabic">
+            Passage Text in Lisan al-Dawat <span class="required-mark">*</span>
+          </label>
+          <textarea id="input-para-arabic" class="form-textarea arabic-input" rows="3" placeholder="Continuous text demonstrating register and discourse markers..." required></textarea>
+          <span class="form-error" id="error-para">Passage text is required.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-para-trans">Passage English Translation</label>
+          <textarea id="input-para-trans" class="form-textarea" placeholder="Passage translation..."></textarea>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="drawer-footer">
+      <button type="button" class="btn btn-outline" id="cancel-drawer-btn">Cancel</button>
+      <button type="button" class="btn btn-primary" id="save-word-btn">Save Entry</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite">
+    <span id="toast-message">Action confirmed</span>
+  </div>
+
+  <!-- Application Logic (Universal Offline Bundle) -->
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>

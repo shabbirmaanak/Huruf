@@ -1,0 +1,101 @@
+{
+  "app_name": "Qamoos53",
+  "package_name": "com.qamoos53",
+  "version_extracted": "2.3",
+  "source_platform": "Google Play Store / APK",
+  "source_backend": "https://dawatehadiyahattalimna.org",
+  "extraction_timestamp": "2026-10-14T10:06:06.255Z",
+  "statistics": {
+    "total_words": 8587,
+    "active_words": 8578,
+    "words_with_audio": 6864,
+    "words_with_images": 816,
+    "words_with_sentences": 996,
+    "words_with_categories": 957,
+    "total_categories": 20,
+    "total_meanings": 18239,
+    "total_translations": 17738
+  },
+  "thematic_categories": [
+    {
+      "name": "Ashara",
+      "count": 148
+    },
+    {
+      "name": "adad",
+      "count": 130
+    },
+    {
+      "name": "haiwanat",
+      "count": 93
+    },
+    {
+      "name": "aazaa",
+      "count": 75
+    },
+    {
+      "name": "Sheher",
+      "count": 71
+    },
+    {
+      "name": "shugal",
+      "count": 64
+    },
+    {
+      "name": "madressa",
+      "count": 59
+    },
+    {
+      "name": "bagicha",
+      "count": 57
+    },
+    {
+      "name": "phal",
+      "count": 45
+    },
+    {
+      "name": "jazbaat",
+      "count": 44
+    },
+    {
+      "name": "manazir",
+      "count": 36
+    },
+    {
+      "name": "mausam",
+      "count": 35
+    },
+    {
+      "name": "rasoru",
+      "count": 34
+    },
+    {
+      "name": "sabzi",
+      "count": 27
+    },
+    {
+      "name": "safar",
+      "count": 27
+    },
+    {
+      "name": "ashkal",
+      "count": 20
+    },
+    {
+      "name": "hawas_khamsa",
+      "count": 19
+    },
+    {
+      "name": "adwat",
+      "count": 16
+    },
+    {
+      "name": "aasmaan",
+      "count": 14
+    },
+    {
+      "name": "rang",
+      "count": 11
+    }
+  ]
+}

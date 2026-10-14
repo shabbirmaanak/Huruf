@@ -1,0 +1,7 @@
+{
+  "provider": "turso",
+  "turso": {
+    "url": "https://lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io",
+    "tokenEnv": "TURSO_TOKEN"
+  }
+}

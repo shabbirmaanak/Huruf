@@ -1,0 +1,19 @@
+[
+  {
+    "id": "ice-cream",
+    "qamoosId": 3,
+    "arabic": "آئيس كريم",
+    "arabicNormalized": "آئيس كريم",
+    "transliteration": "Ice cream",
+    "gujaratiPhonetic": "",
+    "origin": "Lisan al-Dawat",
+    "partOfSpeech": "Noun",
+    "definition": "Ice cream",
+    "audioUrl": "https://dawatehadiyahattalimna.org/public/storage/3800/277.mp3",
+    "notes": "Reviewed & curated entry from Qamoos53 (ID: 3).",
+    "sentenceReference": {
+      "arabic": "",
+      "translation": ""
+    }
+  }
+]

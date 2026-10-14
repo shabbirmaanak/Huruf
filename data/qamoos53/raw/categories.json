@@ -1,0 +1,5127 @@
+[
+  {
+    "id": 1,
+    "word_id": 4,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 8,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 8,
+    "name": "bagicha"
+  },
+  {
+    "id": 1,
+    "word_id": 10,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 46,
+    "name": "Sheher"
+  },
+  {
+    "id": 3,
+    "word_id": 47,
+    "name": "madressa"
+  },
+  {
+    "id": 1,
+    "word_id": 49,
+    "name": "Sheher"
+  },
+  {
+    "id": 9,
+    "word_id": 57,
+    "name": "phal"
+  },
+  {
+    "id": 3,
+    "word_id": 106,
+    "name": "madressa"
+  },
+  {
+    "id": 4,
+    "word_id": 109,
+    "name": "shugal"
+  },
+  {
+    "id": 5,
+    "word_id": 142,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 3,
+    "word_id": 152,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 160,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 162,
+    "name": "madressa"
+  },
+  {
+    "id": 6,
+    "word_id": 166,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 168,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 177,
+    "name": "adad"
+  },
+  {
+    "id": 7,
+    "word_id": 189,
+    "name": "sabzi"
+  },
+  {
+    "id": 3,
+    "word_id": 191,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 197,
+    "name": "madressa"
+  },
+  {
+    "id": 19,
+    "word_id": 197,
+    "name": "adwat"
+  },
+  {
+    "id": 13,
+    "word_id": 202,
+    "name": "aazaa"
+  },
+  {
+    "id": 1,
+    "word_id": 233,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 240,
+    "name": "shugal"
+  },
+  {
+    "id": 8,
+    "word_id": 245,
+    "name": "haiwanat"
+  },
+  {
+    "id": 11,
+    "word_id": 247,
+    "name": "jazbaat"
+  },
+  {
+    "id": 3,
+    "word_id": 262,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 263,
+    "name": "madressa"
+  },
+  {
+    "id": 9,
+    "word_id": 274,
+    "name": "phal"
+  },
+  {
+    "id": 10,
+    "word_id": 322,
+    "name": "aasmaan"
+  },
+  {
+    "id": 15,
+    "word_id": 322,
+    "name": "manazir"
+  },
+  {
+    "id": 1,
+    "word_id": 335,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 335,
+    "name": "bagicha"
+  },
+  {
+    "id": 1,
+    "word_id": 336,
+    "name": "Sheher"
+  },
+  {
+    "id": 12,
+    "word_id": 370,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 372,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 378,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 379,
+    "name": "Ashara"
+  },
+  {
+    "id": 5,
+    "word_id": 401,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 23,
+    "word_id": 437,
+    "name": "Ashara"
+  },
+  {
+    "id": 11,
+    "word_id": 443,
+    "name": "jazbaat"
+  },
+  {
+    "id": 15,
+    "word_id": 447,
+    "name": "manazir"
+  },
+  {
+    "id": 4,
+    "word_id": 461,
+    "name": "shugal"
+  },
+  {
+    "id": 16,
+    "word_id": 474,
+    "name": "safar"
+  },
+  {
+    "id": 3,
+    "word_id": 479,
+    "name": "madressa"
+  },
+  {
+    "id": 1,
+    "word_id": 490,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 493,
+    "name": "bagicha"
+  },
+  {
+    "id": 2,
+    "word_id": 503,
+    "name": "bagicha"
+  },
+  {
+    "id": 6,
+    "word_id": 506,
+    "name": "adad"
+  },
+  {
+    "id": 3,
+    "word_id": 511,
+    "name": "madressa"
+  },
+  {
+    "id": 11,
+    "word_id": 524,
+    "name": "jazbaat"
+  },
+  {
+    "id": 12,
+    "word_id": 539,
+    "name": "rasoru"
+  },
+  {
+    "id": 8,
+    "word_id": 544,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 553,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 575,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 581,
+    "name": "Sheher"
+  },
+  {
+    "id": 17,
+    "word_id": 592,
+    "name": "mausam"
+  },
+  {
+    "id": 1,
+    "word_id": 598,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 609,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 612,
+    "name": "Ashara"
+  },
+  {
+    "id": 9,
+    "word_id": 613,
+    "name": "phal"
+  },
+  {
+    "id": 8,
+    "word_id": 616,
+    "name": "haiwanat"
+  },
+  {
+    "id": 5,
+    "word_id": 622,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 17,
+    "word_id": 623,
+    "name": "mausam"
+  },
+  {
+    "id": 3,
+    "word_id": 632,
+    "name": "madressa"
+  },
+  {
+    "id": 5,
+    "word_id": 646,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 13,
+    "word_id": 646,
+    "name": "aazaa"
+  },
+  {
+    "id": 6,
+    "word_id": 649,
+    "name": "adad"
+  },
+  {
+    "id": 13,
+    "word_id": 650,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 651,
+    "name": "aazaa"
+  },
+  {
+    "id": 9,
+    "word_id": 653,
+    "name": "phal"
+  },
+  {
+    "id": 5,
+    "word_id": 655,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 13,
+    "word_id": 655,
+    "name": "aazaa"
+  },
+  {
+    "id": 9,
+    "word_id": 674,
+    "name": "phal"
+  },
+  {
+    "id": 15,
+    "word_id": 675,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 681,
+    "name": "Ashara"
+  },
+  {
+    "id": 5,
+    "word_id": 696,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 1,
+    "word_id": 717,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 726,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 728,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 729,
+    "name": "haiwanat"
+  },
+  {
+    "id": 14,
+    "word_id": 731,
+    "name": "ashkal"
+  },
+  {
+    "id": 13,
+    "word_id": 751,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 752,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 760,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 761,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 768,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 771,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 773,
+    "name": "adad"
+  },
+  {
+    "id": 9,
+    "word_id": 775,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 794,
+    "name": "phal"
+  },
+  {
+    "id": 1,
+    "word_id": 795,
+    "name": "Sheher"
+  },
+  {
+    "id": 10,
+    "word_id": 799,
+    "name": "aasmaan"
+  },
+  {
+    "id": 17,
+    "word_id": 799,
+    "name": "mausam"
+  },
+  {
+    "id": 1,
+    "word_id": 801,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 803,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 809,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 817,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 820,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 820,
+    "name": "bagicha"
+  },
+  {
+    "id": 1,
+    "word_id": 822,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 822,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 823,
+    "name": "manazir"
+  },
+  {
+    "id": 13,
+    "word_id": 828,
+    "name": "aazaa"
+  },
+  {
+    "id": 15,
+    "word_id": 876,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 935,
+    "name": "Ashara"
+  },
+  {
+    "id": 10,
+    "word_id": 945,
+    "name": "aasmaan"
+  },
+  {
+    "id": 12,
+    "word_id": 952,
+    "name": "rasoru"
+  },
+  {
+    "id": 7,
+    "word_id": 959,
+    "name": "sabzi"
+  },
+  {
+    "id": 1,
+    "word_id": 968,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 968,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 971,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 973,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 977,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 981,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 984,
+    "name": "Ashara"
+  },
+  {
+    "id": 16,
+    "word_id": 985,
+    "name": "safar"
+  },
+  {
+    "id": 6,
+    "word_id": 988,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 993,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 995,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 999,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1003,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 1010,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 1021,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1022,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1023,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1026,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1032,
+    "name": "Ashara"
+  },
+  {
+    "id": 7,
+    "word_id": 1047,
+    "name": "sabzi"
+  },
+  {
+    "id": 2,
+    "word_id": 1049,
+    "name": "bagicha"
+  },
+  {
+    "id": 8,
+    "word_id": 1049,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 1069,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 1076,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 1081,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 1090,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 1094,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 1111,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 1117,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 1123,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 1124,
+    "name": "Sheher"
+  },
+  {
+    "id": 15,
+    "word_id": 1126,
+    "name": "manazir"
+  },
+  {
+    "id": 7,
+    "word_id": 1129,
+    "name": "sabzi"
+  },
+  {
+    "id": 2,
+    "word_id": 1132,
+    "name": "bagicha"
+  },
+  {
+    "id": 17,
+    "word_id": 1132,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 1141,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 1142,
+    "name": "haiwanat"
+  },
+  {
+    "id": 7,
+    "word_id": 1153,
+    "name": "sabzi"
+  },
+  {
+    "id": 2,
+    "word_id": 1158,
+    "name": "bagicha"
+  },
+  {
+    "id": 4,
+    "word_id": 1160,
+    "name": "shugal"
+  },
+  {
+    "id": 5,
+    "word_id": 1167,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 17,
+    "word_id": 1188,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 1188,
+    "name": "Ashara"
+  },
+  {
+    "id": 18,
+    "word_id": 1192,
+    "name": "rang"
+  },
+  {
+    "id": 8,
+    "word_id": 1207,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 1213,
+    "name": "haiwanat"
+  },
+  {
+    "id": 1,
+    "word_id": 1217,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 1218,
+    "name": "Ashara"
+  },
+  {
+    "id": 9,
+    "word_id": 1222,
+    "name": "phal"
+  },
+  {
+    "id": 1,
+    "word_id": 1224,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 1225,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1226,
+    "name": "Ashara"
+  },
+  {
+    "id": 12,
+    "word_id": 1234,
+    "name": "rasoru"
+  },
+  {
+    "id": 1,
+    "word_id": 1240,
+    "name": "Sheher"
+  },
+  {
+    "id": 6,
+    "word_id": 1244,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 1252,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 1253,
+    "name": "adad"
+  },
+  {
+    "id": 11,
+    "word_id": 1260,
+    "name": "jazbaat"
+  },
+  {
+    "id": 6,
+    "word_id": 1262,
+    "name": "adad"
+  },
+  {
+    "id": 8,
+    "word_id": 1263,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 1268,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 1290,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 1290,
+    "name": "shugal"
+  },
+  {
+    "id": 10,
+    "word_id": 1292,
+    "name": "aasmaan"
+  },
+  {
+    "id": 14,
+    "word_id": 1292,
+    "name": "ashkal"
+  },
+  {
+    "id": 15,
+    "word_id": 1292,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 1298,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1299,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 1304,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 1304,
+    "name": "manazir"
+  },
+  {
+    "id": 8,
+    "word_id": 1336,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 1339,
+    "name": "Ashara"
+  },
+  {
+    "id": 12,
+    "word_id": 1341,
+    "name": "rasoru"
+  },
+  {
+    "id": 1,
+    "word_id": 1342,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 1343,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 1343,
+    "name": "shugal"
+  },
+  {
+    "id": 13,
+    "word_id": 1381,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 1382,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 1403,
+    "name": "phal"
+  },
+  {
+    "id": 12,
+    "word_id": 1412,
+    "name": "rasoru"
+  },
+  {
+    "id": 2,
+    "word_id": 1415,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 1415,
+    "name": "manazir"
+  },
+  {
+    "id": 8,
+    "word_id": 1419,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 1425,
+    "name": "shugal"
+  },
+  {
+    "id": 11,
+    "word_id": 1463,
+    "name": "jazbaat"
+  },
+  {
+    "id": 9,
+    "word_id": 1480,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 1481,
+    "name": "phal"
+  },
+  {
+    "id": 23,
+    "word_id": 1482,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 1485,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 1485,
+    "name": "bagicha"
+  },
+  {
+    "id": 11,
+    "word_id": 1527,
+    "name": "jazbaat"
+  },
+  {
+    "id": 9,
+    "word_id": 1559,
+    "name": "phal"
+  },
+  {
+    "id": 23,
+    "word_id": 1568,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 1572,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 1583,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 1587,
+    "name": "Ashara"
+  },
+  {
+    "id": 12,
+    "word_id": 1596,
+    "name": "rasoru"
+  },
+  {
+    "id": 17,
+    "word_id": 1623,
+    "name": "mausam"
+  },
+  {
+    "id": 6,
+    "word_id": 1626,
+    "name": "adad"
+  },
+  {
+    "id": 12,
+    "word_id": 1638,
+    "name": "rasoru"
+  },
+  {
+    "id": 16,
+    "word_id": 1654,
+    "name": "safar"
+  },
+  {
+    "id": 17,
+    "word_id": 1671,
+    "name": "mausam"
+  },
+  {
+    "id": 14,
+    "word_id": 1673,
+    "name": "ashkal"
+  },
+  {
+    "id": 2,
+    "word_id": 1680,
+    "name": "bagicha"
+  },
+  {
+    "id": 9,
+    "word_id": 1685,
+    "name": "phal"
+  },
+  {
+    "id": 8,
+    "word_id": 1697,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 1701,
+    "name": "aazaa"
+  },
+  {
+    "id": 2,
+    "word_id": 1728,
+    "name": "bagicha"
+  },
+  {
+    "id": 8,
+    "word_id": 1729,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 1732,
+    "name": "aazaa"
+  },
+  {
+    "id": 17,
+    "word_id": 1734,
+    "name": "mausam"
+  },
+  {
+    "id": 17,
+    "word_id": 1741,
+    "name": "mausam"
+  },
+  {
+    "id": 10,
+    "word_id": 1747,
+    "name": "aasmaan"
+  },
+  {
+    "id": 9,
+    "word_id": 1753,
+    "name": "phal"
+  },
+  {
+    "id": 23,
+    "word_id": 1760,
+    "name": "Ashara"
+  },
+  {
+    "id": 16,
+    "word_id": 1788,
+    "name": "safar"
+  },
+  {
+    "id": 2,
+    "word_id": 1797,
+    "name": "bagicha"
+  },
+  {
+    "id": 8,
+    "word_id": 1797,
+    "name": "haiwanat"
+  },
+  {
+    "id": 10,
+    "word_id": 1797,
+    "name": "aasmaan"
+  },
+  {
+    "id": 15,
+    "word_id": 1797,
+    "name": "manazir"
+  },
+  {
+    "id": 8,
+    "word_id": 1803,
+    "name": "haiwanat"
+  },
+  {
+    "id": 11,
+    "word_id": 1813,
+    "name": "jazbaat"
+  },
+  {
+    "id": 16,
+    "word_id": 1818,
+    "name": "safar"
+  },
+  {
+    "id": 17,
+    "word_id": 1827,
+    "name": "mausam"
+  },
+  {
+    "id": 15,
+    "word_id": 1832,
+    "name": "manazir"
+  },
+  {
+    "id": 12,
+    "word_id": 1835,
+    "name": "rasoru"
+  },
+  {
+    "id": 12,
+    "word_id": 1836,
+    "name": "rasoru"
+  },
+  {
+    "id": 13,
+    "word_id": 1837,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 1848,
+    "name": "aazaa"
+  },
+  {
+    "id": 9,
+    "word_id": 1849,
+    "name": "phal"
+  },
+  {
+    "id": 2,
+    "word_id": 1886,
+    "name": "bagicha"
+  },
+  {
+    "id": 9,
+    "word_id": 1886,
+    "name": "phal"
+  },
+  {
+    "id": 15,
+    "word_id": 1886,
+    "name": "manazir"
+  },
+  {
+    "id": 2,
+    "word_id": 1888,
+    "name": "bagicha"
+  },
+  {
+    "id": 16,
+    "word_id": 1894,
+    "name": "safar"
+  },
+  {
+    "id": 7,
+    "word_id": 1903,
+    "name": "sabzi"
+  },
+  {
+    "id": 2,
+    "word_id": 1905,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 1905,
+    "name": "manazir"
+  },
+  {
+    "id": 7,
+    "word_id": 1911,
+    "name": "sabzi"
+  },
+  {
+    "id": 8,
+    "word_id": 1924,
+    "name": "haiwanat"
+  },
+  {
+    "id": 1,
+    "word_id": 1936,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 1936,
+    "name": "shugal"
+  },
+  {
+    "id": 17,
+    "word_id": 1937,
+    "name": "mausam"
+  },
+  {
+    "id": 7,
+    "word_id": 1946,
+    "name": "sabzi"
+  },
+  {
+    "id": 12,
+    "word_id": 1948,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 1965,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 1972,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 1976,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 1977,
+    "name": "aazaa"
+  },
+  {
+    "id": 18,
+    "word_id": 1985,
+    "name": "rang"
+  },
+  {
+    "id": 19,
+    "word_id": 1988,
+    "name": "adwat"
+  },
+  {
+    "id": 1,
+    "word_id": 1998,
+    "name": "Sheher"
+  },
+  {
+    "id": 9,
+    "word_id": 2004,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 2005,
+    "name": "phal"
+  },
+  {
+    "id": 13,
+    "word_id": 2017,
+    "name": "aazaa"
+  },
+  {
+    "id": 1,
+    "word_id": 2021,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 2039,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 2040,
+    "name": "Sheher"
+  },
+  {
+    "id": 18,
+    "word_id": 2041,
+    "name": "rang"
+  },
+  {
+    "id": 15,
+    "word_id": 2070,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 2080,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 2100,
+    "name": "bagicha"
+  },
+  {
+    "id": 5,
+    "word_id": 2120,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 8,
+    "word_id": 2126,
+    "name": "haiwanat"
+  },
+  {
+    "id": 12,
+    "word_id": 2131,
+    "name": "rasoru"
+  },
+  {
+    "id": 8,
+    "word_id": 2159,
+    "name": "haiwanat"
+  },
+  {
+    "id": 3,
+    "word_id": 2181,
+    "name": "madressa"
+  },
+  {
+    "id": 15,
+    "word_id": 2192,
+    "name": "manazir"
+  },
+  {
+    "id": 15,
+    "word_id": 2193,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 2193,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 2195,
+    "name": "haiwanat"
+  },
+  {
+    "id": 2,
+    "word_id": 2210,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 2210,
+    "name": "manazir"
+  },
+  {
+    "id": 13,
+    "word_id": 2219,
+    "name": "aazaa"
+  },
+  {
+    "id": 4,
+    "word_id": 2226,
+    "name": "shugal"
+  },
+  {
+    "id": 15,
+    "word_id": 2231,
+    "name": "manazir"
+  },
+  {
+    "id": 2,
+    "word_id": 2248,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 2253,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 2254,
+    "name": "haiwanat"
+  },
+  {
+    "id": 3,
+    "word_id": 2257,
+    "name": "madressa"
+  },
+  {
+    "id": 4,
+    "word_id": 2279,
+    "name": "shugal"
+  },
+  {
+    "id": 1,
+    "word_id": 2309,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 2309,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 2346,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 2355,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 2357,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 2358,
+    "name": "haiwanat"
+  },
+  {
+    "id": 10,
+    "word_id": 2359,
+    "name": "aasmaan"
+  },
+  {
+    "id": 15,
+    "word_id": 2359,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 2372,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 2380,
+    "name": "Ashara"
+  },
+  {
+    "id": 12,
+    "word_id": 2400,
+    "name": "rasoru"
+  },
+  {
+    "id": 12,
+    "word_id": 2407,
+    "name": "rasoru"
+  },
+  {
+    "id": 13,
+    "word_id": 2420,
+    "name": "aazaa"
+  },
+  {
+    "id": 17,
+    "word_id": 2432,
+    "name": "mausam"
+  },
+  {
+    "id": 13,
+    "word_id": 2443,
+    "name": "aazaa"
+  },
+  {
+    "id": 12,
+    "word_id": 2445,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 2445,
+    "name": "Ashara"
+  },
+  {
+    "id": 9,
+    "word_id": 2448,
+    "name": "phal"
+  },
+  {
+    "id": 14,
+    "word_id": 2473,
+    "name": "ashkal"
+  },
+  {
+    "id": 14,
+    "word_id": 2477,
+    "name": "ashkal"
+  },
+  {
+    "id": 12,
+    "word_id": 2490,
+    "name": "rasoru"
+  },
+  {
+    "id": 8,
+    "word_id": 2499,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 2506,
+    "name": "phal"
+  },
+  {
+    "id": 8,
+    "word_id": 2509,
+    "name": "haiwanat"
+  },
+  {
+    "id": 2,
+    "word_id": 2523,
+    "name": "bagicha"
+  },
+  {
+    "id": 17,
+    "word_id": 2526,
+    "name": "mausam"
+  },
+  {
+    "id": 1,
+    "word_id": 2527,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 2533,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 2534,
+    "name": "Sheher"
+  },
+  {
+    "id": 11,
+    "word_id": 2535,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 2538,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 2551,
+    "name": "adad"
+  },
+  {
+    "id": 11,
+    "word_id": 2555,
+    "name": "jazbaat"
+  },
+  {
+    "id": 6,
+    "word_id": 2568,
+    "name": "adad"
+  },
+  {
+    "id": 1,
+    "word_id": 2583,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 2604,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 2605,
+    "name": "shugal"
+  },
+  {
+    "id": 13,
+    "word_id": 2615,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 2615,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 2617,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 2617,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 2651,
+    "name": "Sheher"
+  },
+  {
+    "id": 11,
+    "word_id": 2662,
+    "name": "jazbaat"
+  },
+  {
+    "id": 4,
+    "word_id": 2675,
+    "name": "shugal"
+  },
+  {
+    "id": 9,
+    "word_id": 2731,
+    "name": "phal"
+  },
+  {
+    "id": 17,
+    "word_id": 2741,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 2742,
+    "name": "Ashara"
+  },
+  {
+    "id": 17,
+    "word_id": 2743,
+    "name": "mausam"
+  },
+  {
+    "id": 4,
+    "word_id": 2745,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 2765,
+    "name": "Ashara"
+  },
+  {
+    "id": 4,
+    "word_id": 2766,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 2811,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 2813,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 2814,
+    "name": "aazaa"
+  },
+  {
+    "id": 11,
+    "word_id": 2828,
+    "name": "jazbaat"
+  },
+  {
+    "id": 11,
+    "word_id": 2830,
+    "name": "jazbaat"
+  },
+  {
+    "id": 2,
+    "word_id": 2834,
+    "name": "bagicha"
+  },
+  {
+    "id": 5,
+    "word_id": 2834,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 11,
+    "word_id": 2842,
+    "name": "jazbaat"
+  },
+  {
+    "id": 7,
+    "word_id": 2849,
+    "name": "sabzi"
+  },
+  {
+    "id": 15,
+    "word_id": 2860,
+    "name": "manazir"
+  },
+  {
+    "id": 16,
+    "word_id": 2860,
+    "name": "safar"
+  },
+  {
+    "id": 16,
+    "word_id": 2861,
+    "name": "safar"
+  },
+  {
+    "id": 23,
+    "word_id": 2861,
+    "name": "Ashara"
+  },
+  {
+    "id": 14,
+    "word_id": 2867,
+    "name": "ashkal"
+  },
+  {
+    "id": 1,
+    "word_id": 2878,
+    "name": "Sheher"
+  },
+  {
+    "id": 13,
+    "word_id": 2886,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 2887,
+    "name": "aazaa"
+  },
+  {
+    "id": 4,
+    "word_id": 2897,
+    "name": "shugal"
+  },
+  {
+    "id": 13,
+    "word_id": 2906,
+    "name": "aazaa"
+  },
+  {
+    "id": 12,
+    "word_id": 2916,
+    "name": "rasoru"
+  },
+  {
+    "id": 11,
+    "word_id": 2921,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 2933,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 2934,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 2936,
+    "name": "madressa"
+  },
+  {
+    "id": 5,
+    "word_id": 2940,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 4,
+    "word_id": 2942,
+    "name": "shugal"
+  },
+  {
+    "id": 15,
+    "word_id": 2953,
+    "name": "manazir"
+  },
+  {
+    "id": 9,
+    "word_id": 2956,
+    "name": "phal"
+  },
+  {
+    "id": 17,
+    "word_id": 2988,
+    "name": "mausam"
+  },
+  {
+    "id": 8,
+    "word_id": 2990,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 2999,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 3010,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 3016,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 3019,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 3056,
+    "name": "Ashara"
+  },
+  {
+    "id": 17,
+    "word_id": 3068,
+    "name": "mausam"
+  },
+  {
+    "id": 8,
+    "word_id": 3069,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 3081,
+    "name": "haiwanat"
+  },
+  {
+    "id": 6,
+    "word_id": 3091,
+    "name": "adad"
+  },
+  {
+    "id": 8,
+    "word_id": 3102,
+    "name": "haiwanat"
+  },
+  {
+    "id": 7,
+    "word_id": 3104,
+    "name": "sabzi"
+  },
+  {
+    "id": 16,
+    "word_id": 3114,
+    "name": "safar"
+  },
+  {
+    "id": 2,
+    "word_id": 3118,
+    "name": "bagicha"
+  },
+  {
+    "id": 13,
+    "word_id": 3124,
+    "name": "aazaa"
+  },
+  {
+    "id": 5,
+    "word_id": 3142,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 8,
+    "word_id": 3155,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 3157,
+    "name": "shugal"
+  },
+  {
+    "id": 8,
+    "word_id": 3160,
+    "name": "haiwanat"
+  },
+  {
+    "id": 7,
+    "word_id": 3168,
+    "name": "sabzi"
+  },
+  {
+    "id": 2,
+    "word_id": 3208,
+    "name": "bagicha"
+  },
+  {
+    "id": 9,
+    "word_id": 3213,
+    "name": "phal"
+  },
+  {
+    "id": 1,
+    "word_id": 3214,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 3218,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 3226,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 3227,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 3227,
+    "name": "Ashara"
+  },
+  {
+    "id": 19,
+    "word_id": 3243,
+    "name": "adwat"
+  },
+  {
+    "id": 17,
+    "word_id": 3248,
+    "name": "mausam"
+  },
+  {
+    "id": 3,
+    "word_id": 3253,
+    "name": "madressa"
+  },
+  {
+    "id": 16,
+    "word_id": 3270,
+    "name": "safar"
+  },
+  {
+    "id": 3,
+    "word_id": 3271,
+    "name": "madressa"
+  },
+  {
+    "id": 16,
+    "word_id": 3271,
+    "name": "safar"
+  },
+  {
+    "id": 1,
+    "word_id": 3312,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 3322,
+    "name": "shugal"
+  },
+  {
+    "id": 16,
+    "word_id": 3336,
+    "name": "safar"
+  },
+  {
+    "id": 12,
+    "word_id": 3337,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 3340,
+    "name": "Ashara"
+  },
+  {
+    "id": 18,
+    "word_id": 3346,
+    "name": "rang"
+  },
+  {
+    "id": 2,
+    "word_id": 3354,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 3355,
+    "name": "Ashara"
+  },
+  {
+    "id": 7,
+    "word_id": 3357,
+    "name": "sabzi"
+  },
+  {
+    "id": 1,
+    "word_id": 3358,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 3375,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 3376,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 3377,
+    "name": "madressa"
+  },
+  {
+    "id": 1,
+    "word_id": 3391,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 3393,
+    "name": "shugal"
+  },
+  {
+    "id": 5,
+    "word_id": 3407,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 23,
+    "word_id": 3417,
+    "name": "Ashara"
+  },
+  {
+    "id": 17,
+    "word_id": 3418,
+    "name": "mausam"
+  },
+  {
+    "id": 13,
+    "word_id": 3421,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 3431,
+    "name": "Ashara"
+  },
+  {
+    "id": 5,
+    "word_id": 3437,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 13,
+    "word_id": 3437,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 3458,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 3460,
+    "name": "phal"
+  },
+  {
+    "id": 18,
+    "word_id": 3464,
+    "name": "rang"
+  },
+  {
+    "id": 15,
+    "word_id": 3480,
+    "name": "manazir"
+  },
+  {
+    "id": 8,
+    "word_id": 3508,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 3510,
+    "name": "phal"
+  },
+  {
+    "id": 1,
+    "word_id": 3511,
+    "name": "Sheher"
+  },
+  {
+    "id": 15,
+    "word_id": 3533,
+    "name": "manazir"
+  },
+  {
+    "id": 16,
+    "word_id": 3558,
+    "name": "safar"
+  },
+  {
+    "id": 8,
+    "word_id": 3565,
+    "name": "haiwanat"
+  },
+  {
+    "id": 5,
+    "word_id": 3570,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 3,
+    "word_id": 3585,
+    "name": "madressa"
+  },
+  {
+    "id": 6,
+    "word_id": 3590,
+    "name": "adad"
+  },
+  {
+    "id": 4,
+    "word_id": 3593,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 3595,
+    "name": "shugal"
+  },
+  {
+    "id": 17,
+    "word_id": 3646,
+    "name": "mausam"
+  },
+  {
+    "id": 1,
+    "word_id": 3649,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 3649,
+    "name": "bagicha"
+  },
+  {
+    "id": 17,
+    "word_id": 3649,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 3657,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 3671,
+    "name": "haiwanat"
+  },
+  {
+    "id": 16,
+    "word_id": 3683,
+    "name": "safar"
+  },
+  {
+    "id": 12,
+    "word_id": 3686,
+    "name": "rasoru"
+  },
+  {
+    "id": 9,
+    "word_id": 3687,
+    "name": "phal"
+  },
+  {
+    "id": 18,
+    "word_id": 3688,
+    "name": "rang"
+  },
+  {
+    "id": 23,
+    "word_id": 3691,
+    "name": "Ashara"
+  },
+  {
+    "id": 11,
+    "word_id": 3711,
+    "name": "jazbaat"
+  },
+  {
+    "id": 4,
+    "word_id": 3728,
+    "name": "shugal"
+  },
+  {
+    "id": 8,
+    "word_id": 3735,
+    "name": "haiwanat"
+  },
+  {
+    "id": 5,
+    "word_id": 3796,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 16,
+    "word_id": 3797,
+    "name": "safar"
+  },
+  {
+    "id": 16,
+    "word_id": 3798,
+    "name": "safar"
+  },
+  {
+    "id": 10,
+    "word_id": 3812,
+    "name": "aasmaan"
+  },
+  {
+    "id": 15,
+    "word_id": 3812,
+    "name": "manazir"
+  },
+  {
+    "id": 6,
+    "word_id": 3817,
+    "name": "adad"
+  },
+  {
+    "id": 4,
+    "word_id": 3834,
+    "name": "shugal"
+  },
+  {
+    "id": 17,
+    "word_id": 3837,
+    "name": "mausam"
+  },
+  {
+    "id": 3,
+    "word_id": 3855,
+    "name": "madressa"
+  },
+  {
+    "id": 7,
+    "word_id": 3857,
+    "name": "sabzi"
+  },
+  {
+    "id": 6,
+    "word_id": 3860,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 3860,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 3862,
+    "name": "aazaa"
+  },
+  {
+    "id": 4,
+    "word_id": 3865,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 3874,
+    "name": "shugal"
+  },
+  {
+    "id": 17,
+    "word_id": 3897,
+    "name": "mausam"
+  },
+  {
+    "id": 8,
+    "word_id": 3900,
+    "name": "haiwanat"
+  },
+  {
+    "id": 2,
+    "word_id": 3904,
+    "name": "bagicha"
+  },
+  {
+    "id": 12,
+    "word_id": 3921,
+    "name": "rasoru"
+  },
+  {
+    "id": 1,
+    "word_id": 3925,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 3925,
+    "name": "shugal"
+  },
+  {
+    "id": 11,
+    "word_id": 3929,
+    "name": "jazbaat"
+  },
+  {
+    "id": 3,
+    "word_id": 3940,
+    "name": "madressa"
+  },
+  {
+    "id": 4,
+    "word_id": 3947,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 3963,
+    "name": "shugal"
+  },
+  {
+    "id": 12,
+    "word_id": 3965,
+    "name": "rasoru"
+  },
+  {
+    "id": 11,
+    "word_id": 3966,
+    "name": "jazbaat"
+  },
+  {
+    "id": 14,
+    "word_id": 3971,
+    "name": "ashkal"
+  },
+  {
+    "id": 12,
+    "word_id": 4004,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 4008,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 4063,
+    "name": "Sheher"
+  },
+  {
+    "id": 23,
+    "word_id": 4082,
+    "name": "Ashara"
+  },
+  {
+    "id": 4,
+    "word_id": 4094,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 4114,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 4137,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 4142,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 4165,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 4167,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 4168,
+    "name": "madressa"
+  },
+  {
+    "id": 7,
+    "word_id": 4169,
+    "name": "sabzi"
+  },
+  {
+    "id": 3,
+    "word_id": 4172,
+    "name": "madressa"
+  },
+  {
+    "id": 4,
+    "word_id": 4175,
+    "name": "shugal"
+  },
+  {
+    "id": 1,
+    "word_id": 4184,
+    "name": "Sheher"
+  },
+  {
+    "id": 3,
+    "word_id": 4196,
+    "name": "madressa"
+  },
+  {
+    "id": 23,
+    "word_id": 4201,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 4204,
+    "name": "madressa"
+  },
+  {
+    "id": 17,
+    "word_id": 4208,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 4210,
+    "name": "Ashara"
+  },
+  {
+    "id": 11,
+    "word_id": 4220,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 4250,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 4280,
+    "name": "Sheher"
+  },
+  {
+    "id": 2,
+    "word_id": 4300,
+    "name": "bagicha"
+  },
+  {
+    "id": 6,
+    "word_id": 4311,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 4337,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 4338,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 4358,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 4361,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 4366,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 4367,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 4369,
+    "name": "madressa"
+  },
+  {
+    "id": 16,
+    "word_id": 4369,
+    "name": "safar"
+  },
+  {
+    "id": 13,
+    "word_id": 4373,
+    "name": "aazaa"
+  },
+  {
+    "id": 3,
+    "word_id": 4406,
+    "name": "madressa"
+  },
+  {
+    "id": 23,
+    "word_id": 4415,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 4427,
+    "name": "Sheher"
+  },
+  {
+    "id": 3,
+    "word_id": 4427,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 4450,
+    "name": "madressa"
+  },
+  {
+    "id": 2,
+    "word_id": 4494,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 4494,
+    "name": "manazir"
+  },
+  {
+    "id": 8,
+    "word_id": 4512,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 4517,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 4518,
+    "name": "Ashara"
+  },
+  {
+    "id": 11,
+    "word_id": 4520,
+    "name": "jazbaat"
+  },
+  {
+    "id": 11,
+    "word_id": 4539,
+    "name": "jazbaat"
+  },
+  {
+    "id": 11,
+    "word_id": 4542,
+    "name": "jazbaat"
+  },
+  {
+    "id": 16,
+    "word_id": 4585,
+    "name": "safar"
+  },
+  {
+    "id": 2,
+    "word_id": 4618,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 4622,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 4628,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 4637,
+    "name": "haiwanat"
+  },
+  {
+    "id": 11,
+    "word_id": 4693,
+    "name": "jazbaat"
+  },
+  {
+    "id": 10,
+    "word_id": 4700,
+    "name": "aasmaan"
+  },
+  {
+    "id": 2,
+    "word_id": 4709,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 4712,
+    "name": "Ashara"
+  },
+  {
+    "id": 7,
+    "word_id": 4714,
+    "name": "sabzi"
+  },
+  {
+    "id": 3,
+    "word_id": 4745,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 4752,
+    "name": "madressa"
+  },
+  {
+    "id": 16,
+    "word_id": 4754,
+    "name": "safar"
+  },
+  {
+    "id": 3,
+    "word_id": 4755,
+    "name": "madressa"
+  },
+  {
+    "id": 1,
+    "word_id": 4764,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 4767,
+    "name": "shugal"
+  },
+  {
+    "id": 16,
+    "word_id": 4767,
+    "name": "safar"
+  },
+  {
+    "id": 13,
+    "word_id": 4791,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 4792,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 4796,
+    "name": "Sheher"
+  },
+  {
+    "id": 3,
+    "word_id": 4797,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 4803,
+    "name": "madressa"
+  },
+  {
+    "id": 2,
+    "word_id": 4830,
+    "name": "bagicha"
+  },
+  {
+    "id": 4,
+    "word_id": 4832,
+    "name": "shugal"
+  },
+  {
+    "id": 3,
+    "word_id": 4834,
+    "name": "madressa"
+  },
+  {
+    "id": 14,
+    "word_id": 4848,
+    "name": "ashkal"
+  },
+  {
+    "id": 23,
+    "word_id": 4848,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 4855,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 4864,
+    "name": "madressa"
+  },
+  {
+    "id": 19,
+    "word_id": 4864,
+    "name": "adwat"
+  },
+  {
+    "id": 11,
+    "word_id": 4873,
+    "name": "jazbaat"
+  },
+  {
+    "id": 10,
+    "word_id": 4889,
+    "name": "aasmaan"
+  },
+  {
+    "id": 3,
+    "word_id": 4890,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 4912,
+    "name": "madressa"
+  },
+  {
+    "id": 19,
+    "word_id": 4913,
+    "name": "adwat"
+  },
+  {
+    "id": 12,
+    "word_id": 4914,
+    "name": "rasoru"
+  },
+  {
+    "id": 8,
+    "word_id": 4918,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 4922,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 4923,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 4924,
+    "name": "shugal"
+  },
+  {
+    "id": 7,
+    "word_id": 4926,
+    "name": "sabzi"
+  },
+  {
+    "id": 19,
+    "word_id": 4932,
+    "name": "adwat"
+  },
+  {
+    "id": 7,
+    "word_id": 4937,
+    "name": "sabzi"
+  },
+  {
+    "id": 8,
+    "word_id": 4938,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 4946,
+    "name": "shugal"
+  },
+  {
+    "id": 3,
+    "word_id": 4951,
+    "name": "madressa"
+  },
+  {
+    "id": 5,
+    "word_id": 4952,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 13,
+    "word_id": 4952,
+    "name": "aazaa"
+  },
+  {
+    "id": 2,
+    "word_id": 4954,
+    "name": "bagicha"
+  },
+  {
+    "id": 13,
+    "word_id": 4958,
+    "name": "aazaa"
+  },
+  {
+    "id": 12,
+    "word_id": 4969,
+    "name": "rasoru"
+  },
+  {
+    "id": 8,
+    "word_id": 4976,
+    "name": "haiwanat"
+  },
+  {
+    "id": 3,
+    "word_id": 4979,
+    "name": "madressa"
+  },
+  {
+    "id": 19,
+    "word_id": 4979,
+    "name": "adwat"
+  },
+  {
+    "id": 8,
+    "word_id": 4987,
+    "name": "haiwanat"
+  },
+  {
+    "id": 1,
+    "word_id": 4995,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 4998,
+    "name": "Sheher"
+  },
+  {
+    "id": 6,
+    "word_id": 5001,
+    "name": "adad"
+  },
+  {
+    "id": 4,
+    "word_id": 5006,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 5031,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 5056,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 5059,
+    "name": "haiwanat"
+  },
+  {
+    "id": 7,
+    "word_id": 5060,
+    "name": "sabzi"
+  },
+  {
+    "id": 16,
+    "word_id": 5065,
+    "name": "safar"
+  },
+  {
+    "id": 13,
+    "word_id": 5066,
+    "name": "aazaa"
+  },
+  {
+    "id": 1,
+    "word_id": 5069,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 5070,
+    "name": "Sheher"
+  },
+  {
+    "id": 1,
+    "word_id": 5071,
+    "name": "Sheher"
+  },
+  {
+    "id": 8,
+    "word_id": 5077,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 5095,
+    "name": "aazaa"
+  },
+  {
+    "id": 10,
+    "word_id": 5102,
+    "name": "aasmaan"
+  },
+  {
+    "id": 17,
+    "word_id": 5103,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 5108,
+    "name": "Ashara"
+  },
+  {
+    "id": 9,
+    "word_id": 5109,
+    "name": "phal"
+  },
+  {
+    "id": 23,
+    "word_id": 5114,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 5117,
+    "name": "bagicha"
+  },
+  {
+    "id": 18,
+    "word_id": 5118,
+    "name": "rang"
+  },
+  {
+    "id": 12,
+    "word_id": 5119,
+    "name": "rasoru"
+  },
+  {
+    "id": 19,
+    "word_id": 5126,
+    "name": "adwat"
+  },
+  {
+    "id": 1,
+    "word_id": 5127,
+    "name": "Sheher"
+  },
+  {
+    "id": 6,
+    "word_id": 5139,
+    "name": "adad"
+  },
+  {
+    "id": 2,
+    "word_id": 5146,
+    "name": "bagicha"
+  },
+  {
+    "id": 11,
+    "word_id": 5148,
+    "name": "jazbaat"
+  },
+  {
+    "id": 17,
+    "word_id": 5151,
+    "name": "mausam"
+  },
+  {
+    "id": 11,
+    "word_id": 5170,
+    "name": "jazbaat"
+  },
+  {
+    "id": 19,
+    "word_id": 5174,
+    "name": "adwat"
+  },
+  {
+    "id": 8,
+    "word_id": 5177,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 5180,
+    "name": "Ashara"
+  },
+  {
+    "id": 7,
+    "word_id": 5193,
+    "name": "sabzi"
+  },
+  {
+    "id": 13,
+    "word_id": 5194,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 5196,
+    "name": "Ashara"
+  },
+  {
+    "id": 14,
+    "word_id": 5200,
+    "name": "ashkal"
+  },
+  {
+    "id": 3,
+    "word_id": 5207,
+    "name": "madressa"
+  },
+  {
+    "id": 12,
+    "word_id": 5208,
+    "name": "rasoru"
+  },
+  {
+    "id": 13,
+    "word_id": 5213,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 5213,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 5226,
+    "name": "haiwanat"
+  },
+  {
+    "id": 2,
+    "word_id": 5232,
+    "name": "bagicha"
+  },
+  {
+    "id": 4,
+    "word_id": 5240,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 5243,
+    "name": "shugal"
+  },
+  {
+    "id": 17,
+    "word_id": 5245,
+    "name": "mausam"
+  },
+  {
+    "id": 13,
+    "word_id": 5247,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 5251,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 5273,
+    "name": "bagicha"
+  },
+  {
+    "id": 1,
+    "word_id": 5275,
+    "name": "Sheher"
+  },
+  {
+    "id": 12,
+    "word_id": 5284,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 5313,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 5320,
+    "name": "Ashara"
+  },
+  {
+    "id": 4,
+    "word_id": 5334,
+    "name": "shugal"
+  },
+  {
+    "id": 7,
+    "word_id": 5350,
+    "name": "sabzi"
+  },
+  {
+    "id": 1,
+    "word_id": 5354,
+    "name": "Sheher"
+  },
+  {
+    "id": 7,
+    "word_id": 5361,
+    "name": "sabzi"
+  },
+  {
+    "id": 13,
+    "word_id": 5367,
+    "name": "aazaa"
+  },
+  {
+    "id": 2,
+    "word_id": 5369,
+    "name": "bagicha"
+  },
+  {
+    "id": 12,
+    "word_id": 5370,
+    "name": "rasoru"
+  },
+  {
+    "id": 17,
+    "word_id": 5371,
+    "name": "mausam"
+  },
+  {
+    "id": 8,
+    "word_id": 5376,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 5377,
+    "name": "phal"
+  },
+  {
+    "id": 8,
+    "word_id": 5384,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 5386,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 5393,
+    "name": "phal"
+  },
+  {
+    "id": 23,
+    "word_id": 5408,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 5416,
+    "name": "adad"
+  },
+  {
+    "id": 18,
+    "word_id": 5418,
+    "name": "rang"
+  },
+  {
+    "id": 11,
+    "word_id": 5421,
+    "name": "jazbaat"
+  },
+  {
+    "id": 13,
+    "word_id": 5430,
+    "name": "aazaa"
+  },
+  {
+    "id": 9,
+    "word_id": 5431,
+    "name": "phal"
+  },
+  {
+    "id": 3,
+    "word_id": 5464,
+    "name": "madressa"
+  },
+  {
+    "id": 7,
+    "word_id": 5466,
+    "name": "sabzi"
+  },
+  {
+    "id": 16,
+    "word_id": 5467,
+    "name": "safar"
+  },
+  {
+    "id": 23,
+    "word_id": 5468,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 5481,
+    "name": "madressa"
+  },
+  {
+    "id": 19,
+    "word_id": 5483,
+    "name": "adwat"
+  },
+  {
+    "id": 3,
+    "word_id": 5485,
+    "name": "madressa"
+  },
+  {
+    "id": 16,
+    "word_id": 5492,
+    "name": "safar"
+  },
+  {
+    "id": 14,
+    "word_id": 5503,
+    "name": "ashkal"
+  },
+  {
+    "id": 14,
+    "word_id": 5505,
+    "name": "ashkal"
+  },
+  {
+    "id": 23,
+    "word_id": 5537,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 5541,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 5543,
+    "name": "shugal"
+  },
+  {
+    "id": 9,
+    "word_id": 5546,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 5552,
+    "name": "phal"
+  },
+  {
+    "id": 5,
+    "word_id": 5568,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 13,
+    "word_id": 5568,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 5582,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 5589,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 5595,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 5605,
+    "name": "Ashara"
+  },
+  {
+    "id": 11,
+    "word_id": 5606,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 5607,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 5608,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 5609,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 5616,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 5635,
+    "name": "bagicha"
+  },
+  {
+    "id": 12,
+    "word_id": 5656,
+    "name": "rasoru"
+  },
+  {
+    "id": 14,
+    "word_id": 5679,
+    "name": "ashkal"
+  },
+  {
+    "id": 8,
+    "word_id": 5725,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 5726,
+    "name": "haiwanat"
+  },
+  {
+    "id": 15,
+    "word_id": 5726,
+    "name": "manazir"
+  },
+  {
+    "id": 1,
+    "word_id": 5788,
+    "name": "Sheher"
+  },
+  {
+    "id": 3,
+    "word_id": 5788,
+    "name": "madressa"
+  },
+  {
+    "id": 4,
+    "word_id": 5788,
+    "name": "shugal"
+  },
+  {
+    "id": 8,
+    "word_id": 5792,
+    "name": "haiwanat"
+  },
+  {
+    "id": 3,
+    "word_id": 5811,
+    "name": "madressa"
+  },
+  {
+    "id": 14,
+    "word_id": 5821,
+    "name": "ashkal"
+  },
+  {
+    "id": 7,
+    "word_id": 5836,
+    "name": "sabzi"
+  },
+  {
+    "id": 8,
+    "word_id": 5850,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 5872,
+    "name": "shugal"
+  },
+  {
+    "id": 16,
+    "word_id": 5891,
+    "name": "safar"
+  },
+  {
+    "id": 12,
+    "word_id": 5896,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 5908,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 5922,
+    "name": "madressa"
+  },
+  {
+    "id": 14,
+    "word_id": 5927,
+    "name": "ashkal"
+  },
+  {
+    "id": 23,
+    "word_id": 5956,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 5979,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 6039,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 6040,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 6072,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 6079,
+    "name": "madressa"
+  },
+  {
+    "id": 8,
+    "word_id": 6170,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 6174,
+    "name": "haiwanat"
+  },
+  {
+    "id": 1,
+    "word_id": 6205,
+    "name": "Sheher"
+  },
+  {
+    "id": 13,
+    "word_id": 6311,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 6379,
+    "name": "haiwanat"
+  },
+  {
+    "id": 7,
+    "word_id": 6401,
+    "name": "sabzi"
+  },
+  {
+    "id": 13,
+    "word_id": 6403,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 6414,
+    "name": "Ashara"
+  },
+  {
+    "id": 1,
+    "word_id": 6421,
+    "name": "Sheher"
+  },
+  {
+    "id": 15,
+    "word_id": 6421,
+    "name": "manazir"
+  },
+  {
+    "id": 11,
+    "word_id": 6443,
+    "name": "jazbaat"
+  },
+  {
+    "id": 11,
+    "word_id": 6448,
+    "name": "jazbaat"
+  },
+  {
+    "id": 11,
+    "word_id": 6449,
+    "name": "jazbaat"
+  },
+  {
+    "id": 13,
+    "word_id": 6461,
+    "name": "aazaa"
+  },
+  {
+    "id": 11,
+    "word_id": 6467,
+    "name": "jazbaat"
+  },
+  {
+    "id": 18,
+    "word_id": 6470,
+    "name": "rang"
+  },
+  {
+    "id": 9,
+    "word_id": 6473,
+    "name": "phal"
+  },
+  {
+    "id": 13,
+    "word_id": 6498,
+    "name": "aazaa"
+  },
+  {
+    "id": 5,
+    "word_id": 6505,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 13,
+    "word_id": 6505,
+    "name": "aazaa"
+  },
+  {
+    "id": 2,
+    "word_id": 6561,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 6564,
+    "name": "Ashara"
+  },
+  {
+    "id": 15,
+    "word_id": 6571,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 6579,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 6589,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 6596,
+    "name": "Ashara"
+  },
+  {
+    "id": 3,
+    "word_id": 6608,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 6619,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 6677,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 6689,
+    "name": "madressa"
+  },
+  {
+    "id": 2,
+    "word_id": 6717,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 6736,
+    "name": "Ashara"
+  },
+  {
+    "id": 4,
+    "word_id": 6747,
+    "name": "shugal"
+  },
+  {
+    "id": 2,
+    "word_id": 6750,
+    "name": "bagicha"
+  },
+  {
+    "id": 3,
+    "word_id": 6750,
+    "name": "madressa"
+  },
+  {
+    "id": 18,
+    "word_id": 6767,
+    "name": "rang"
+  },
+  {
+    "id": 13,
+    "word_id": 6772,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 6778,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 6796,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 6798,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 6807,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 6821,
+    "name": "haiwanat"
+  },
+  {
+    "id": 18,
+    "word_id": 6822,
+    "name": "rang"
+  },
+  {
+    "id": 2,
+    "word_id": 6824,
+    "name": "bagicha"
+  },
+  {
+    "id": 17,
+    "word_id": 6824,
+    "name": "mausam"
+  },
+  {
+    "id": 6,
+    "word_id": 6825,
+    "name": "adad"
+  },
+  {
+    "id": 14,
+    "word_id": 6838,
+    "name": "ashkal"
+  },
+  {
+    "id": 23,
+    "word_id": 6846,
+    "name": "Ashara"
+  },
+  {
+    "id": 10,
+    "word_id": 6876,
+    "name": "aasmaan"
+  },
+  {
+    "id": 13,
+    "word_id": 6887,
+    "name": "aazaa"
+  },
+  {
+    "id": 23,
+    "word_id": 6893,
+    "name": "Ashara"
+  },
+  {
+    "id": 10,
+    "word_id": 6913,
+    "name": "aasmaan"
+  },
+  {
+    "id": 15,
+    "word_id": 6913,
+    "name": "manazir"
+  },
+  {
+    "id": 17,
+    "word_id": 6913,
+    "name": "mausam"
+  },
+  {
+    "id": 23,
+    "word_id": 6922,
+    "name": "Ashara"
+  },
+  {
+    "id": 12,
+    "word_id": 6927,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 6952,
+    "name": "Ashara"
+  },
+  {
+    "id": 7,
+    "word_id": 6956,
+    "name": "sabzi"
+  },
+  {
+    "id": 23,
+    "word_id": 6980,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 6993,
+    "name": "bagicha"
+  },
+  {
+    "id": 17,
+    "word_id": 6995,
+    "name": "mausam"
+  },
+  {
+    "id": 8,
+    "word_id": 7002,
+    "name": "haiwanat"
+  },
+  {
+    "id": 23,
+    "word_id": 7024,
+    "name": "Ashara"
+  },
+  {
+    "id": 10,
+    "word_id": 7086,
+    "name": "aasmaan"
+  },
+  {
+    "id": 15,
+    "word_id": 7086,
+    "name": "manazir"
+  },
+  {
+    "id": 8,
+    "word_id": 7087,
+    "name": "haiwanat"
+  },
+  {
+    "id": 12,
+    "word_id": 7093,
+    "name": "rasoru"
+  },
+  {
+    "id": 23,
+    "word_id": 7103,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7182,
+    "name": "Ashara"
+  },
+  {
+    "id": 11,
+    "word_id": 7186,
+    "name": "jazbaat"
+  },
+  {
+    "id": 11,
+    "word_id": 7187,
+    "name": "jazbaat"
+  },
+  {
+    "id": 15,
+    "word_id": 7193,
+    "name": "manazir"
+  },
+  {
+    "id": 11,
+    "word_id": 7198,
+    "name": "jazbaat"
+  },
+  {
+    "id": 16,
+    "word_id": 7202,
+    "name": "safar"
+  },
+  {
+    "id": 6,
+    "word_id": 7209,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7210,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7211,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7212,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7213,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7214,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7215,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7216,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7217,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7218,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7219,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7220,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7221,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7222,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7223,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7226,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7227,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7228,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7229,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7230,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7231,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7232,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7233,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7234,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7235,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7236,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7237,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7238,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7239,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7240,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7241,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7242,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7243,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7244,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7245,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7246,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7247,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7248,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7249,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7250,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7251,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7252,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7253,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7254,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7255,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7256,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7257,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7258,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7259,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7260,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7261,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7262,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7263,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7264,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7265,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7266,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7267,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7268,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7269,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7270,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7271,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7272,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7273,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7274,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7275,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7276,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7277,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7278,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7279,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7280,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7281,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7282,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7283,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7284,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7285,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7286,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7287,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7288,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7289,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7290,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7291,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7292,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7293,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7294,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7295,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7296,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7297,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7298,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7299,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7300,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7301,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7302,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7303,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7304,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7305,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7306,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7307,
+    "name": "adad"
+  },
+  {
+    "id": 6,
+    "word_id": 7308,
+    "name": "adad"
+  },
+  {
+    "id": 4,
+    "word_id": 7323,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 7324,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 7325,
+    "name": "shugal"
+  },
+  {
+    "id": 11,
+    "word_id": 7335,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 7342,
+    "name": "Ashara"
+  },
+  {
+    "id": 17,
+    "word_id": 7347,
+    "name": "mausam"
+  },
+  {
+    "id": 15,
+    "word_id": 7363,
+    "name": "manazir"
+  },
+  {
+    "id": 13,
+    "word_id": 7367,
+    "name": "aazaa"
+  },
+  {
+    "id": 11,
+    "word_id": 7385,
+    "name": "jazbaat"
+  },
+  {
+    "id": 16,
+    "word_id": 7397,
+    "name": "safar"
+  },
+  {
+    "id": 4,
+    "word_id": 7398,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 7400,
+    "name": "Ashara"
+  },
+  {
+    "id": 2,
+    "word_id": 7403,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 7412,
+    "name": "Ashara"
+  },
+  {
+    "id": 13,
+    "word_id": 7414,
+    "name": "aazaa"
+  },
+  {
+    "id": 2,
+    "word_id": 7416,
+    "name": "bagicha"
+  },
+  {
+    "id": 15,
+    "word_id": 7418,
+    "name": "manazir"
+  },
+  {
+    "id": 23,
+    "word_id": 7420,
+    "name": "Ashara"
+  },
+  {
+    "id": 19,
+    "word_id": 7428,
+    "name": "adwat"
+  },
+  {
+    "id": 11,
+    "word_id": 7438,
+    "name": "jazbaat"
+  },
+  {
+    "id": 6,
+    "word_id": 7467,
+    "name": "adad"
+  },
+  {
+    "id": 4,
+    "word_id": 7488,
+    "name": "shugal"
+  },
+  {
+    "id": 8,
+    "word_id": 7501,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 7503,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 7505,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 7506,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 7511,
+    "name": "aazaa"
+  },
+  {
+    "id": 2,
+    "word_id": 7545,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 7560,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7563,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7572,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7573,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7575,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7579,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7580,
+    "name": "Ashara"
+  },
+  {
+    "id": 6,
+    "word_id": 7585,
+    "name": "adad"
+  },
+  {
+    "id": 23,
+    "word_id": 7585,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 7587,
+    "name": "haiwanat"
+  },
+  {
+    "id": 19,
+    "word_id": 7588,
+    "name": "adwat"
+  },
+  {
+    "id": 23,
+    "word_id": 7590,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7592,
+    "name": "Ashara"
+  },
+  {
+    "id": 23,
+    "word_id": 7595,
+    "name": "Ashara"
+  },
+  {
+    "id": 19,
+    "word_id": 7600,
+    "name": "adwat"
+  },
+  {
+    "id": 12,
+    "word_id": 7612,
+    "name": "rasoru"
+  },
+  {
+    "id": 2,
+    "word_id": 7627,
+    "name": "bagicha"
+  },
+  {
+    "id": 2,
+    "word_id": 7628,
+    "name": "bagicha"
+  },
+  {
+    "id": 2,
+    "word_id": 7636,
+    "name": "bagicha"
+  },
+  {
+    "id": 13,
+    "word_id": 7637,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 7638,
+    "name": "aazaa"
+  },
+  {
+    "id": 4,
+    "word_id": 7647,
+    "name": "shugal"
+  },
+  {
+    "id": 16,
+    "word_id": 7678,
+    "name": "safar"
+  },
+  {
+    "id": 11,
+    "word_id": 7679,
+    "name": "jazbaat"
+  },
+  {
+    "id": 9,
+    "word_id": 7687,
+    "name": "phal"
+  },
+  {
+    "id": 6,
+    "word_id": 7697,
+    "name": "adad"
+  },
+  {
+    "id": 15,
+    "word_id": 7707,
+    "name": "manazir"
+  },
+  {
+    "id": 11,
+    "word_id": 7713,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 7721,
+    "name": "Ashara"
+  },
+  {
+    "id": 15,
+    "word_id": 7770,
+    "name": "manazir"
+  },
+  {
+    "id": 17,
+    "word_id": 7800,
+    "name": "mausam"
+  },
+  {
+    "id": 13,
+    "word_id": 7840,
+    "name": "aazaa"
+  },
+  {
+    "id": 3,
+    "word_id": 7842,
+    "name": "madressa"
+  },
+  {
+    "id": 14,
+    "word_id": 7869,
+    "name": "ashkal"
+  },
+  {
+    "id": 14,
+    "word_id": 7880,
+    "name": "ashkal"
+  },
+  {
+    "id": 13,
+    "word_id": 7882,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 7883,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 7884,
+    "name": "aazaa"
+  },
+  {
+    "id": 19,
+    "word_id": 7900,
+    "name": "adwat"
+  },
+  {
+    "id": 9,
+    "word_id": 7904,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 7905,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 7907,
+    "name": "phal"
+  },
+  {
+    "id": 2,
+    "word_id": 7908,
+    "name": "bagicha"
+  },
+  {
+    "id": 2,
+    "word_id": 7910,
+    "name": "bagicha"
+  },
+  {
+    "id": 9,
+    "word_id": 7913,
+    "name": "phal"
+  },
+  {
+    "id": 4,
+    "word_id": 7929,
+    "name": "shugal"
+  },
+  {
+    "id": 4,
+    "word_id": 7930,
+    "name": "shugal"
+  },
+  {
+    "id": 3,
+    "word_id": 7964,
+    "name": "madressa"
+  },
+  {
+    "id": 3,
+    "word_id": 7969,
+    "name": "madressa"
+  },
+  {
+    "id": 2,
+    "word_id": 7985,
+    "name": "bagicha"
+  },
+  {
+    "id": 2,
+    "word_id": 8000,
+    "name": "bagicha"
+  },
+  {
+    "id": 23,
+    "word_id": 8001,
+    "name": "Ashara"
+  },
+  {
+    "id": 19,
+    "word_id": 8012,
+    "name": "adwat"
+  },
+  {
+    "id": 8,
+    "word_id": 8023,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8026,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8027,
+    "name": "haiwanat"
+  },
+  {
+    "id": 17,
+    "word_id": 8028,
+    "name": "mausam"
+  },
+  {
+    "id": 17,
+    "word_id": 8029,
+    "name": "mausam"
+  },
+  {
+    "id": 5,
+    "word_id": 8030,
+    "name": "hawas_khamsa"
+  },
+  {
+    "id": 11,
+    "word_id": 8031,
+    "name": "jazbaat"
+  },
+  {
+    "id": 23,
+    "word_id": 8034,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 8043,
+    "name": "haiwanat"
+  },
+  {
+    "id": 6,
+    "word_id": 8058,
+    "name": "adad"
+  },
+  {
+    "id": 8,
+    "word_id": 8067,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8069,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8077,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8079,
+    "name": "haiwanat"
+  },
+  {
+    "id": 13,
+    "word_id": 8090,
+    "name": "aazaa"
+  },
+  {
+    "id": 4,
+    "word_id": 8114,
+    "name": "shugal"
+  },
+  {
+    "id": 23,
+    "word_id": 8120,
+    "name": "Ashara"
+  },
+  {
+    "id": 8,
+    "word_id": 8125,
+    "name": "haiwanat"
+  },
+  {
+    "id": 1,
+    "word_id": 8132,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 8145,
+    "name": "shugal"
+  },
+  {
+    "id": 6,
+    "word_id": 8192,
+    "name": "adad"
+  },
+  {
+    "id": 8,
+    "word_id": 8195,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 8197,
+    "name": "phal"
+  },
+  {
+    "id": 13,
+    "word_id": 8221,
+    "name": "aazaa"
+  },
+  {
+    "id": 13,
+    "word_id": 8222,
+    "name": "aazaa"
+  },
+  {
+    "id": 9,
+    "word_id": 8223,
+    "name": "phal"
+  },
+  {
+    "id": 8,
+    "word_id": 8240,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8286,
+    "name": "haiwanat"
+  },
+  {
+    "id": 14,
+    "word_id": 8288,
+    "name": "ashkal"
+  },
+  {
+    "id": 14,
+    "word_id": 8289,
+    "name": "ashkal"
+  },
+  {
+    "id": 9,
+    "word_id": 8329,
+    "name": "phal"
+  },
+  {
+    "id": 4,
+    "word_id": 8355,
+    "name": "shugal"
+  },
+  {
+    "id": 19,
+    "word_id": 8355,
+    "name": "adwat"
+  },
+  {
+    "id": 13,
+    "word_id": 8376,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 8383,
+    "name": "haiwanat"
+  },
+  {
+    "id": 12,
+    "word_id": 8395,
+    "name": "rasoru"
+  },
+  {
+    "id": 8,
+    "word_id": 8412,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8420,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8443,
+    "name": "haiwanat"
+  },
+  {
+    "id": 9,
+    "word_id": 8462,
+    "name": "phal"
+  },
+  {
+    "id": 8,
+    "word_id": 8466,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 8470,
+    "name": "shugal"
+  },
+  {
+    "id": 8,
+    "word_id": 8472,
+    "name": "haiwanat"
+  },
+  {
+    "id": 8,
+    "word_id": 8473,
+    "name": "haiwanat"
+  },
+  {
+    "id": 7,
+    "word_id": 8482,
+    "name": "sabzi"
+  },
+  {
+    "id": 7,
+    "word_id": 8483,
+    "name": "sabzi"
+  },
+  {
+    "id": 11,
+    "word_id": 8488,
+    "name": "jazbaat"
+  },
+  {
+    "id": 15,
+    "word_id": 8498,
+    "name": "manazir"
+  },
+  {
+    "id": 1,
+    "word_id": 8521,
+    "name": "Sheher"
+  },
+  {
+    "id": 8,
+    "word_id": 8535,
+    "name": "haiwanat"
+  },
+  {
+    "id": 11,
+    "word_id": 8536,
+    "name": "jazbaat"
+  },
+  {
+    "id": 1,
+    "word_id": 8538,
+    "name": "Sheher"
+  },
+  {
+    "id": 4,
+    "word_id": 8538,
+    "name": "shugal"
+  },
+  {
+    "id": 13,
+    "word_id": 8562,
+    "name": "aazaa"
+  },
+  {
+    "id": 9,
+    "word_id": 8582,
+    "name": "phal"
+  },
+  {
+    "id": 9,
+    "word_id": 8593,
+    "name": "phal"
+  },
+  {
+    "id": 14,
+    "word_id": 8601,
+    "name": "ashkal"
+  },
+  {
+    "id": 11,
+    "word_id": 8614,
+    "name": "jazbaat"
+  },
+  {
+    "id": 8,
+    "word_id": 8640,
+    "name": "haiwanat"
+  },
+  {
+    "id": 11,
+    "word_id": 8652,
+    "name": "jazbaat"
+  },
+  {
+    "id": 13,
+    "word_id": 8657,
+    "name": "aazaa"
+  },
+  {
+    "id": 8,
+    "word_id": 8676,
+    "name": "haiwanat"
+  },
+  {
+    "id": 4,
+    "word_id": 8680,
+    "name": "shugal"
+  },
+  {
+    "id": 2,
+    "word_id": 8686,
+    "name": "bagicha"
+  }
+]

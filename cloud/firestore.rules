@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Qamoos Words Collection
+    match /qamoos_words/{wordId} {
+      // Anyone can read approved entries
+      allow read: if true;
+      
+      // Only authenticated team members / editors can modify or curate
+      allow write: if request.auth != null;
+    }
+    
+    // Default deny for other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

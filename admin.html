@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لسان الدعوة — Editorial Studio & Orthography Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+  <!-- Top Studio Header -->
+  <header class="studio-header">
+    <div class="brand-section">
+      <span class="brand-arabic">لسان الدعوة</span>
+      <div class="brand-divider"></div>
+      <div>
+        <div class="brand-title">Qamoos53 Editorial Studio <span style="background:#EBF7F0; color:#246B43; font-size:11px; padding:2px 8px; border-radius:12px; font-weight:600; margin-left:6px; border:1px solid #B8E5CC;">● Turso Cloud DB</span></div>
+        <div class="brand-subtitle">Connected to: lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn btn-sm" id="btn-run-diagnostics" title="Re-run automated orthography checks">
+        ✦ Run Diagnostics
+      </button>
+      <button class="btn btn-sm" id="btn-cloud-modal">
+        ☁ Cloud Sync
+      </button>
+      <button class="btn btn-sm btn-success" id="btn-sync-spellbank" title="Publish approved words to the live Spell Bank lexicon">
+        ✓ Sync Approved to Spell Bank
+      </button>
+      <button class="btn btn-sm btn-primary" id="btn-new-word">
+        + New Word
+      </button>
+      <a href="/" target="_blank" class="btn btn-sm" style="text-decoration:none;">
+        Open Public Lexicon ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Realtime Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-group">
+      <div class="stat-item">
+        <span>Total:</span>
+        <span class="stat-badge badge-total" id="stat-total">8,587</span>
+      </div>
+      <div class="stat-item">
+        <span>Pending:</span>
+        <span class="stat-badge badge-pending" id="stat-pending">0</span>
+      </div>
+      <div class="stat-item">
+        <span>Flagged for Review:</span>
+        <span class="stat-badge badge-flagged" id="stat-flagged">0</span>
+      </div>
+      <div class="stat-item">
+        <span>Edited:</span>
+        <span class="stat-badge badge-edited" id="stat-edited">0</span>
+      </div>
+      <div class="stat-item">
+        <span>Approved:</span>
+        <span class="stat-badge badge-approved" id="stat-approved">0</span>
+      </div>
+    </div>
+
+    <div class="stats-group">
+      <div class="stat-item">
+        <span>Audio Links:</span>
+        <span style="font-weight:600;" id="stat-audio">6,864</span>
+      </div>
+      <div class="stat-item">
+        <span>Cloud Synced:</span>
+        <span style="font-weight:600;" id="stat-cloud">0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Split Studio Layout -->
+  <main class="studio-main">
+
+    <!-- Left Sidebar: Search, Filters & Word Directory -->
+    <aside class="sidebar-pane">
+      <div class="sidebar-search-box">
+        <div class="search-input-wrap">
+          <input type="text" id="search-input" class="search-input" placeholder="Search Arabic, Transliteration, English...">
+        </div>
+        <div class="filters-row">
+          <select id="category-filter" class="select-filter">
+            <option value="">All Categories</option>
+          </select>
+          <select id="alphabet-filter" class="select-filter">
+            <option value="">All Letters (حروف)</option>
+            <option value="ا">ا (Alif)</option>
+            <option value="ب">ب (Baa)</option>
+            <option value="ت">ت (Taa)</option>
+            <option value="ث">ث (Thaa)</option>
+            <option value="ج">ج (Jeem)</option>
+            <option value="ح">ح (Haa)</option>
+            <option value="خ">خ (Khaa)</option>
+            <option value="د">د (Daal)</option>
+            <option value="ذ">ذ (Zaal)</option>
+            <option value="ر">ر (Raa)</option>
+            <option value="ز">ز (Zaa)</option>
+            <option value="س">س (Seen)</option>
+            <option value="ش">ش (Sheen)</option>
+            <option value="ص">ص (Saad)</option>
+            <option value="ض">ض (Daad)</option>
+            <option value="ط">ط (Taa)</option>
+            <option value="ظ">ظ (Zaa)</option>
+            <option value="ع">ع (Ayn)</option>
+            <option value="غ">غ (Ghayn)</option>
+            <option value="ف">ف (Faa)</option>
+            <option value="ق">ق (Qaaf)</option>
+            <option value="ك">ك (Kaaf)</option>
+            <option value="ل">ل (Laam)</option>
+            <option value="م">م (Meem)</option>
+            <option value="ن">ن (Noon)</option>
+            <option value="و">و (Waaw)</option>
+            <option value="ه">ه (Haa)</option>
+            <option value="ي">ي (Yaa)</option>
+          </select>
+          <select id="level-filter" class="select-filter">
+            <option value="">All Levels</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advance">Advance</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Review Status Tabs -->
+      <div class="status-tabs">
+        <button class="status-tab active" data-status="all">All Words</button>
+        <button class="status-tab" data-status="flagged">Flagged Anomalies</button>
+        <button class="status-tab" data-status="pending">Pending</button>
+        <button class="status-tab" data-status="edited">Edited</button>
+        <button class="status-tab" data-status="approved">Approved</button>
+      </div>
+
+      <!-- Word Items List -->
+      <div class="word-list" id="word-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Pagination Footer -->
+      <div class="pagination-footer">
+        <button class="btn btn-sm" id="btn-prev-page">← Previous</button>
+        <span id="page-indicator">Page 1 of 172</span>
+        <button class="btn btn-sm" id="btn-next-page">Next →</button>
+      </div>
+    </aside>
+
+    <!-- Right Workspace: Editorial Studio -->
+    <section class="editor-pane">
+      <div class="editor-header-bar">
+        <div class="editor-breadcrumbs" id="editor-breadcrumbs">
+          Entry ID: <strong id="crumb-id">—</strong> &nbsp;·&nbsp; Status: <span id="crumb-status">—</span>
+        </div>
+        <div class="editor-shortcuts">
+          <kbd>Space</kbd> Play Audio &nbsp;·&nbsp;
+          <kbd>Cmd/Ctrl + S</kbd> Save &nbsp;·&nbsp;
+          <kbd>Alt + A</kbd> Approve &nbsp;·&nbsp;
+          <kbd>Alt + →</kbd> Next
+        </div>
+      </div>
+
+      <div class="editor-body">
+        
+        <!-- Calligraphy Hero Section -->
+        <div class="calligraphy-hero">
+          <div class="hero-arabic" id="hero-arabic">اْئيس كريم</div>
+          <div class="hero-translit" id="hero-translit">Ice cream</div>
+
+          <div class="audio-player-bar" id="audio-container" style="display:none;">
+            <button class="audio-play-btn" id="btn-play-audio" title="Play Pronunciation (Spacebar)">
+              ▶
+            </button>
+            <span class="audio-label" id="audio-label">Native Pronunciation</span>
+            <audio id="word-audio" preload="none"></audio>
+          </div>
+        </div>
+
+        <!-- Before & After Diff Card -->
+        <div class="diff-card">
+          <div class="diff-side">
+            <div class="diff-label">Original Qamoos53 Spelling (Untouched)</div>
+            <div class="diff-val original" id="diff-original">—</div>
+          </div>
+          <div style="font-size:20px; color:var(--ink-muted);">→</div>
+          <div class="diff-side">
+            <div class="diff-label">Current Revised Spelling</div>
+            <div class="diff-val current" id="diff-current">—</div>
+          </div>
+        </div>
+
+        <!-- Diagnostic Alert Banner -->
+        <div class="diagnostic-banner" id="diagnostic-banner" style="display:none;">
+          <div class="diag-header">
+            <span>⚠</span>
+            <span id="diag-title">Orthography Check</span>
+          </div>
+          <div class="diag-message" id="diag-message">
+            Legacy font artifact detected.
+          </div>
+          <div class="diag-action-bar">
+            <button class="btn btn-sm btn-primary" id="btn-apply-suggestion">
+              Accept Suggested Spelling: <strong id="diag-suggested-text">—</strong>
+            </button>
+          </div>
+        </div>
+
+        <!-- Word Edit Form -->
+        <form id="word-edit-form" class="editor-form-grid" onsubmit="return false;">
+          
+          <div class="form-group">
+            <label class="form-label">Headword (Arabic Script — Al-Kanz)</label>
+            <input type="text" id="field-word-name" class="form-input arabic-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Transliteration (Roman Script)</label>
+            <input type="text" id="field-transliteration" class="form-input">
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">English Definition / Meaning</label>
+            <textarea id="field-english-meaning" class="form-textarea" placeholder="Primary English definition..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">French Definition / Meaning (Optional)</label>
+            <input type="text" id="field-french-meaning" class="form-input" placeholder="French translation...">
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Lisan al-Dawat Vernacular Explanation (معنى)</label>
+            <textarea id="field-lisan-meaning" class="form-textarea arabic-input" placeholder="Lisan al-Dawat classical meaning..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Contextual Usage Sentence (مثال في الجملة)</label>
+            <textarea id="field-sentence" class="form-textarea arabic-input" placeholder="Sentence illustrating Bohra Gujarati syntax..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Grammatical Difficulty Level</label>
+            <select id="field-level" class="form-select">
+              <option value="beginner">Beginner (مبتدئ)</option>
+              <option value="intermediate">Intermediate (متوسط)</option>
+              <option value="advance">Advanced (متقدم)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Review Status</label>
+            <select id="field-review-status" class="form-select">
+              <option value="pending">Pending Review</option>
+              <option value="flagged">Flagged Anomaly</option>
+              <option value="edited">Edited / Corrected</option>
+              <option value="approved">Approved & Verified</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Singular Form (مفرد)</label>
+            <input type="text" id="field-singular" class="form-input arabic-input">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Plural Form (جمع)</label>
+            <input type="text" id="field-plural" class="form-input arabic-input">
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Thematic Categories (Comma-separated)</label>
+            <input type="text" id="field-categories" class="form-input" placeholder="e.g. Sheher, Ashara, phal...">
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Curator Editorial Notes</label>
+            <textarea id="field-curator-notes" class="form-textarea" placeholder="Notes on etymology, Bohra orthographic rules, source references..."></textarea>
+          </div>
+
+        </form>
+
+      </div>
+
+      <!-- Action Dock Fixed Bottom -->
+      <div class="action-dock">
+        <div class="dock-left">
+          <button class="btn" id="btn-prev-word" title="Alt + Left Arrow">
+            ← Previous Word
+          </button>
+          <button class="btn" id="btn-next-word" title="Alt + Right Arrow">
+            Next Word →
+          </button>
+          <button class="btn" id="btn-delete-word" style="color:#C92A2A;">
+            Delete
+          </button>
+        </div>
+
+        <div class="dock-right">
+          <button class="btn btn-primary" id="btn-save-changes">
+            Save Changes (Cmd+S)
+          </button>
+          <button class="btn btn-success" id="btn-approve-word">
+            ✓ Mark as Approved (Alt+A)
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Passcode Modal Gate -->
+  <div class="modal-overlay" id="auth-modal" style="display:none;">
+    <div class="modal-box">
+      <div class="modal-title">Editorial Authentication</div>
+      <div class="modal-desc">
+        This is a protected editorial workspace for curating the Lisan al-Dawat database. Enter your editorial passkey to proceed.
+      </div>
+      <div class="form-group" style="margin-bottom:16px;">
+        <input type="password" id="input-passkey" class="form-input" placeholder="Editorial Passkey (default: qamoos53)" autofocus>
+      </div>
+      <div style="display:flex; justify-content:flex-end; gap:8px;">
+        <button class="btn btn-primary" id="btn-verify-passcode">Unlock Studio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cloud Sync Modal -->
+  <div class="modal-overlay" id="cloud-modal" style="display:none;">
+    <div class="modal-box" style="max-width:580px;">
+      <div class="modal-title">Cloud Database Status</div>
+      <div class="modal-desc">
+        Your Editorial Studio is connected live to your <strong>Turso (libSQL)</strong> distributed cloud database.
+      </div>
+
+      <div style="background:#F4EFEB; padding:16px; border-radius:6px; border:1px solid #E6DFD3; margin-bottom:18px;">
+        <div style="font-size:12px; margin-bottom:6px;"><strong>Provider:</strong> Turso Cloud (libSQL)</div>
+        <div style="font-size:12px; margin-bottom:6px;"><strong>Endpoint:</strong> <code>https://lsd-spell-bank-shabbirmaanak.aws-ap-south-1.turso.io</code></div>
+        <div style="font-size:12px; margin-bottom:6px;"><strong>Region:</strong> AWS Mumbai (ap-south-1)</div>
+        <div style="font-size:12px; color:#246B43; font-weight:600;">● Status: Connected & Synced (8,587 Words Live)</div>
+      </div>
+
+      <p style="font-size:12px; color:var(--ink-secondary); line-height:1.5;">
+        Every edit, approval, or suggestion acceptance made in this Studio is committed and overwritten directly to your Turso cloud database in real-time.
+      </p>
+
+      <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:20px; border-top:1px solid var(--border-delicate); padding-top:16px;">
+        <button class="btn btn-primary" id="btn-close-cloud-modal">Done</button>
+      </div>
+
+      <div style="margin-top:16px; text-align:right;">
+        <button class="btn btn-sm" id="btn-close-cloud-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast-notice" style="display:none;"></div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

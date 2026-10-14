@@ -1,0 +1,5247 @@
+[
+  {
+    "name": "Ashara",
+    "word_count": 148,
+    "words": [
+      {
+        "id": 168,
+        "word_name": "اْخرين",
+        "transliteration": "Aakhereen"
+      },
+      {
+        "id": 372,
+        "word_name": "اضعافاً مضاعفة",
+        "transliteration": "Ad'aafan Muda'afa"
+      },
+      {
+        "id": 378,
+        "word_name": "اطمئنان",
+        "transliteration": "Itmenaan"
+      },
+      {
+        "id": 379,
+        "word_name": "اطهر",
+        "transliteration": "At'har"
+      },
+      {
+        "id": 437,
+        "word_name": "اْفتاب",
+        "transliteration": "Aaftaab"
+      },
+      {
+        "id": 553,
+        "word_name": "امان",
+        "transliteration": "Amaan"
+      },
+      {
+        "id": 612,
+        "word_name": "اْنجو",
+        "transliteration": "Aanju"
+      },
+      {
+        "id": 681,
+        "word_name": "اْه زاري",
+        "transliteration": "Aaho zaari"
+      },
+      {
+        "id": 726,
+        "word_name": "اولين",
+        "transliteration": "Awwaleen"
+      },
+      {
+        "id": 752,
+        "word_name": "ايرٌي رككرٌوو",
+        "transliteration": "Eiri ragarwu"
+      },
+      {
+        "id": 803,
+        "word_name": "بارها",
+        "transliteration": "Baa rahaa"
+      },
+      {
+        "id": 935,
+        "word_name": "برححهي",
+        "transliteration": "Barchhi"
+      },
+      {
+        "id": 971,
+        "word_name": "بسس اْب",
+        "transliteration": "Be aab"
+      },
+      {
+        "id": 973,
+        "word_name": "بسس ادبي",
+        "transliteration": "Be adabi"
+      },
+      {
+        "id": 977,
+        "word_name": "بسس بس",
+        "transliteration": "Be bas"
+      },
+      {
+        "id": 981,
+        "word_name": "بسس ثثرده",
+        "transliteration": "Be parda"
+      },
+      {
+        "id": 984,
+        "word_name": "بسس ثثظظر",
+        "transliteration": "Be paher"
+      },
+      {
+        "id": 993,
+        "word_name": "بسس حرمتي",
+        "transliteration": "Be hurmati"
+      },
+      {
+        "id": 999,
+        "word_name": "بسس دفن",
+        "transliteration": "Be dafan"
+      },
+      {
+        "id": 1003,
+        "word_name": "بسس زبان",
+        "transliteration": "Be zubaan"
+      },
+      {
+        "id": 1021,
+        "word_name": "بسس كس",
+        "transliteration": "Be kas"
+      },
+      {
+        "id": 1022,
+        "word_name": "بسس كفن",
+        "transliteration": "Be Kafan"
+      },
+      {
+        "id": 1023,
+        "word_name": "بسس ككناه",
+        "transliteration": "Be Gunah"
+      },
+      {
+        "id": 1026,
+        "word_name": "بسس كلي",
+        "transliteration": "Be kali"
+      },
+      {
+        "id": 1032,
+        "word_name": "بسس يارو ياور",
+        "transliteration": "Be yaaro yaawar"
+      },
+      {
+        "id": 1076,
+        "word_name": "بكاء",
+        "transliteration": "Bukaa"
+      },
+      {
+        "id": 1117,
+        "word_name": "بنديوان",
+        "transliteration": "Bandiwaan"
+      },
+      {
+        "id": 1141,
+        "word_name": "بهالو",
+        "transliteration": "Bhaalo"
+      },
+      {
+        "id": 1188,
+        "word_name": "بهينككاوو",
+        "transliteration": "Bhingaawu"
+      },
+      {
+        "id": 1218,
+        "word_name": "بوضضهو",
+        "transliteration": "Butho"
+      },
+      {
+        "id": 1225,
+        "word_name": "بوسه",
+        "transliteration": "Bosa, boso"
+      },
+      {
+        "id": 1226,
+        "word_name": "بوسه ككاه",
+        "transliteration": "Bosa gaah"
+      },
+      {
+        "id": 1252,
+        "word_name": "بيرٌي",
+        "transliteration": "Beri"
+      },
+      {
+        "id": 1268,
+        "word_name": "بين",
+        "transliteration": "Bain"
+      },
+      {
+        "id": 1298,
+        "word_name": "تاسوع",
+        "transliteration": "Taasu'"
+      },
+      {
+        "id": 1299,
+        "word_name": "تاسوعاء",
+        "transliteration": "Taasu'aa"
+      },
+      {
+        "id": 1339,
+        "word_name": "ضضثثكوو",
+        "transliteration": "Tapakwu"
+      },
+      {
+        "id": 1482,
+        "word_name": "تفادي",
+        "transliteration": "Tafaadi"
+      },
+      {
+        "id": 1568,
+        "word_name": "تمهيد",
+        "transliteration": "Tamheed"
+      },
+      {
+        "id": 1572,
+        "word_name": "تنِ تنظظا",
+        "transliteration": "Tane tanhaa"
+      },
+      {
+        "id": 1587,
+        "word_name": "تنظظا",
+        "transliteration": "Tanha"
+      },
+      {
+        "id": 1760,
+        "word_name": "ثثححهورٌي",
+        "transliteration": "Pichhori"
+      },
+      {
+        "id": 1965,
+        "word_name": "ثثيري",
+        "transliteration": "peeri"
+      },
+      {
+        "id": 2080,
+        "word_name": "جثة",
+        "transliteration": "Jussat"
+      },
+      {
+        "id": 2193,
+        "word_name": "جنككل بياباطط",
+        "transliteration": "Jangal e bayaabaan"
+      },
+      {
+        "id": 2253,
+        "word_name": "جهيلي ليوو",
+        "transliteration": "Jhili lewu"
+      },
+      {
+        "id": 2346,
+        "word_name": "ححاك كروو",
+        "transliteration": "Chaak kerwu"
+      },
+      {
+        "id": 2372,
+        "word_name": "ححضضهي",
+        "transliteration": "Chit'thi"
+      },
+      {
+        "id": 2380,
+        "word_name": "ححراغ",
+        "transliteration": "Chiraag"
+      },
+      {
+        "id": 2445,
+        "word_name": "ححهري",
+        "transliteration": "Chhuri"
+      },
+      {
+        "id": 2538,
+        "word_name": "حرم",
+        "transliteration": "Haram"
+      },
+      {
+        "id": 2615,
+        "word_name": "حلق",
+        "transliteration": "Halq"
+      },
+      {
+        "id": 2617,
+        "word_name": "حلقوم",
+        "transliteration": "Hulqoom"
+      },
+      {
+        "id": 2742,
+        "word_name": "خزاده",
+        "transliteration": "Khuzaadah"
+      },
+      {
+        "id": 2765,
+        "word_name": "خط",
+        "transliteration": "Khat"
+      },
+      {
+        "id": 2811,
+        "word_name": "خنجر",
+        "transliteration": "Khanjar"
+      },
+      {
+        "id": 2861,
+        "word_name": "خيمة ككاه",
+        "transliteration": "Khaimagaah"
+      },
+      {
+        "id": 2933,
+        "word_name": "دربدر",
+        "transliteration": "Darbadar"
+      },
+      {
+        "id": 2934,
+        "word_name": "دره",
+        "transliteration": "Dirrah"
+      },
+      {
+        "id": 3010,
+        "word_name": "دلظظا - دلظظاؤ",
+        "transliteration": "Dulhaa - Dulhaao"
+      },
+      {
+        "id": 3056,
+        "word_name": "دلي (نمك ني)",
+        "transliteration": "Dali"
+      },
+      {
+        "id": 3227,
+        "word_name": "راوت",
+        "transliteration": "Raawat"
+      },
+      {
+        "id": 3340,
+        "word_name": "رككرٌا",
+        "transliteration": "Ragraa"
+      },
+      {
+        "id": 3355,
+        "word_name": "رن",
+        "transliteration": "Ran"
+      },
+      {
+        "id": 3375,
+        "word_name": "رواطط تهاوو",
+        "transliteration": "Rawaa thaawu"
+      },
+      {
+        "id": 3417,
+        "word_name": "ريضضي",
+        "transliteration": "Reti"
+      },
+      {
+        "id": 3431,
+        "word_name": "زار زار",
+        "transliteration": "Zaar zaar"
+      },
+      {
+        "id": 3657,
+        "word_name": "سرهانسس",
+        "transliteration": "Sirhaane"
+      },
+      {
+        "id": 3691,
+        "word_name": "سقّاء",
+        "transliteration": "Saqqaa"
+      },
+      {
+        "id": 3860,
+        "word_name": "سينكرٌو",
+        "transliteration": "Sai(n)kro"
+      },
+      {
+        "id": 4008,
+        "word_name": "شيشه",
+        "transliteration": "Shisha"
+      },
+      {
+        "id": 4082,
+        "word_name": "صلح",
+        "transliteration": "Suleh"
+      },
+      {
+        "id": 4114,
+        "word_name": "ضامن",
+        "transliteration": "Zaamin"
+      },
+      {
+        "id": 4142,
+        "word_name": "ضضهوكر ماروو",
+        "transliteration": "Thoker"
+      },
+      {
+        "id": 4201,
+        "word_name": "طمانححه",
+        "transliteration": "Tamaacho"
+      },
+      {
+        "id": 4210,
+        "word_name": "طوق",
+        "transliteration": "Towq"
+      },
+      {
+        "id": 4250,
+        "word_name": "عاشوراء",
+        "transliteration": "Aashuraa"
+      },
+      {
+        "id": 4337,
+        "word_name": "عزاء",
+        "transliteration": "Azaa"
+      },
+      {
+        "id": 4338,
+        "word_name": "عزادار",
+        "transliteration": "Azaadaar"
+      },
+      {
+        "id": 4358,
+        "word_name": "عصىْ",
+        "transliteration": "Asaa"
+      },
+      {
+        "id": 4366,
+        "word_name": "عطش",
+        "transliteration": "Atash"
+      },
+      {
+        "id": 4367,
+        "word_name": "عطشان",
+        "transliteration": "Atshaan"
+      },
+      {
+        "id": 4415,
+        "word_name": "علمبردار",
+        "transliteration": "Alamberdaar"
+      },
+      {
+        "id": 4517,
+        "word_name": "غشي",
+        "transliteration": "Gashye"
+      },
+      {
+        "id": 4518,
+        "word_name": "غشي طاري تهاوو",
+        "transliteration": "Gasye taari thaawu"
+      },
+      {
+        "id": 4622,
+        "word_name": "فرات",
+        "transliteration": "Furaat"
+      },
+      {
+        "id": 4628,
+        "word_name": "فراقي",
+        "transliteration": "Firaaqi"
+      },
+      {
+        "id": 4712,
+        "word_name": "فوج - افواج",
+        "transliteration": "Fauj - Afwaaj"
+      },
+      {
+        "id": 4792,
+        "word_name": "قدم ضضيكي ديوو",
+        "transliteration": "Qadam teki dewu"
+      },
+      {
+        "id": 4848,
+        "word_name": "قطرة",
+        "transliteration": "Qatro, qatra"
+      },
+      {
+        "id": 4855,
+        "word_name": "قفا",
+        "transliteration": "Qafaa"
+      },
+      {
+        "id": 5056,
+        "word_name": "كفن - اكفان",
+        "transliteration": "Kafan - Akfaan"
+      },
+      {
+        "id": 5108,
+        "word_name": "ككريبان",
+        "transliteration": "Girebaan"
+      },
+      {
+        "id": 5114,
+        "word_name": "ككفتككو",
+        "transliteration": "Guftagu"
+      },
+      {
+        "id": 5180,
+        "word_name": "ككهونضض",
+        "transliteration": "Ghunt"
+      },
+      {
+        "id": 5196,
+        "word_name": "ككود",
+        "transliteration": "Goud"
+      },
+      {
+        "id": 5213,
+        "word_name": "ككيبرٌي",
+        "transliteration": "Gibri"
+      },
+      {
+        "id": 5251,
+        "word_name": "كمر خم تهاوو",
+        "transliteration": "Kamar kham thaawu"
+      },
+      {
+        "id": 5313,
+        "word_name": "كهلبلي مححوو",
+        "transliteration": "Khalbali machwu"
+      },
+      {
+        "id": 5320,
+        "word_name": "كهوبلا",
+        "transliteration": "Khobla"
+      },
+      {
+        "id": 5408,
+        "word_name": "لاش - لاشاؤ",
+        "transliteration": "Laash - Lashaao"
+      },
+      {
+        "id": 5468,
+        "word_name": "لشكر بندي",
+        "transliteration": "Lashkar bandi"
+      },
+      {
+        "id": 5537,
+        "word_name": "لوكهندٌ",
+        "transliteration": "Lokhand"
+      },
+      {
+        "id": 5595,
+        "word_name": "ماطط جايا",
+        "transliteration": "Maa jaayaa"
+      },
+      {
+        "id": 5605,
+        "word_name": "ماهي بسس اْب",
+        "transliteration": "Maahiye be aab"
+      },
+      {
+        "id": 5607,
+        "word_name": "مأتم",
+        "transliteration": "Maatam"
+      },
+      {
+        "id": 5608,
+        "word_name": "ماتم داران حسين!",
+        "transliteration": "Maatam daaraane Husain"
+      },
+      {
+        "id": 5609,
+        "word_name": "مأتم دارو",
+        "transliteration": "Maatam daaro"
+      },
+      {
+        "id": 5616,
+        "word_name": "مبادا",
+        "transliteration": "Mabaada"
+      },
+      {
+        "id": 5908,
+        "word_name": "مستضام",
+        "transliteration": "Mustadaam"
+      },
+      {
+        "id": 5956,
+        "word_name": "مشتري",
+        "transliteration": "Mushtari"
+      },
+      {
+        "id": 5979,
+        "word_name": "مشكي",
+        "transliteration": "Mashki"
+      },
+      {
+        "id": 6039,
+        "word_name": "مظلوم - مظلومين",
+        "transliteration": "Mazloom - Mazlumeen"
+      },
+      {
+        "id": 6040,
+        "word_name": "مظلومية",
+        "transliteration": "Mazlumiat"
+      },
+      {
+        "id": 6072,
+        "word_name": "معصوم",
+        "transliteration": "Ma'soom"
+      },
+      {
+        "id": 6414,
+        "word_name": "ميان",
+        "transliteration": "Miyaan"
+      },
+      {
+        "id": 6564,
+        "word_name": "نداء",
+        "transliteration": "Nidaa"
+      },
+      {
+        "id": 6579,
+        "word_name": "نرغه",
+        "transliteration": "Nargah"
+      },
+      {
+        "id": 6596,
+        "word_name": "نشان",
+        "transliteration": "Nishaan"
+      },
+      {
+        "id": 6736,
+        "word_name": "نوحه",
+        "transliteration": "Nauha"
+      },
+      {
+        "id": 6796,
+        "word_name": "هتهكرٌي",
+        "transliteration": "Hatkari"
+      },
+      {
+        "id": 6846,
+        "word_name": "هم شكل",
+        "transliteration": "Ham shakal"
+      },
+      {
+        "id": 6893,
+        "word_name": "هيراكني",
+        "transliteration": "Hiraa kani"
+      },
+      {
+        "id": 6922,
+        "word_name": "وارو",
+        "transliteration": "Waaro"
+      },
+      {
+        "id": 6952,
+        "word_name": "واويلا",
+        "transliteration": "Waawelaa"
+      },
+      {
+        "id": 6980,
+        "word_name": "وداع",
+        "transliteration": "Wadaa"
+      },
+      {
+        "id": 7024,
+        "word_name": "وصية - وصايا",
+        "transliteration": "Wasiyat - Wasaaya"
+      },
+      {
+        "id": 7103,
+        "word_name": "يارو ياور",
+        "transliteration": "Yaaro yaawer"
+      },
+      {
+        "id": 7182,
+        "word_name": "ككودي",
+        "transliteration": "Godi"
+      },
+      {
+        "id": 7342,
+        "word_name": "شفاعة",
+        "transliteration": "Shafaa'at"
+      },
+      {
+        "id": 7400,
+        "word_name": "ثثيضضي",
+        "transliteration": "Peti"
+      },
+      {
+        "id": 7412,
+        "word_name": "بسس تيز",
+        "transliteration": "Be tez"
+      },
+      {
+        "id": 7420,
+        "word_name": "ته و بالائي",
+        "transliteration": "Taho baalaai"
+      },
+      {
+        "id": 7560,
+        "word_name": "بسس شير",
+        "transliteration": "Be sheer"
+      },
+      {
+        "id": 7563,
+        "word_name": "شير خوار",
+        "transliteration": "Sheer Khuwaar"
+      },
+      {
+        "id": 7572,
+        "word_name": "خوش ككفتككو",
+        "transliteration": "Khush guftagu"
+      },
+      {
+        "id": 7573,
+        "word_name": "تير",
+        "transliteration": "Tir"
+      },
+      {
+        "id": 7575,
+        "word_name": "علمدار",
+        "transliteration": "Alamdaar"
+      },
+      {
+        "id": 7579,
+        "word_name": "اْلوده",
+        "transliteration": "Aaluda"
+      },
+      {
+        "id": 7580,
+        "word_name": "كهندٌلوو",
+        "transliteration": "Khundalwu"
+      },
+      {
+        "id": 7585,
+        "word_name": "سه روز",
+        "transliteration": "Seh roz"
+      },
+      {
+        "id": 7590,
+        "word_name": "ترٌثثهرٌوو",
+        "transliteration": "Tarpharwu"
+      },
+      {
+        "id": 7592,
+        "word_name": "تلملوو",
+        "transliteration": "Talmalwu"
+      },
+      {
+        "id": 7595,
+        "word_name": "عزاداران",
+        "transliteration": "Azaadaaraan"
+      },
+      {
+        "id": 7721,
+        "word_name": "بَن",
+        "transliteration": "Ban"
+      },
+      {
+        "id": 8001,
+        "word_name": "ابكاء",
+        "transliteration": "Ibkaa"
+      },
+      {
+        "id": 8034,
+        "word_name": "اشك",
+        "transliteration": "Ashk"
+      },
+      {
+        "id": 8120,
+        "word_name": "تشنه دهن",
+        "transliteration": "Tishna dahan"
+      }
+    ]
+  },
+  {
+    "name": "adad",
+    "word_count": 130,
+    "words": [
+      {
+        "id": 166,
+        "word_name": "اْخر",
+        "transliteration": "Aakhir"
+      },
+      {
+        "id": 177,
+        "word_name": "اخير",
+        "transliteration": "Akheer"
+      },
+      {
+        "id": 506,
+        "word_name": "اكيلا",
+        "transliteration": "Akela"
+      },
+      {
+        "id": 649,
+        "word_name": "اَنككِـنَـت",
+        "transliteration": "Anginat"
+      },
+      {
+        "id": 760,
+        "word_name": "ايك بعد (ثثححهي) ايك",
+        "transliteration": "Ek ba'ad ek"
+      },
+      {
+        "id": 761,
+        "word_name": "ايك بهي نظظيطط",
+        "transliteration": "Ek bhi nahi"
+      },
+      {
+        "id": 768,
+        "word_name": "ايك وار",
+        "transliteration": "Aik waar"
+      },
+      {
+        "id": 771,
+        "word_name": "ايكج",
+        "transliteration": "Aikaj"
+      },
+      {
+        "id": 773,
+        "word_name": "ايكي",
+        "transliteration": "Eaiki"
+      },
+      {
+        "id": 988,
+        "word_name": "بسس ححار",
+        "transliteration": "Be chaar"
+      },
+      {
+        "id": 995,
+        "word_name": "بسس حساب",
+        "transliteration": "Be hisaab"
+      },
+      {
+        "id": 1010,
+        "word_name": "بسس شمار",
+        "transliteration": "Be shumaar"
+      },
+      {
+        "id": 1244,
+        "word_name": "بيجا",
+        "transliteration": "Bijaa"
+      },
+      {
+        "id": 1253,
+        "word_name": "بيسرا",
+        "transliteration": "Bisraa"
+      },
+      {
+        "id": 1262,
+        "word_name": "بيكي",
+        "transliteration": "Beki"
+      },
+      {
+        "id": 1626,
+        "word_name": "تهورا",
+        "transliteration": "Thoraa"
+      },
+      {
+        "id": 2551,
+        "word_name": "حساب",
+        "transliteration": "Hisaab"
+      },
+      {
+        "id": 2568,
+        "word_name": "حصة - حصة ؤ",
+        "transliteration": "Hisso, hissa - Hissaao"
+      },
+      {
+        "id": 3091,
+        "word_name": "دوباره",
+        "transliteration": "Dobaara"
+      },
+      {
+        "id": 3590,
+        "word_name": "ستّر",
+        "transliteration": "Sattar"
+      },
+      {
+        "id": 3817,
+        "word_name": "سول",
+        "transliteration": "Sol"
+      },
+      {
+        "id": 3860,
+        "word_name": "سينكرٌو",
+        "transliteration": "Sai(n)kro"
+      },
+      {
+        "id": 4311,
+        "word_name": "عدد",
+        "transliteration": "Adad"
+      },
+      {
+        "id": 5001,
+        "word_name": "كرورٌ",
+        "transliteration": "Karor"
+      },
+      {
+        "id": 5139,
+        "word_name": "ككنتي",
+        "transliteration": "Ginti"
+      },
+      {
+        "id": 5416,
+        "word_name": "لاكهـ",
+        "transliteration": "lakh"
+      },
+      {
+        "id": 6825,
+        "word_name": "هزار",
+        "transliteration": "Hazaar"
+      },
+      {
+        "id": 7209,
+        "word_name": "ايك",
+        "transliteration": "Eik"
+      },
+      {
+        "id": 7210,
+        "word_name": "بسس",
+        "transliteration": "Be"
+      },
+      {
+        "id": 7211,
+        "word_name": "تين",
+        "transliteration": "Teen"
+      },
+      {
+        "id": 7212,
+        "word_name": "ححار",
+        "transliteration": "Chaar"
+      },
+      {
+        "id": 7213,
+        "word_name": "ثثانحح",
+        "transliteration": "Paanch"
+      },
+      {
+        "id": 7214,
+        "word_name": "ححهـ",
+        "transliteration": "Chho"
+      },
+      {
+        "id": 7215,
+        "word_name": "سات",
+        "transliteration": "Saat"
+      },
+      {
+        "id": 7216,
+        "word_name": "اْنتهـ",
+        "transliteration": "Aanth"
+      },
+      {
+        "id": 7217,
+        "word_name": "نو",
+        "transliteration": "Nau"
+      },
+      {
+        "id": 7218,
+        "word_name": "دس",
+        "transliteration": "Das"
+      },
+      {
+        "id": 7219,
+        "word_name": "اككيار",
+        "transliteration": "Agyaar"
+      },
+      {
+        "id": 7220,
+        "word_name": "بار",
+        "transliteration": "Baar"
+      },
+      {
+        "id": 7221,
+        "word_name": "تير",
+        "transliteration": "Tair"
+      },
+      {
+        "id": 7222,
+        "word_name": "ححود",
+        "transliteration": "Chawwud"
+      },
+      {
+        "id": 7223,
+        "word_name": "ثثندر",
+        "transliteration": "Pandar"
+      },
+      {
+        "id": 7226,
+        "word_name": "ارهار",
+        "transliteration": "Arhaar"
+      },
+      {
+        "id": 7227,
+        "word_name": "اوككنيس",
+        "transliteration": "Ougnees"
+      },
+      {
+        "id": 7228,
+        "word_name": "ويس",
+        "transliteration": "Wees"
+      },
+      {
+        "id": 7229,
+        "word_name": "ايكويس",
+        "transliteration": "Ekwees"
+      },
+      {
+        "id": 7230,
+        "word_name": "باويس",
+        "transliteration": "Baawees"
+      },
+      {
+        "id": 7231,
+        "word_name": "تيويس",
+        "transliteration": "Tewees"
+      },
+      {
+        "id": 7232,
+        "word_name": "ححوويس",
+        "transliteration": "Chowees"
+      },
+      {
+        "id": 7233,
+        "word_name": "ثثححيس",
+        "transliteration": "Pach-chees"
+      },
+      {
+        "id": 7234,
+        "word_name": "ححهوّيس",
+        "transliteration": "Chhauwees"
+      },
+      {
+        "id": 7235,
+        "word_name": "ستاويس",
+        "transliteration": "Sattaawees"
+      },
+      {
+        "id": 7236,
+        "word_name": "اتهاويس",
+        "transliteration": "Athaawees"
+      },
+      {
+        "id": 7237,
+        "word_name": "اوككنتيس",
+        "transliteration": "Ogantees"
+      },
+      {
+        "id": 7238,
+        "word_name": "تيس",
+        "transliteration": "Tees"
+      },
+      {
+        "id": 7239,
+        "word_name": "ايكتريس",
+        "transliteration": "Ekatrees"
+      },
+      {
+        "id": 7240,
+        "word_name": "بتريس",
+        "transliteration": "Batrees"
+      },
+      {
+        "id": 7241,
+        "word_name": "تيتريس",
+        "transliteration": "Tetrees"
+      },
+      {
+        "id": 7242,
+        "word_name": "ححوتريس",
+        "transliteration": "Choutrees"
+      },
+      {
+        "id": 7243,
+        "word_name": "ثثاتريس",
+        "transliteration": "Paatrees"
+      },
+      {
+        "id": 7244,
+        "word_name": "ححهتريس",
+        "transliteration": "Chhatrees"
+      },
+      {
+        "id": 7245,
+        "word_name": "سارتيس",
+        "transliteration": "Saartees"
+      },
+      {
+        "id": 7246,
+        "word_name": "اْرتيس",
+        "transliteration": "Aartees"
+      },
+      {
+        "id": 7247,
+        "word_name": "اوككنححاليس",
+        "transliteration": "Oganchaalees"
+      },
+      {
+        "id": 7248,
+        "word_name": "ححاليس",
+        "transliteration": "Chaalees"
+      },
+      {
+        "id": 7249,
+        "word_name": "ايكتاليس",
+        "transliteration": "Ektaalees"
+      },
+      {
+        "id": 7250,
+        "word_name": "بيتاليس",
+        "transliteration": "Betaalees"
+      },
+      {
+        "id": 7251,
+        "word_name": "تيتاليس",
+        "transliteration": "Tetaalees"
+      },
+      {
+        "id": 7252,
+        "word_name": "ححماليس",
+        "transliteration": "Chummaalees"
+      },
+      {
+        "id": 7253,
+        "word_name": "ثثستاليس",
+        "transliteration": "Pistaalees"
+      },
+      {
+        "id": 7254,
+        "word_name": "ححهيتاليس",
+        "transliteration": "Chhetaalees"
+      },
+      {
+        "id": 7255,
+        "word_name": "سرتاليس",
+        "transliteration": "Surtaalees"
+      },
+      {
+        "id": 7256,
+        "word_name": "ارتاليس",
+        "transliteration": "Artaalees"
+      },
+      {
+        "id": 7257,
+        "word_name": "اوككنثثححاس",
+        "transliteration": "Oganpachaas"
+      },
+      {
+        "id": 7258,
+        "word_name": "ثثححاس",
+        "transliteration": "Pachaas"
+      },
+      {
+        "id": 7259,
+        "word_name": "ايكاون",
+        "transliteration": "Eikaawan"
+      },
+      {
+        "id": 7260,
+        "word_name": "باون",
+        "transliteration": "Baawan"
+      },
+      {
+        "id": 7261,
+        "word_name": "تريثثن",
+        "transliteration": "Treppan"
+      },
+      {
+        "id": 7262,
+        "word_name": "ححوثثن",
+        "transliteration": "Choppan"
+      },
+      {
+        "id": 7263,
+        "word_name": "ثثنححاون",
+        "transliteration": "Panchaawan"
+      },
+      {
+        "id": 7264,
+        "word_name": "ححهثثّن",
+        "transliteration": "Chhappan"
+      },
+      {
+        "id": 7265,
+        "word_name": "ستّاون",
+        "transliteration": "Sattaawan"
+      },
+      {
+        "id": 7266,
+        "word_name": "اتهاون",
+        "transliteration": "Athaawan"
+      },
+      {
+        "id": 7267,
+        "word_name": "اوككنسهانتهـ",
+        "transliteration": "Ogansahaa(n)th"
+      },
+      {
+        "id": 7268,
+        "word_name": "سهانتهـ",
+        "transliteration": "Sahaa(n)th"
+      },
+      {
+        "id": 7269,
+        "word_name": "ايكستهـ",
+        "transliteration": "Eksath"
+      },
+      {
+        "id": 7270,
+        "word_name": "بانستهـ",
+        "transliteration": "Baa(n)sath"
+      },
+      {
+        "id": 7271,
+        "word_name": "تينستهـ",
+        "transliteration": "Te(n)sath"
+      },
+      {
+        "id": 7272,
+        "word_name": "ححونستهـ",
+        "transliteration": "Cho(n)sath"
+      },
+      {
+        "id": 7273,
+        "word_name": "ثثانستهـ",
+        "transliteration": "Paa(n)sath"
+      },
+      {
+        "id": 7274,
+        "word_name": "ححهانستهـ",
+        "transliteration": "Chhaa(n)sath"
+      },
+      {
+        "id": 7275,
+        "word_name": "سرستهـ",
+        "transliteration": "Sarsath"
+      },
+      {
+        "id": 7276,
+        "word_name": "ارستهـ",
+        "transliteration": "Arsath"
+      },
+      {
+        "id": 7277,
+        "word_name": "اوككنتير",
+        "transliteration": "Ogantair"
+      },
+      {
+        "id": 7278,
+        "word_name": "ستّير",
+        "transliteration": "Sittair"
+      },
+      {
+        "id": 7279,
+        "word_name": "ايكوتير",
+        "transliteration": "Ekotair"
+      },
+      {
+        "id": 7280,
+        "word_name": "بظظتّير",
+        "transliteration": "Bohattair"
+      },
+      {
+        "id": 7281,
+        "word_name": "تظظتير",
+        "transliteration": "Tihatair"
+      },
+      {
+        "id": 7282,
+        "word_name": "ححمبوتير",
+        "transliteration": "Chumbotair"
+      },
+      {
+        "id": 7283,
+        "word_name": "ثثنححوتير",
+        "transliteration": "Pinchotair"
+      },
+      {
+        "id": 7284,
+        "word_name": "ححهوتّير",
+        "transliteration": "Chehottair"
+      },
+      {
+        "id": 7285,
+        "word_name": "ستوتير",
+        "transliteration": "Sitotair"
+      },
+      {
+        "id": 7286,
+        "word_name": "اتهوتير",
+        "transliteration": "Athotair"
+      },
+      {
+        "id": 7287,
+        "word_name": "اوككنااهسي",
+        "transliteration": "Ognaaehsi"
+      },
+      {
+        "id": 7288,
+        "word_name": "اهنسي",
+        "transliteration": "Ehsi"
+      },
+      {
+        "id": 7289,
+        "word_name": "ايكياسي",
+        "transliteration": "Ekyaasi"
+      },
+      {
+        "id": 7290,
+        "word_name": "بياسي",
+        "transliteration": "Bayaasi"
+      },
+      {
+        "id": 7291,
+        "word_name": "ترياسي",
+        "transliteration": "Tiryaasi"
+      },
+      {
+        "id": 7292,
+        "word_name": "ححورياسي",
+        "transliteration": "Choryaasi"
+      },
+      {
+        "id": 7293,
+        "word_name": "ثثنححياسي",
+        "transliteration": "Pinchyaasi"
+      },
+      {
+        "id": 7294,
+        "word_name": "ححهياسي",
+        "transliteration": "Chheyaasi"
+      },
+      {
+        "id": 7295,
+        "word_name": "سِتياسي",
+        "transliteration": "Sityaasi"
+      },
+      {
+        "id": 7296,
+        "word_name": "اتهياسي",
+        "transliteration": "Athyaasi"
+      },
+      {
+        "id": 7297,
+        "word_name": "نيوياسي",
+        "transliteration": "Nivyaasi"
+      },
+      {
+        "id": 7298,
+        "word_name": "نيوو",
+        "transliteration": "Newu"
+      },
+      {
+        "id": 7299,
+        "word_name": "ايكانو",
+        "transliteration": "Ekaanu"
+      },
+      {
+        "id": 7300,
+        "word_name": "بانو",
+        "transliteration": "Baanu"
+      },
+      {
+        "id": 7301,
+        "word_name": "تانو",
+        "transliteration": "Taanu"
+      },
+      {
+        "id": 7302,
+        "word_name": "ححورانو",
+        "transliteration": "Choraanu"
+      },
+      {
+        "id": 7303,
+        "word_name": "ثثنححانو",
+        "transliteration": "Panchaanu"
+      },
+      {
+        "id": 7304,
+        "word_name": "ححهنّو",
+        "transliteration": "Chhannu"
+      },
+      {
+        "id": 7305,
+        "word_name": "ستّانو",
+        "transliteration": "Sattaanu"
+      },
+      {
+        "id": 7306,
+        "word_name": "اتهّانو",
+        "transliteration": "Ath-thaanu"
+      },
+      {
+        "id": 7307,
+        "word_name": "نوّانو",
+        "transliteration": "Nawwaanu"
+      },
+      {
+        "id": 7308,
+        "word_name": "سو",
+        "transliteration": "So"
+      },
+      {
+        "id": 7467,
+        "word_name": "نمي",
+        "transliteration": "Nami"
+      },
+      {
+        "id": 7585,
+        "word_name": "سه روز",
+        "transliteration": "Seh roz"
+      },
+      {
+        "id": 7697,
+        "word_name": "نمبر",
+        "transliteration": "Number"
+      },
+      {
+        "id": 8058,
+        "word_name": "حساب الجُمَّل",
+        "transliteration": "Hisaab ul Jummal"
+      },
+      {
+        "id": 8192,
+        "word_name": "صِفر",
+        "transliteration": "Sifr"
+      }
+    ]
+  },
+  {
+    "name": "haiwanat",
+    "word_count": 93,
+    "words": [
+      {
+        "id": 245,
+        "word_name": "اَزدَها",
+        "transliteration": "Azdahaa"
+      },
+      {
+        "id": 544,
+        "word_name": "اُلّو",
+        "transliteration": "Ullu"
+      },
+      {
+        "id": 616,
+        "word_name": "اوندر",
+        "transliteration": "Oundar"
+      },
+      {
+        "id": 728,
+        "word_name": "اونضض",
+        "transliteration": "Oont"
+      },
+      {
+        "id": 729,
+        "word_name": "اونضضري",
+        "transliteration": "Untri"
+      },
+      {
+        "id": 1049,
+        "word_name": "بطخ",
+        "transliteration": "Batakh"
+      },
+      {
+        "id": 1081,
+        "word_name": "بكري",
+        "transliteration": "Bakri"
+      },
+      {
+        "id": 1090,
+        "word_name": "بلاري",
+        "transliteration": "Bilaari"
+      },
+      {
+        "id": 1094,
+        "word_name": "بلبل",
+        "transliteration": "Bulbul"
+      },
+      {
+        "id": 1111,
+        "word_name": "بندر",
+        "transliteration": "Bandar"
+      },
+      {
+        "id": 1142,
+        "word_name": "بهالو",
+        "transliteration": "Bhaalu"
+      },
+      {
+        "id": 1207,
+        "word_name": "بهيرٌيو - بهيرٌياؤ",
+        "transliteration": "Bhairyo - Bhairyaao"
+      },
+      {
+        "id": 1213,
+        "word_name": "بهينس",
+        "transliteration": "Bhains"
+      },
+      {
+        "id": 1263,
+        "word_name": "بيل",
+        "transliteration": "Bail"
+      },
+      {
+        "id": 1336,
+        "word_name": "تتلي",
+        "transliteration": "Titli"
+      },
+      {
+        "id": 1382,
+        "word_name": "تدٌا - تدٌاؤ",
+        "transliteration": "Tidda - Tiddao"
+      },
+      {
+        "id": 1419,
+        "word_name": "تركي",
+        "transliteration": "Tarki"
+      },
+      {
+        "id": 1697,
+        "word_name": "ثثاضضلاككهو",
+        "transliteration": "Paatlaagho"
+      },
+      {
+        "id": 1729,
+        "word_name": "ثثاندا",
+        "transliteration": "Paanda"
+      },
+      {
+        "id": 1797,
+        "word_name": "ثثرنده - ثثرنداؤ",
+        "transliteration": "Parinda"
+      },
+      {
+        "id": 1803,
+        "word_name": "ثثروانه",
+        "transliteration": "Parwaana"
+      },
+      {
+        "id": 1924,
+        "word_name": "ثثوثثضض",
+        "transliteration": "Popat"
+      },
+      {
+        "id": 2126,
+        "word_name": "جعلان",
+        "transliteration": "Jolaan"
+      },
+      {
+        "id": 2159,
+        "word_name": "جِمال",
+        "transliteration": "Jimaal"
+      },
+      {
+        "id": 2195,
+        "word_name": "جنككلي بهينس",
+        "transliteration": "Jangli bhains"
+      },
+      {
+        "id": 2254,
+        "word_name": "جهينككو",
+        "transliteration": "Jhingo"
+      },
+      {
+        "id": 2355,
+        "word_name": "ححامر ححلي",
+        "transliteration": "Chaamar chilli"
+      },
+      {
+        "id": 2358,
+        "word_name": "ححانحح",
+        "transliteration": "Chaanch"
+      },
+      {
+        "id": 2499,
+        "word_name": "ححيتو",
+        "transliteration": "Cheetah"
+      },
+      {
+        "id": 2509,
+        "word_name": "ححيل",
+        "transliteration": "Cheel"
+      },
+      {
+        "id": 2813,
+        "word_name": "خنزير",
+        "transliteration": "Khinzeer"
+      },
+      {
+        "id": 2990,
+        "word_name": "دكّر",
+        "transliteration": "Dukkar"
+      },
+      {
+        "id": 3069,
+        "word_name": "دٌهور",
+        "transliteration": "Dhor"
+      },
+      {
+        "id": 3081,
+        "word_name": "دهيرٌكو",
+        "transliteration": "Dhedko"
+      },
+      {
+        "id": 3102,
+        "word_name": "دودة القز",
+        "transliteration": "Dudatul qaz"
+      },
+      {
+        "id": 3155,
+        "word_name": "ذئب",
+        "transliteration": "Zeeb"
+      },
+      {
+        "id": 3160,
+        "word_name": "ذُباب",
+        "transliteration": "Zubaab"
+      },
+      {
+        "id": 3458,
+        "word_name": "زرافة",
+        "transliteration": "Zaraafah"
+      },
+      {
+        "id": 3508,
+        "word_name": "زيبرا",
+        "transliteration": "Zebra"
+      },
+      {
+        "id": 3565,
+        "word_name": "سانثث",
+        "transliteration": "Saa(n)p"
+      },
+      {
+        "id": 3671,
+        "word_name": "سسلو",
+        "transliteration": "Saslu"
+      },
+      {
+        "id": 3735,
+        "word_name": "سلوىْ",
+        "transliteration": "Salwa"
+      },
+      {
+        "id": 3900,
+        "word_name": "شترمرغ",
+        "transliteration": "Shutermurg"
+      },
+      {
+        "id": 4512,
+        "word_name": "غزال",
+        "transliteration": "Gazaal"
+      },
+      {
+        "id": 4637,
+        "word_name": "فَرَس",
+        "transliteration": "Faras"
+      },
+      {
+        "id": 4918,
+        "word_name": "كاجبو",
+        "transliteration": "Kaajbo"
+      },
+      {
+        "id": 4938,
+        "word_name": "كاككرٌو",
+        "transliteration": "Kaagro"
+      },
+      {
+        "id": 4976,
+        "word_name": "كبوضضر",
+        "transliteration": "Kabutar"
+      },
+      {
+        "id": 4987,
+        "word_name": "كتّه-كتّاؤ",
+        "transliteration": "Kutta- Kuttao"
+      },
+      {
+        "id": 5059,
+        "word_name": "ككائي",
+        "transliteration": "Gaai"
+      },
+      {
+        "id": 5077,
+        "word_name": "ككدهو، ككدهيرو",
+        "transliteration": "Gadho, Gadhero"
+      },
+      {
+        "id": 5177,
+        "word_name": "ككهورٌو",
+        "transliteration": "Ghodho"
+      },
+      {
+        "id": 5226,
+        "word_name": "كلب - كلاب",
+        "transliteration": "Kalb - Kilaab"
+      },
+      {
+        "id": 5376,
+        "word_name": "كيرٌي",
+        "transliteration": "Kiri"
+      },
+      {
+        "id": 5384,
+        "word_name": "كيكـرٌو",
+        "transliteration": "Kekdo"
+      },
+      {
+        "id": 5541,
+        "word_name": "لومرٌي",
+        "transliteration": "Lomri"
+      },
+      {
+        "id": 5582,
+        "word_name": "ماكهو",
+        "transliteration": "Maakho"
+      },
+      {
+        "id": 5725,
+        "word_name": "مححهي- مححهيو",
+        "transliteration": "Machchhi - Machchhiyo"
+      },
+      {
+        "id": 5726,
+        "word_name": "مححهي -  مححهيو",
+        "transliteration": "Machhi"
+      },
+      {
+        "id": 5792,
+        "word_name": "مدماكهي",
+        "transliteration": "Mad-Maakhi"
+      },
+      {
+        "id": 5850,
+        "word_name": "مرغي",
+        "transliteration": "Murgi"
+      },
+      {
+        "id": 6170,
+        "word_name": "مكرٌي",
+        "transliteration": "Makdi"
+      },
+      {
+        "id": 6174,
+        "word_name": "مككر مححهـ",
+        "transliteration": "Magarmuchh"
+      },
+      {
+        "id": 6379,
+        "word_name": "مور",
+        "transliteration": "Mor"
+      },
+      {
+        "id": 6589,
+        "word_name": "نسر",
+        "transliteration": "Nasr"
+      },
+      {
+        "id": 6778,
+        "word_name": "هاتهي",
+        "transliteration": "Haathi"
+      },
+      {
+        "id": 6821,
+        "word_name": "هرن",
+        "transliteration": "Haran"
+      },
+      {
+        "id": 7002,
+        "word_name": "ورٌو",
+        "transliteration": "Waru"
+      },
+      {
+        "id": 7087,
+        "word_name": "ويححهو",
+        "transliteration": "Veechhu"
+      },
+      {
+        "id": 7501,
+        "word_name": "سينككرٌا",
+        "transliteration": "Singraa"
+      },
+      {
+        "id": 7587,
+        "word_name": "ككلوري",
+        "transliteration": "Gilori"
+      },
+      {
+        "id": 8023,
+        "word_name": "عندليب",
+        "transliteration": "Andalib"
+      },
+      {
+        "id": 8026,
+        "word_name": "عِجل",
+        "transliteration": "Ijl"
+      },
+      {
+        "id": 8027,
+        "word_name": "واححهرٌدو",
+        "transliteration": "Waachherdu"
+      },
+      {
+        "id": 8043,
+        "word_name": "قنفذ",
+        "transliteration": "Qunfuz"
+      },
+      {
+        "id": 8067,
+        "word_name": "بهيمة - بهائم",
+        "transliteration": "Bahimat - Bahaaim"
+      },
+      {
+        "id": 8069,
+        "word_name": "اَنعام",
+        "transliteration": "An'aam"
+      },
+      {
+        "id": 8077,
+        "word_name": "هثثّو",
+        "transliteration": "Hippo"
+      },
+      {
+        "id": 8079,
+        "word_name": "ككيندٌو",
+        "transliteration": "Gaindo"
+      },
+      {
+        "id": 8125,
+        "word_name": "كوترو - كوتراؤ",
+        "transliteration": "Kutro - Kutraao"
+      },
+      {
+        "id": 8195,
+        "word_name": "قُمري",
+        "transliteration": "Qumri"
+      },
+      {
+        "id": 8240,
+        "word_name": "ثثينححها",
+        "transliteration": "Pinchaa"
+      },
+      {
+        "id": 8286,
+        "word_name": "عنكبوت",
+        "transliteration": "Ankaboot"
+      },
+      {
+        "id": 8383,
+        "word_name": "حمامة",
+        "transliteration": "Hamaamat"
+      },
+      {
+        "id": 8412,
+        "word_name": "طاووس",
+        "transliteration": "Tawus"
+      },
+      {
+        "id": 8420,
+        "word_name": "اخطبوط",
+        "transliteration": "Ukhtabut"
+      },
+      {
+        "id": 8443,
+        "word_name": "هزبر",
+        "transliteration": "Hizabr"
+      },
+      {
+        "id": 8466,
+        "word_name": "ككوريلا",
+        "transliteration": "Gorilla"
+      },
+      {
+        "id": 8472,
+        "word_name": "بهمري",
+        "transliteration": "Bhamri"
+      },
+      {
+        "id": 8473,
+        "word_name": "ماكن",
+        "transliteration": "Maakan"
+      },
+      {
+        "id": 8535,
+        "word_name": "فاخته",
+        "transliteration": "Faakhta"
+      },
+      {
+        "id": 8640,
+        "word_name": "عنکبوت",
+        "transliteration": "Ankabut"
+      },
+      {
+        "id": 8676,
+        "word_name": "طاووس",
+        "transliteration": "Taawus"
+      }
+    ]
+  },
+  {
+    "name": "aazaa",
+    "word_count": 75,
+    "words": [
+      {
+        "id": 202,
+        "word_name": "اذن",
+        "transliteration": "Ozun"
+      },
+      {
+        "id": 646,
+        "word_name": "اْنككلي - اْنككليو",
+        "transliteration": "Aangli - Aangliyo"
+      },
+      {
+        "id": 650,
+        "word_name": "انككوا - انككواؤ",
+        "transliteration": "Angwa - Angwaao"
+      },
+      {
+        "id": 651,
+        "word_name": "انككوضضهو",
+        "transliteration": "Angutho"
+      },
+      {
+        "id": 655,
+        "word_name": "اْنكهـ - اْنكهو",
+        "transliteration": "aankh"
+      },
+      {
+        "id": 751,
+        "word_name": "ايرٌي",
+        "transliteration": "Eiri"
+      },
+      {
+        "id": 828,
+        "word_name": "بال - بالو",
+        "transliteration": "Baal - Baalo"
+      },
+      {
+        "id": 1069,
+        "word_name": "بغل",
+        "transliteration": "bagal"
+      },
+      {
+        "id": 1381,
+        "word_name": "تخنه",
+        "transliteration": "Takhna"
+      },
+      {
+        "id": 1701,
+        "word_name": "ثثاثثن",
+        "transliteration": "Paapan"
+      },
+      {
+        "id": 1732,
+        "word_name": "ثثانسلي - ثثانسليو",
+        "transliteration": "pansli"
+      },
+      {
+        "id": 1837,
+        "word_name": "ثثكك",
+        "transliteration": "pug"
+      },
+      {
+        "id": 1848,
+        "word_name": "ثثلكو",
+        "transliteration": "Palko"
+      },
+      {
+        "id": 1972,
+        "word_name": "ثثيشاني",
+        "transliteration": "peshaani"
+      },
+      {
+        "id": 1976,
+        "word_name": "ثثيضض",
+        "transliteration": "paet"
+      },
+      {
+        "id": 1977,
+        "word_name": "ثثيضضهـ",
+        "transliteration": "Peeth"
+      },
+      {
+        "id": 2017,
+        "word_name": "جابرٌا",
+        "transliteration": "Jaabra"
+      },
+      {
+        "id": 2219,
+        "word_name": "جهانكك",
+        "transliteration": "Jhaang"
+      },
+      {
+        "id": 2357,
+        "word_name": "ححامرٌي",
+        "transliteration": "Chaamri"
+      },
+      {
+        "id": 2420,
+        "word_name": "ححهاتي",
+        "transliteration": "Chhaati"
+      },
+      {
+        "id": 2443,
+        "word_name": "ححظظره",
+        "transliteration": "Chehra"
+      },
+      {
+        "id": 2615,
+        "word_name": "حلق",
+        "transliteration": "Halq"
+      },
+      {
+        "id": 2617,
+        "word_name": "حلقوم",
+        "transliteration": "Hulqoom"
+      },
+      {
+        "id": 2814,
+        "word_name": "خنصر",
+        "transliteration": "Khinsir"
+      },
+      {
+        "id": 2886,
+        "word_name": "دارٌهـ",
+        "transliteration": "Daarh"
+      },
+      {
+        "id": 2887,
+        "word_name": "دارٌهي",
+        "transliteration": "Daarhi"
+      },
+      {
+        "id": 2906,
+        "word_name": "دانت",
+        "transliteration": "Dāṅt"
+      },
+      {
+        "id": 2999,
+        "word_name": "دل",
+        "transliteration": "Dil"
+      },
+      {
+        "id": 3016,
+        "word_name": "دُم",
+        "transliteration": "Dum"
+      },
+      {
+        "id": 3019,
+        "word_name": "دماغ",
+        "transliteration": "Dimaag"
+      },
+      {
+        "id": 3124,
+        "word_name": "دٌونضضي",
+        "transliteration": "Duti"
+      },
+      {
+        "id": 3421,
+        "word_name": "ريرٌهـ ني هدٌي",
+        "transliteration": "Rirh ni haddi"
+      },
+      {
+        "id": 3437,
+        "word_name": "زبان",
+        "transliteration": "Zabaan"
+      },
+      {
+        "id": 3862,
+        "word_name": "سينه",
+        "transliteration": "Seena"
+      },
+      {
+        "id": 4137,
+        "word_name": "ضضهدٌي",
+        "transliteration": "Thuddi"
+      },
+      {
+        "id": 4361,
+        "word_name": "عضو - اعضاء",
+        "transliteration": "Udw-Aa'daa"
+      },
+      {
+        "id": 4373,
+        "word_name": "عظام",
+        "transliteration": "Ezaam"
+      },
+      {
+        "id": 4791,
+        "word_name": "قدم - اقدام",
+        "transliteration": "Qadam - Aqdaam"
+      },
+      {
+        "id": 4952,
+        "word_name": "كان",
+        "transliteration": "Kaan"
+      },
+      {
+        "id": 4958,
+        "word_name": "كاندها",
+        "transliteration": "Kaandha"
+      },
+      {
+        "id": 5066,
+        "word_name": "ككال",
+        "transliteration": "Gaal"
+      },
+      {
+        "id": 5095,
+        "word_name": "ككردن",
+        "transliteration": "Gardan"
+      },
+      {
+        "id": 5194,
+        "word_name": "ككوضضهن",
+        "transliteration": "Guthan"
+      },
+      {
+        "id": 5213,
+        "word_name": "ككيبرٌي",
+        "transliteration": "Gibri"
+      },
+      {
+        "id": 5247,
+        "word_name": "كمر",
+        "transliteration": "Kamar"
+      },
+      {
+        "id": 5367,
+        "word_name": "كوني",
+        "transliteration": "Koni"
+      },
+      {
+        "id": 5430,
+        "word_name": "لب",
+        "transliteration": "Lab"
+      },
+      {
+        "id": 5568,
+        "word_name": "ماتهو",
+        "transliteration": "Maathu"
+      },
+      {
+        "id": 6311,
+        "word_name": "منهـ",
+        "transliteration": "Monh"
+      },
+      {
+        "id": 6403,
+        "word_name": "مونححهـ",
+        "transliteration": "Moonchh"
+      },
+      {
+        "id": 6461,
+        "word_name": "ناخن",
+        "transliteration": "Naakhun"
+      },
+      {
+        "id": 6498,
+        "word_name": "ناف",
+        "transliteration": "Naaf"
+      },
+      {
+        "id": 6505,
+        "word_name": "ناك",
+        "transliteration": "naak"
+      },
+      {
+        "id": 6772,
+        "word_name": "هاتهـ",
+        "transliteration": "haath"
+      },
+      {
+        "id": 6798,
+        "word_name": "هتهيلي",
+        "transliteration": "hatheli"
+      },
+      {
+        "id": 6807,
+        "word_name": "هدٌا",
+        "transliteration": "hadda"
+      },
+      {
+        "id": 6887,
+        "word_name": "هونضض",
+        "transliteration": "Hount"
+      },
+      {
+        "id": 7367,
+        "word_name": "بُرجُمَة - بَراجِم",
+        "transliteration": "Baraajim"
+      },
+      {
+        "id": 7414,
+        "word_name": "ثغر",
+        "transliteration": "Sagr"
+      },
+      {
+        "id": 7503,
+        "word_name": "سرة",
+        "transliteration": "Surrat"
+      },
+      {
+        "id": 7505,
+        "word_name": "وتين",
+        "transliteration": "Wateen"
+      },
+      {
+        "id": 7506,
+        "word_name": "شه ركك",
+        "transliteration": "Sheh rag"
+      },
+      {
+        "id": 7511,
+        "word_name": "جككر",
+        "transliteration": "Jigar"
+      },
+      {
+        "id": 7637,
+        "word_name": "كيكي (اْنكهـ ني)",
+        "transliteration": "Kiki"
+      },
+      {
+        "id": 7638,
+        "word_name": "فرق",
+        "transliteration": "Farq"
+      },
+      {
+        "id": 7840,
+        "word_name": "ثثضضهّا",
+        "transliteration": "Puttha"
+      },
+      {
+        "id": 7882,
+        "word_name": "عارضة",
+        "transliteration": "Aaredat"
+      },
+      {
+        "id": 7883,
+        "word_name": "كنثثضضي",
+        "transliteration": "Kanpati"
+      },
+      {
+        "id": 7884,
+        "word_name": "عنقفة",
+        "transliteration": "Anqafat"
+      },
+      {
+        "id": 8090,
+        "word_name": "سوق",
+        "transliteration": "Suq"
+      },
+      {
+        "id": 8221,
+        "word_name": "حقو",
+        "transliteration": "Haqw"
+      },
+      {
+        "id": 8222,
+        "word_name": "حقوين",
+        "transliteration": "Haqawain"
+      },
+      {
+        "id": 8376,
+        "word_name": "حواجب",
+        "transliteration": "Hawaajib"
+      },
+      {
+        "id": 8562,
+        "word_name": "گيبرٌي",
+        "transliteration": "Gibri"
+      },
+      {
+        "id": 8657,
+        "word_name": "بطن",
+        "transliteration": "Batn"
+      }
+    ]
+  },
+  {
+    "name": "Sheher",
+    "word_count": 71,
+    "words": [
+      {
+        "id": 4,
+        "word_name": "اْئين",
+        "transliteration": "Aaeen"
+      },
+      {
+        "id": 8,
+        "word_name": "اْب و هواء",
+        "transliteration": "Aabo Hawaa"
+      },
+      {
+        "id": 10,
+        "word_name": "اْبادي",
+        "transliteration": "Aabaadi"
+      },
+      {
+        "id": 46,
+        "word_name": "ابواب",
+        "transliteration": "Abwaab"
+      },
+      {
+        "id": 49,
+        "word_name": "اُتارو",
+        "transliteration": "Utaaro"
+      },
+      {
+        "id": 233,
+        "word_name": "ارض",
+        "transliteration": "Ard"
+      },
+      {
+        "id": 335,
+        "word_name": "اَشجار",
+        "transliteration": "Ashjaar"
+      },
+      {
+        "id": 336,
+        "word_name": "اشخاص",
+        "transliteration": "Ashkhaas"
+      },
+      {
+        "id": 490,
+        "word_name": "اككاسي",
+        "transliteration": "Agaasi"
+      },
+      {
+        "id": 575,
+        "word_name": "امن",
+        "transliteration": "Aman"
+      },
+      {
+        "id": 581,
+        "word_name": "امير",
+        "transliteration": "Ameer"
+      },
+      {
+        "id": 598,
+        "word_name": "انتظام",
+        "transliteration": "Intezaam"
+      },
+      {
+        "id": 609,
+        "word_name": "انجمن - انجمنو",
+        "transliteration": "Anjuman"
+      },
+      {
+        "id": 717,
+        "word_name": "اوكلدو",
+        "transliteration": "Okaldo"
+      },
+      {
+        "id": 795,
+        "word_name": "بادشاه - بادشاهو",
+        "transliteration": "Baadshah"
+      },
+      {
+        "id": 801,
+        "word_name": "باركش",
+        "transliteration": "Baarkash"
+      },
+      {
+        "id": 809,
+        "word_name": "بازار",
+        "transliteration": "Baazaar"
+      },
+      {
+        "id": 817,
+        "word_name": "باشنده - باشندا ؤ",
+        "transliteration": "Baashindaa"
+      },
+      {
+        "id": 820,
+        "word_name": "باغ",
+        "transliteration": "Baag"
+      },
+      {
+        "id": 822,
+        "word_name": "باغيححه",
+        "transliteration": "Baagicha"
+      },
+      {
+        "id": 968,
+        "word_name": "بستان - بساتين",
+        "transliteration": "Bustaan - Basaateen"
+      },
+      {
+        "id": 1123,
+        "word_name": "بنياد",
+        "transliteration": "Bunyaad"
+      },
+      {
+        "id": 1124,
+        "word_name": "بنيان",
+        "transliteration": "Bunyaan"
+      },
+      {
+        "id": 1217,
+        "word_name": "بوَّاب",
+        "transliteration": "Buwwab"
+      },
+      {
+        "id": 1224,
+        "word_name": "بوستان",
+        "transliteration": "Bostaan"
+      },
+      {
+        "id": 1240,
+        "word_name": "بيت - بيوت",
+        "transliteration": "Bait - Buyoot"
+      },
+      {
+        "id": 1290,
+        "word_name": "تاجر",
+        "transliteration": "Taajir"
+      },
+      {
+        "id": 1342,
+        "word_name": "تجار",
+        "transliteration": "Tujjaar"
+      },
+      {
+        "id": 1343,
+        "word_name": "تجارة",
+        "transliteration": "Tijaarat"
+      },
+      {
+        "id": 1485,
+        "word_name": "تفريح",
+        "transliteration": "Tafreeh"
+      },
+      {
+        "id": 1583,
+        "word_name": "تنككدست",
+        "transliteration": "Tangdast"
+      },
+      {
+        "id": 1936,
+        "word_name": "ثثوليس",
+        "transliteration": "Police"
+      },
+      {
+        "id": 1998,
+        "word_name": "ثقافة",
+        "transliteration": "Saqaafat"
+      },
+      {
+        "id": 2021,
+        "word_name": "جار",
+        "transliteration": "Jaar"
+      },
+      {
+        "id": 2039,
+        "word_name": "جامع مسجد",
+        "transliteration": "Jaame' Masjid"
+      },
+      {
+        "id": 2040,
+        "word_name": "جامعة",
+        "transliteration": "Jamea"
+      },
+      {
+        "id": 2309,
+        "word_name": "حاكم",
+        "transliteration": "Haakim"
+      },
+      {
+        "id": 2527,
+        "word_name": "حراسة",
+        "transliteration": "Hiraasat"
+      },
+      {
+        "id": 2533,
+        "word_name": "حرز",
+        "transliteration": "Hirz"
+      },
+      {
+        "id": 2534,
+        "word_name": "حرسة - حراس",
+        "transliteration": "Harasat-Hurraas"
+      },
+      {
+        "id": 2583,
+        "word_name": "حفاظة",
+        "transliteration": "Hifaazat"
+      },
+      {
+        "id": 2604,
+        "word_name": "حكومة",
+        "transliteration": "Hukoomat"
+      },
+      {
+        "id": 2651,
+        "word_name": "حويلي",
+        "transliteration": "Haveli"
+      },
+      {
+        "id": 2878,
+        "word_name": "دار",
+        "transliteration": "Daar"
+      },
+      {
+        "id": 3214,
+        "word_name": "راسته",
+        "transliteration": "Raasta, raasto"
+      },
+      {
+        "id": 3312,
+        "word_name": "رعية",
+        "transliteration": "Ra'eeyat"
+      },
+      {
+        "id": 3358,
+        "word_name": "رهائش",
+        "transliteration": "Rahaaish"
+      },
+      {
+        "id": 3391,
+        "word_name": "روزككار",
+        "transliteration": "Rozgaar"
+      },
+      {
+        "id": 3511,
+        "word_name": "زير تعمير",
+        "transliteration": "Zair e Ta'meer"
+      },
+      {
+        "id": 3649,
+        "word_name": "سرسبز",
+        "transliteration": "Sarsabz"
+      },
+      {
+        "id": 3925,
+        "word_name": "شرطة - شرطاؤ",
+        "transliteration": "Shurtat - Shurtaao"
+      },
+      {
+        "id": 4063,
+        "word_name": "صفائي",
+        "transliteration": "Safaai"
+      },
+      {
+        "id": 4184,
+        "word_name": "طريق -  طرائق",
+        "transliteration": "Tareeq - Taraaiq"
+      },
+      {
+        "id": 4280,
+        "word_name": "عامل- عمّال",
+        "transliteration": "Aamil - Ummaal"
+      },
+      {
+        "id": 4427,
+        "word_name": "عمارة",
+        "transliteration": "Imaarat"
+      },
+      {
+        "id": 4764,
+        "word_name": "قبرستان",
+        "transliteration": "Qabrastaan"
+      },
+      {
+        "id": 4796,
+        "word_name": "قذارة",
+        "transliteration": "Qazaarat"
+      },
+      {
+        "id": 4995,
+        "word_name": "كححرو",
+        "transliteration": "Kachro"
+      },
+      {
+        "id": 4998,
+        "word_name": "كدورة",
+        "transliteration": "Kadurat"
+      },
+      {
+        "id": 5069,
+        "word_name": "ككام",
+        "transliteration": "Gaam"
+      },
+      {
+        "id": 5070,
+        "word_name": "ككامرٌو",
+        "transliteration": "Gaamru"
+      },
+      {
+        "id": 5071,
+        "word_name": "ككامرٌيو",
+        "transliteration": "Gaameryo"
+      },
+      {
+        "id": 5127,
+        "word_name": "ككلي-ككليو",
+        "transliteration": "Gali - Galyo"
+      },
+      {
+        "id": 5275,
+        "word_name": "كنيسة - كنائس",
+        "transliteration": "Kanisat - Kanaais"
+      },
+      {
+        "id": 5354,
+        "word_name": "كورضض",
+        "transliteration": "Court"
+      },
+      {
+        "id": 5788,
+        "word_name": "مدرسة",
+        "transliteration": "Madrasa"
+      },
+      {
+        "id": 6205,
+        "word_name": "ملكة",
+        "transliteration": "Milkat"
+      },
+      {
+        "id": 6421,
+        "word_name": "ميدان",
+        "transliteration": "Maidaan"
+      },
+      {
+        "id": 8132,
+        "word_name": "ككضضر - ككضضرو",
+        "transliteration": "Gutter"
+      },
+      {
+        "id": 8521,
+        "word_name": "ائيرثثورضض",
+        "transliteration": "Airport"
+      },
+      {
+        "id": 8538,
+        "word_name": "دكان",
+        "transliteration": "Dukaan"
+      }
+    ]
+  },
+  {
+    "name": "shugal",
+    "word_count": 64,
+    "words": [
+      {
+        "id": 109,
+        "word_name": "اُجرة",
+        "transliteration": "Ujrat"
+      },
+      {
+        "id": 240,
+        "word_name": "اْري",
+        "transliteration": "Aari"
+      },
+      {
+        "id": 461,
+        "word_name": "اقتصاد",
+        "transliteration": "Iqtesaad"
+      },
+      {
+        "id": 1160,
+        "word_name": "بهرت",
+        "transliteration": "Bharat"
+      },
+      {
+        "id": 1290,
+        "word_name": "تاجر",
+        "transliteration": "Taajir"
+      },
+      {
+        "id": 1343,
+        "word_name": "تجارة",
+        "transliteration": "Tijaarat"
+      },
+      {
+        "id": 1425,
+        "word_name": "تزيين",
+        "transliteration": "Tazyeen"
+      },
+      {
+        "id": 1936,
+        "word_name": "ثثوليس",
+        "transliteration": "Police"
+      },
+      {
+        "id": 2226,
+        "word_name": "جظظد",
+        "transliteration": "Johod"
+      },
+      {
+        "id": 2279,
+        "word_name": "جوهري",
+        "transliteration": "Jawhari"
+      },
+      {
+        "id": 2309,
+        "word_name": "حاكم",
+        "transliteration": "Haakim"
+      },
+      {
+        "id": 2605,
+        "word_name": "حكيم",
+        "transliteration": "Hakeem"
+      },
+      {
+        "id": 2675,
+        "word_name": "خادم",
+        "transliteration": "Khaadim"
+      },
+      {
+        "id": 2745,
+        "word_name": "خزانححي",
+        "transliteration": "Khazaanchi"
+      },
+      {
+        "id": 2766,
+        "word_name": "خطّاط",
+        "transliteration": "Khattaat"
+      },
+      {
+        "id": 2897,
+        "word_name": "دٌاكـضضر",
+        "transliteration": "Daakter"
+      },
+      {
+        "id": 2942,
+        "word_name": "درزي",
+        "transliteration": "Darzi"
+      },
+      {
+        "id": 3157,
+        "word_name": "ذاكر",
+        "transliteration": "Zaakir "
+      },
+      {
+        "id": 3218,
+        "word_name": "راعي",
+        "transliteration": "Raa'ee"
+      },
+      {
+        "id": 3226,
+        "word_name": "راهب",
+        "transliteration": "Raahib"
+      },
+      {
+        "id": 3227,
+        "word_name": "راوت",
+        "transliteration": "Raawat"
+      },
+      {
+        "id": 3322,
+        "word_name": "رفوككر",
+        "transliteration": "Rafu gar"
+      },
+      {
+        "id": 3393,
+        "word_name": "روزي",
+        "transliteration": "Rozi"
+      },
+      {
+        "id": 3593,
+        "word_name": "ستهار",
+        "transliteration": "Suthaar"
+      },
+      {
+        "id": 3595,
+        "word_name": "سثثاهي",
+        "transliteration": "Sipaahi"
+      },
+      {
+        "id": 3728,
+        "word_name": "سلطان - سلاطين",
+        "transliteration": "Sultaan"
+      },
+      {
+        "id": 3834,
+        "word_name": "سياسة",
+        "transliteration": "Siyasat"
+      },
+      {
+        "id": 3865,
+        "word_name": "سيوو",
+        "transliteration": "Seewu"
+      },
+      {
+        "id": 3874,
+        "word_name": "شاعر",
+        "transliteration": "Shaair "
+      },
+      {
+        "id": 3925,
+        "word_name": "شرطة - شرطاؤ",
+        "transliteration": "Shurtat - Shurtaao"
+      },
+      {
+        "id": 3947,
+        "word_name": "شغل",
+        "transliteration": "Shugul"
+      },
+      {
+        "id": 3963,
+        "word_name": "شكاري",
+        "transliteration": "Shikaari"
+      },
+      {
+        "id": 4094,
+        "word_name": "صنعة - صنائع",
+        "transliteration": "San'at - Sanaae'"
+      },
+      {
+        "id": 4175,
+        "word_name": "طبيب - اطباء",
+        "transliteration": "Tabeeb - Attibbaa"
+      },
+      {
+        "id": 4767,
+        "word_name": "قبطان",
+        "transliteration": "Qabtaan"
+      },
+      {
+        "id": 4832,
+        "word_name": "قصائي",
+        "transliteration": "Qasaai"
+      },
+      {
+        "id": 4922,
+        "word_name": "كارخانه",
+        "transliteration": "Kaarkhaana"
+      },
+      {
+        "id": 4923,
+        "word_name": "كاروبار",
+        "transliteration": "Kaarobaar"
+      },
+      {
+        "id": 4924,
+        "word_name": "كاريككر",
+        "transliteration": "Kaarigar"
+      },
+      {
+        "id": 4946,
+        "word_name": "كام",
+        "transliteration": "Kaam"
+      },
+      {
+        "id": 5006,
+        "word_name": "كرايه",
+        "transliteration": "Kiraaya"
+      },
+      {
+        "id": 5031,
+        "word_name": "كسان",
+        "transliteration": "Kisaan"
+      },
+      {
+        "id": 5240,
+        "word_name": "كمائي",
+        "transliteration": "Kamaai"
+      },
+      {
+        "id": 5243,
+        "word_name": "كماؤنار",
+        "transliteration": "Kamaavnaar"
+      },
+      {
+        "id": 5334,
+        "word_name": "كهيت",
+        "transliteration": "Kheit"
+      },
+      {
+        "id": 5543,
+        "word_name": "لوهار",
+        "transliteration": "Lauhaar"
+      },
+      {
+        "id": 5589,
+        "word_name": "مالي",
+        "transliteration": "Maali"
+      },
+      {
+        "id": 5788,
+        "word_name": "مدرسة",
+        "transliteration": "Madrasa"
+      },
+      {
+        "id": 5872,
+        "word_name": "مزدور",
+        "transliteration": "Mazdoor"
+      },
+      {
+        "id": 6747,
+        "word_name": "نوكري",
+        "transliteration": "Noukri"
+      },
+      {
+        "id": 7323,
+        "word_name": "اْورٌوو",
+        "transliteration": "Aawarwu"
+      },
+      {
+        "id": 7324,
+        "word_name": "باورححي",
+        "transliteration": "Baawarchi"
+      },
+      {
+        "id": 7325,
+        "word_name": "قَهرَمان",
+        "transliteration": "Qahramaan"
+      },
+      {
+        "id": 7398,
+        "word_name": "جزار",
+        "transliteration": "Jazzaar"
+      },
+      {
+        "id": 7488,
+        "word_name": "حرفة",
+        "transliteration": "Hirfat"
+      },
+      {
+        "id": 7647,
+        "word_name": "لاب ونتو",
+        "transliteration": "Laab wanto"
+      },
+      {
+        "id": 7929,
+        "word_name": "رنككريز",
+        "transliteration": "Rang rez"
+      },
+      {
+        "id": 7930,
+        "word_name": "دهوبي",
+        "transliteration": "Dhobi"
+      },
+      {
+        "id": 8114,
+        "word_name": "نقّاش",
+        "transliteration": "Naqqaash"
+      },
+      {
+        "id": 8145,
+        "word_name": "بسس روزككاري",
+        "transliteration": "Be rozgaari"
+      },
+      {
+        "id": 8355,
+        "word_name": "صانع",
+        "transliteration": "Saane'"
+      },
+      {
+        "id": 8470,
+        "word_name": "فن تعمير",
+        "transliteration": "Fannul Taamir"
+      },
+      {
+        "id": 8538,
+        "word_name": "دكان",
+        "transliteration": "Dukaan"
+      },
+      {
+        "id": 8680,
+        "word_name": "حرافة",
+        "transliteration": "Hiraafat"
+      }
+    ]
+  },
+  {
+    "name": "madressa",
+    "word_count": 59,
+    "words": [
+      {
+        "id": 47,
+        "word_name": "ابيات",
+        "transliteration": "Abyaat"
+      },
+      {
+        "id": 106,
+        "word_name": "اجتهاد",
+        "transliteration": "Ijtehaad"
+      },
+      {
+        "id": 152,
+        "word_name": "اَحكام",
+        "transliteration": "Ahkaam"
+      },
+      {
+        "id": 160,
+        "word_name": "اَخبار",
+        "transliteration": "Akhbaar"
+      },
+      {
+        "id": 162,
+        "word_name": "اختبار",
+        "transliteration": "Ikhtebaar"
+      },
+      {
+        "id": 191,
+        "word_name": "اَدعِـيَة",
+        "transliteration": "Ad'e'yat"
+      },
+      {
+        "id": 197,
+        "word_name": "ادوات",
+        "transliteration": "Adawaat"
+      },
+      {
+        "id": 262,
+        "word_name": "اسباق",
+        "transliteration": "Asbaaq"
+      },
+      {
+        "id": 263,
+        "word_name": "اُستاذ",
+        "transliteration": "Ustaaz"
+      },
+      {
+        "id": 479,
+        "word_name": "اكاليم",
+        "transliteration": "Akaaleem"
+      },
+      {
+        "id": 511,
+        "word_name": "اْل محمدص ع",
+        "transliteration": "Aale Mohammad"
+      },
+      {
+        "id": 632,
+        "word_name": "انشاء",
+        "transliteration": "Inshaa"
+      },
+      {
+        "id": 2181,
+        "word_name": "جناب",
+        "transliteration": "Janaab"
+      },
+      {
+        "id": 2257,
+        "word_name": "جواب",
+        "transliteration": "Jawaab"
+      },
+      {
+        "id": 2936,
+        "word_name": "درجة - درجات",
+        "transliteration": "Darajah - Darajaat"
+      },
+      {
+        "id": 3253,
+        "word_name": "رثثورضض",
+        "transliteration": "Report"
+      },
+      {
+        "id": 3271,
+        "word_name": "رحلة علمية",
+        "transliteration": "Rehlat Ilmiyah"
+      },
+      {
+        "id": 3376,
+        "word_name": "رواني",
+        "transliteration": "Rawaani"
+      },
+      {
+        "id": 3377,
+        "word_name": "رواية",
+        "transliteration": "Riwaayat"
+      },
+      {
+        "id": 3585,
+        "word_name": "سبق",
+        "transliteration": "Sabaq"
+      },
+      {
+        "id": 3855,
+        "word_name": "سيكهوو",
+        "transliteration": "Seekhwu"
+      },
+      {
+        "id": 3940,
+        "word_name": "شعار",
+        "transliteration": "Sheaar"
+      },
+      {
+        "id": 4165,
+        "word_name": "طالب - طلاب",
+        "transliteration": "Taalib - Tullaab"
+      },
+      {
+        "id": 4167,
+        "word_name": "طالب علم",
+        "transliteration": "Talabatul Ilm"
+      },
+      {
+        "id": 4168,
+        "word_name": "طالبة - طالبات",
+        "transliteration": "Taleba - Taalebaat"
+      },
+      {
+        "id": 4172,
+        "word_name": "طبع كروو",
+        "transliteration": "Tabe' kerwu"
+      },
+      {
+        "id": 4196,
+        "word_name": "طلب",
+        "transliteration": "Talab"
+      },
+      {
+        "id": 4204,
+        "word_name": "طهارة",
+        "transliteration": "Tahaarat"
+      },
+      {
+        "id": 4369,
+        "word_name": "عطلة",
+        "transliteration": "Utlat"
+      },
+      {
+        "id": 4406,
+        "word_name": "عِلم - عُلوم",
+        "transliteration": "Ilm - Uloom"
+      },
+      {
+        "id": 4427,
+        "word_name": "عمارة",
+        "transliteration": "Imaarat"
+      },
+      {
+        "id": 4450,
+        "word_name": "عنوان - عناوين",
+        "transliteration": "Unwaan - Anaawin"
+      },
+      {
+        "id": 4745,
+        "word_name": "قاري",
+        "transliteration": "Qaari"
+      },
+      {
+        "id": 4752,
+        "word_name": "قاعة",
+        "transliteration": "Qaa'at"
+      },
+      {
+        "id": 4755,
+        "word_name": "قافية",
+        "transliteration": "Qaafiyah"
+      },
+      {
+        "id": 4797,
+        "word_name": "قراءة",
+        "transliteration": "Qiraa'at"
+      },
+      {
+        "id": 4803,
+        "word_name": "قران مجيد",
+        "transliteration": "Quraan Majid"
+      },
+      {
+        "id": 4834,
+        "word_name": "قصائد",
+        "transliteration": "Qaseeda"
+      },
+      {
+        "id": 4864,
+        "word_name": "قلم",
+        "transliteration": "Qalam"
+      },
+      {
+        "id": 4890,
+        "word_name": "قول-اقوال",
+        "transliteration": "Qoul-Aqwaal"
+      },
+      {
+        "id": 4912,
+        "word_name": "كاتب - كتّاب",
+        "transliteration": "Kaatib - Kuttaab"
+      },
+      {
+        "id": 4951,
+        "word_name": "كاميابي",
+        "transliteration": "Kaamyaabi"
+      },
+      {
+        "id": 4979,
+        "word_name": "كتاب - كُتُب",
+        "transliteration": "Kitaab - Kutub"
+      },
+      {
+        "id": 5207,
+        "word_name": "ككوندر",
+        "transliteration": "Gondar"
+      },
+      {
+        "id": 5464,
+        "word_name": "لسان الدعوة",
+        "transliteration": "Lisan ul Dawat"
+      },
+      {
+        "id": 5481,
+        "word_name": "لغة - لغات",
+        "transliteration": "Lugat - Lugaat"
+      },
+      {
+        "id": 5485,
+        "word_name": "لفظ - الفاظ",
+        "transliteration": "Lafz - Alfaaz"
+      },
+      {
+        "id": 5788,
+        "word_name": "مدرسة",
+        "transliteration": "Madrasa"
+      },
+      {
+        "id": 5811,
+        "word_name": "مراجعة",
+        "transliteration": "Muraaja'at"
+      },
+      {
+        "id": 5922,
+        "word_name": "مسح",
+        "transliteration": "Maseh"
+      },
+      {
+        "id": 6079,
+        "word_name": "معلم",
+        "transliteration": "Moallim"
+      },
+      {
+        "id": 6608,
+        "word_name": "نصاب",
+        "transliteration": "Nisaab"
+      },
+      {
+        "id": 6619,
+        "word_name": "نصيحة",
+        "transliteration": "Naseehat"
+      },
+      {
+        "id": 6677,
+        "word_name": "نقشه",
+        "transliteration": "Naqshaa"
+      },
+      {
+        "id": 6689,
+        "word_name": "نكته - نكات",
+        "transliteration": "Nukta - Nekaat"
+      },
+      {
+        "id": 6750,
+        "word_name": "نونظظال",
+        "transliteration": "Naunihaal"
+      },
+      {
+        "id": 7842,
+        "word_name": "ثثانه",
+        "transliteration": "Paana"
+      },
+      {
+        "id": 7964,
+        "word_name": "درس ككاه",
+        "transliteration": "Dars gah"
+      },
+      {
+        "id": 7969,
+        "word_name": "ححوثثرٌي",
+        "transliteration": "Chopri"
+      }
+    ]
+  },
+  {
+    "name": "bagicha",
+    "word_count": 57,
+    "words": [
+      {
+        "id": 8,
+        "word_name": "اْب و هواء",
+        "transliteration": "Aabo Hawaa"
+      },
+      {
+        "id": 335,
+        "word_name": "اَشجار",
+        "transliteration": "Ashjaar"
+      },
+      {
+        "id": 493,
+        "word_name": "اككاوو",
+        "transliteration": "Ugaawo"
+      },
+      {
+        "id": 503,
+        "word_name": "اكهارٌوو",
+        "transliteration": "Ukhaarwu"
+      },
+      {
+        "id": 820,
+        "word_name": "باغ",
+        "transliteration": "Baag"
+      },
+      {
+        "id": 822,
+        "word_name": "باغيححه",
+        "transliteration": "Baagicha"
+      },
+      {
+        "id": 968,
+        "word_name": "بستان - بساتين",
+        "transliteration": "Bustaan - Basaateen"
+      },
+      {
+        "id": 1049,
+        "word_name": "بطخ",
+        "transliteration": "Batakh"
+      },
+      {
+        "id": 1132,
+        "word_name": "بظظار",
+        "transliteration": "Bahaar"
+      },
+      {
+        "id": 1158,
+        "word_name": "بظظجة",
+        "transliteration": "Behjat"
+      },
+      {
+        "id": 1304,
+        "word_name": "تالاب",
+        "transliteration": "Taalaab"
+      },
+      {
+        "id": 1415,
+        "word_name": "ترعة",
+        "transliteration": "Tur'at"
+      },
+      {
+        "id": 1485,
+        "word_name": "تفريح",
+        "transliteration": "Tafreeh"
+      },
+      {
+        "id": 1680,
+        "word_name": "ضضيكري",
+        "transliteration": "tekri"
+      },
+      {
+        "id": 1728,
+        "word_name": "ثثانترا - ثثانتراؤ",
+        "transliteration": "Paantra-Paantrao"
+      },
+      {
+        "id": 1797,
+        "word_name": "ثثرنده - ثثرنداؤ",
+        "transliteration": "Parinda"
+      },
+      {
+        "id": 1886,
+        "word_name": "ثثهل - ثثهلو",
+        "transliteration": "Phal-Phalo"
+      },
+      {
+        "id": 1888,
+        "word_name": "ثثهل دار",
+        "transliteration": "Phaldaar"
+      },
+      {
+        "id": 1905,
+        "word_name": "ثثهولو",
+        "transliteration": "phulo"
+      },
+      {
+        "id": 2100,
+        "word_name": "جرٌ",
+        "transliteration": "Jarr"
+      },
+      {
+        "id": 2210,
+        "word_name": "جهارٌ",
+        "transliteration": "Jhaar"
+      },
+      {
+        "id": 2248,
+        "word_name": "جهولا",
+        "transliteration": "Jhulaa"
+      },
+      {
+        "id": 2523,
+        "word_name": "حديقة - حدائق",
+        "transliteration": "Hadiqat - Hadaaik"
+      },
+      {
+        "id": 2834,
+        "word_name": "خوشبو",
+        "transliteration": "Khushbu"
+      },
+      {
+        "id": 3118,
+        "word_name": "دولاب",
+        "transliteration": "Daulaab, dolaab, dulaab"
+      },
+      {
+        "id": 3208,
+        "word_name": "راحة",
+        "transliteration": "Raahat"
+      },
+      {
+        "id": 3354,
+        "word_name": "رموو",
+        "transliteration": "Ramvu"
+      },
+      {
+        "id": 3649,
+        "word_name": "سرسبز",
+        "transliteration": "Sarsabz"
+      },
+      {
+        "id": 3904,
+        "word_name": "شجرة",
+        "transliteration": "Shajarat"
+      },
+      {
+        "id": 4300,
+        "word_name": "عجائب",
+        "transliteration": "Ajaaib"
+      },
+      {
+        "id": 4494,
+        "word_name": "غدير",
+        "transliteration": "Gadeer"
+      },
+      {
+        "id": 4618,
+        "word_name": "فدري",
+        "transliteration": "Fudri"
+      },
+      {
+        "id": 4709,
+        "word_name": "فوّاره",
+        "transliteration": "Favvarah"
+      },
+      {
+        "id": 4830,
+        "word_name": "قسم قسم نا",
+        "transliteration": "Qisam qisam na"
+      },
+      {
+        "id": 4954,
+        "word_name": "كانضضو-كانضضاؤ",
+        "transliteration": "Kaanto-Kaantaao"
+      },
+      {
+        "id": 5117,
+        "word_name": "ككلاب",
+        "transliteration": "Gulaab"
+      },
+      {
+        "id": 5146,
+        "word_name": "ككهاس",
+        "transliteration": "Ghaas"
+      },
+      {
+        "id": 5232,
+        "word_name": "كلي",
+        "transliteration": "Kali"
+      },
+      {
+        "id": 5273,
+        "word_name": "كنواطط",
+        "transliteration": "Kunwaa"
+      },
+      {
+        "id": 5369,
+        "word_name": "كياره، كياري",
+        "transliteration": "Kiyaara, kiyaari"
+      },
+      {
+        "id": 5635,
+        "word_name": "مضضّي",
+        "transliteration": "Mitti"
+      },
+      {
+        "id": 6561,
+        "word_name": "نخل",
+        "transliteration": "Nakhal"
+      },
+      {
+        "id": 6717,
+        "word_name": "نظظر - انظظار",
+        "transliteration": "Neher"
+      },
+      {
+        "id": 6750,
+        "word_name": "نونظظال",
+        "transliteration": "Naunihaal"
+      },
+      {
+        "id": 6824,
+        "word_name": "هريالي",
+        "transliteration": "Haryaali"
+      },
+      {
+        "id": 6993,
+        "word_name": "ورزش",
+        "transliteration": "Varzish"
+      },
+      {
+        "id": 7403,
+        "word_name": "بظظشت",
+        "transliteration": "Bahisht"
+      },
+      {
+        "id": 7416,
+        "word_name": "سرسبزككي",
+        "transliteration": "Sarsabzgi"
+      },
+      {
+        "id": 7545,
+        "word_name": "كهلوو",
+        "transliteration": "Khilwu"
+      },
+      {
+        "id": 7627,
+        "word_name": "ثثوده - ثثوداؤ",
+        "transliteration": "Pauda - Paudaao"
+      },
+      {
+        "id": 7628,
+        "word_name": "كضضني",
+        "transliteration": "Katni"
+      },
+      {
+        "id": 7636,
+        "word_name": "ثثانكهرٌي",
+        "transliteration": "Paankhri"
+      },
+      {
+        "id": 7908,
+        "word_name": "بووو",
+        "transliteration": "Bowu"
+      },
+      {
+        "id": 7910,
+        "word_name": "بيج بووو",
+        "transliteration": "Beej bowu"
+      },
+      {
+        "id": 7985,
+        "word_name": "كملائي جاوو",
+        "transliteration": "Kumlaai jaawu"
+      },
+      {
+        "id": 8000,
+        "word_name": "ككلشن",
+        "transliteration": "Gulshan"
+      },
+      {
+        "id": 8686,
+        "word_name": "ريت",
+        "transliteration": "Ret"
+      }
+    ]
+  },
+  {
+    "name": "phal",
+    "word_count": 45,
+    "words": [
+      {
+        "id": 57,
+        "word_name": "اُترُج",
+        "transliteration": "Utruj"
+      },
+      {
+        "id": 274,
+        "word_name": "اسضضرابيري",
+        "transliteration": "Strawberry "
+      },
+      {
+        "id": 613,
+        "word_name": "انجير",
+        "transliteration": "Anjeer"
+      },
+      {
+        "id": 653,
+        "word_name": "انككور",
+        "transliteration": "Angur"
+      },
+      {
+        "id": 674,
+        "word_name": "انناس",
+        "transliteration": "Anannaas"
+      },
+      {
+        "id": 775,
+        "word_name": "ايليو",
+        "transliteration": "Ailyo"
+      },
+      {
+        "id": 794,
+        "word_name": "بادام",
+        "transliteration": "Baadaam"
+      },
+      {
+        "id": 1222,
+        "word_name": "بوردي",
+        "transliteration": "Bordi"
+      },
+      {
+        "id": 1403,
+        "word_name": "تربوز",
+        "transliteration": "Tarbooz"
+      },
+      {
+        "id": 1480,
+        "word_name": "تفاح",
+        "transliteration": "Tuffah"
+      },
+      {
+        "id": 1481,
+        "word_name": "سيب",
+        "transliteration": "Seib"
+      },
+      {
+        "id": 1559,
+        "word_name": "تمر",
+        "transliteration": "Tamr"
+      },
+      {
+        "id": 1685,
+        "word_name": "تين",
+        "transliteration": "Teen"
+      },
+      {
+        "id": 1753,
+        "word_name": "ثثــثثــيّــو",
+        "transliteration": "Papayyu"
+      },
+      {
+        "id": 1849,
+        "word_name": "ثثلم",
+        "transliteration": "Plum"
+      },
+      {
+        "id": 1886,
+        "word_name": "ثثهل - ثثهلو",
+        "transliteration": "Phal-Phalo"
+      },
+      {
+        "id": 2004,
+        "word_name": "ثمر ، ثمرة - ثمار، اثمار",
+        "transliteration": "Samar, Samarat - Semaar, Asmaar"
+      },
+      {
+        "id": 2005,
+        "word_name": "ثمرة",
+        "transliteration": "Samarat"
+      },
+      {
+        "id": 2448,
+        "word_name": "ححهلكا",
+        "transliteration": "Chhilkaa"
+      },
+      {
+        "id": 2506,
+        "word_name": "ححيري",
+        "transliteration": "Cherry"
+      },
+      {
+        "id": 2731,
+        "word_name": "خربوزه",
+        "transliteration": "Kharbuza"
+      },
+      {
+        "id": 2956,
+        "word_name": "دُريان",
+        "transliteration": "Duryaan"
+      },
+      {
+        "id": 3213,
+        "word_name": "راسبيري",
+        "transliteration": "Raspberry "
+      },
+      {
+        "id": 3460,
+        "word_name": "زردالو",
+        "transliteration": "Zardaalu"
+      },
+      {
+        "id": 3510,
+        "word_name": "زيتون",
+        "transliteration": "Zaitoon"
+      },
+      {
+        "id": 3687,
+        "word_name": "سفرجل",
+        "transliteration": "Safarjal"
+      },
+      {
+        "id": 5109,
+        "word_name": "ككريثث فروضض",
+        "transliteration": "Grape fruit "
+      },
+      {
+        "id": 5377,
+        "word_name": "كيري",
+        "transliteration": "Keri"
+      },
+      {
+        "id": 5386,
+        "word_name": "كيلا",
+        "transliteration": "Kela"
+      },
+      {
+        "id": 5393,
+        "word_name": "كيوي",
+        "transliteration": "Kiwi"
+      },
+      {
+        "id": 5431,
+        "word_name": "لب",
+        "transliteration": "Lubb"
+      },
+      {
+        "id": 5546,
+        "word_name": "ليححي",
+        "transliteration": "Lychee "
+      },
+      {
+        "id": 5552,
+        "word_name": "ليمبو",
+        "transliteration": "Leembu"
+      },
+      {
+        "id": 6473,
+        "word_name": "ناريل",
+        "transliteration": "Naaryal"
+      },
+      {
+        "id": 7687,
+        "word_name": "اخروضض",
+        "transliteration": "Akhrot"
+      },
+      {
+        "id": 7904,
+        "word_name": "ححهلضضا",
+        "transliteration": "Chhiltaa"
+      },
+      {
+        "id": 7905,
+        "word_name": "ككر",
+        "transliteration": "Gir"
+      },
+      {
+        "id": 7907,
+        "word_name": "كليو",
+        "transliteration": "kalyo"
+      },
+      {
+        "id": 7913,
+        "word_name": "منككوستان",
+        "transliteration": "Mangoostaan"
+      },
+      {
+        "id": 8197,
+        "word_name": "دراكهـ",
+        "transliteration": "Daraakh"
+      },
+      {
+        "id": 8223,
+        "word_name": "زبيب",
+        "transliteration": "Zabib"
+      },
+      {
+        "id": 8329,
+        "word_name": "جيك فروضض",
+        "transliteration": "Jackfruit"
+      },
+      {
+        "id": 8462,
+        "word_name": "بلوبيري",
+        "transliteration": "Blueberry"
+      },
+      {
+        "id": 8582,
+        "word_name": "سيب",
+        "transliteration": "Saib"
+      },
+      {
+        "id": 8593,
+        "word_name": "عَجوَة",
+        "transliteration": "Ajwah"
+      }
+    ]
+  },
+  {
+    "name": "jazbaat",
+    "word_count": 44,
+    "words": [
+      {
+        "id": 247,
+        "word_name": "اْزرده",
+        "transliteration": "Aazurda"
+      },
+      {
+        "id": 443,
+        "word_name": "افسوس",
+        "transliteration": "Afsos"
+      },
+      {
+        "id": 524,
+        "word_name": "اُلجهن",
+        "transliteration": "Uljhan"
+      },
+      {
+        "id": 1260,
+        "word_name": "بيك",
+        "transliteration": "beek"
+      },
+      {
+        "id": 1463,
+        "word_name": "تعجب",
+        "transliteration": "Ta'ajjub"
+      },
+      {
+        "id": 1527,
+        "word_name": "تكليف - تكاليف",
+        "transliteration": "Takleef - Takaalif"
+      },
+      {
+        "id": 1813,
+        "word_name": "ثثريشان",
+        "transliteration": "Pareshan"
+      },
+      {
+        "id": 2535,
+        "word_name": "حرص",
+        "transliteration": "Hirs"
+      },
+      {
+        "id": 2555,
+        "word_name": "حسد",
+        "transliteration": "Hasad"
+      },
+      {
+        "id": 2662,
+        "word_name": "حيرت",
+        "transliteration": "Hairat"
+      },
+      {
+        "id": 2828,
+        "word_name": "خوش",
+        "transliteration": "Khush"
+      },
+      {
+        "id": 2830,
+        "word_name": "خوش مزاجي",
+        "transliteration": "Khush mizaaji"
+      },
+      {
+        "id": 2842,
+        "word_name": "خوف",
+        "transliteration": "Khauf"
+      },
+      {
+        "id": 2921,
+        "word_name": "دٌر",
+        "transliteration": "Darr"
+      },
+      {
+        "id": 3711,
+        "word_name": "سكون",
+        "transliteration": "Sukun"
+      },
+      {
+        "id": 3929,
+        "word_name": "شرم",
+        "transliteration": "Sharam"
+      },
+      {
+        "id": 3966,
+        "word_name": "شكر",
+        "transliteration": "Shukr"
+      },
+      {
+        "id": 4220,
+        "word_name": "طيش",
+        "transliteration": "Taish"
+      },
+      {
+        "id": 4520,
+        "word_name": "غصة",
+        "transliteration": "Gusso"
+      },
+      {
+        "id": 4539,
+        "word_name": "غم",
+        "transliteration": "Gham"
+      },
+      {
+        "id": 4542,
+        "word_name": "غمزده",
+        "transliteration": "Gamzada"
+      },
+      {
+        "id": 4693,
+        "word_name": "فكر",
+        "transliteration": "Fikar"
+      },
+      {
+        "id": 4873,
+        "word_name": "قناعة",
+        "transliteration": "Qanaa'at"
+      },
+      {
+        "id": 5148,
+        "word_name": "ككهبراهضض",
+        "transliteration": "Ghabraahat"
+      },
+      {
+        "id": 5170,
+        "word_name": "ككهمندٌ",
+        "transliteration": "Ghamand"
+      },
+      {
+        "id": 5421,
+        "word_name": "لالحح",
+        "transliteration": "Laalach"
+      },
+      {
+        "id": 5606,
+        "word_name": "مايوس",
+        "transliteration": "Maayoos"
+      },
+      {
+        "id": 6443,
+        "word_name": "نا اميد",
+        "transliteration": "Na Ummed"
+      },
+      {
+        "id": 6448,
+        "word_name": "نااميد",
+        "transliteration": "Naa ummeed"
+      },
+      {
+        "id": 6449,
+        "word_name": "نااميدي",
+        "transliteration": "Naa ummeedi"
+      },
+      {
+        "id": 6467,
+        "word_name": "ناراض",
+        "transliteration": "Naaraaz"
+      },
+      {
+        "id": 7186,
+        "word_name": "رنج",
+        "transliteration": "Ranj"
+      },
+      {
+        "id": 7187,
+        "word_name": "رنجيده",
+        "transliteration": "Ranjidah"
+      },
+      {
+        "id": 7198,
+        "word_name": "المناك",
+        "transliteration": "Alamnaak"
+      },
+      {
+        "id": 7335,
+        "word_name": "سنتوش",
+        "transliteration": "Santosh"
+      },
+      {
+        "id": 7385,
+        "word_name": "نا خوش",
+        "transliteration": "Naa khush"
+      },
+      {
+        "id": 7438,
+        "word_name": "مبظظوت",
+        "transliteration": "Mabhut"
+      },
+      {
+        "id": 7679,
+        "word_name": "باغ باغ تهاوو (دل نو)",
+        "transliteration": "Baag baag thaawu"
+      },
+      {
+        "id": 7713,
+        "word_name": "روضضهوو",
+        "transliteration": "Ruthwu"
+      },
+      {
+        "id": 8031,
+        "word_name": "حسرة - حسرات",
+        "transliteration": "Hasrat - Hasaraat"
+      },
+      {
+        "id": 8488,
+        "word_name": "جَذَبَات",
+        "transliteration": "Jazabaat"
+      },
+      {
+        "id": 8536,
+        "word_name": "ارهج شوق",
+        "transliteration": "Arhaj Shouq"
+      },
+      {
+        "id": 8614,
+        "word_name": "كأبة",
+        "transliteration": "Kaʾaabah"
+      },
+      {
+        "id": 8652,
+        "word_name": "اْنكهو كهلي نسس كهلي رهي جاوو",
+        "transliteration": "Aankho khuli ne khuli rahi jaawu"
+      }
+    ]
+  },
+  {
+    "name": "manazir",
+    "word_count": 36,
+    "words": [
+      {
+        "id": 322,
+        "word_name": "اْسمان",
+        "transliteration": "Aasmaan"
+      },
+      {
+        "id": 447,
+        "word_name": "اُفُـق",
+        "transliteration": "Ufuq"
+      },
+      {
+        "id": 675,
+        "word_name": "انهار",
+        "transliteration": "Anhaar"
+      },
+      {
+        "id": 823,
+        "word_name": "باغيححه - باغيححه ؤ",
+        "transliteration": "Baagicha"
+      },
+      {
+        "id": 876,
+        "word_name": "بحر - بحور، ابحر، بحار",
+        "transliteration": "Bahr - Buhoor, Abhur, Bihaar"
+      },
+      {
+        "id": 1126,
+        "word_name": "بهاء بظظجة",
+        "transliteration": "Bahaa Bahjat"
+      },
+      {
+        "id": 1292,
+        "word_name": "تارا - تاراؤ",
+        "transliteration": "Taaraa - Taaraao"
+      },
+      {
+        "id": 1304,
+        "word_name": "تالاب",
+        "transliteration": "Taalaab"
+      },
+      {
+        "id": 1415,
+        "word_name": "ترعة",
+        "transliteration": "Tur'at"
+      },
+      {
+        "id": 1797,
+        "word_name": "ثثرنده - ثثرنداؤ",
+        "transliteration": "Parinda"
+      },
+      {
+        "id": 1832,
+        "word_name": "ثثظظارٌ",
+        "transliteration": "Pahaar"
+      },
+      {
+        "id": 1886,
+        "word_name": "ثثهل - ثثهلو",
+        "transliteration": "Phal-Phalo"
+      },
+      {
+        "id": 1905,
+        "word_name": "ثثهولو",
+        "transliteration": "phulo"
+      },
+      {
+        "id": 2070,
+        "word_name": "جبل- جبال",
+        "transliteration": "Jabal - Jibaal"
+      },
+      {
+        "id": 2192,
+        "word_name": "جنككل",
+        "transliteration": "Jungle"
+      },
+      {
+        "id": 2193,
+        "word_name": "جنككل بياباطط",
+        "transliteration": "Jangal e bayaabaan"
+      },
+      {
+        "id": 2210,
+        "word_name": "جهارٌ",
+        "transliteration": "Jhaar"
+      },
+      {
+        "id": 2231,
+        "word_name": "جهرنو - جهرناؤ",
+        "transliteration": "Jharno"
+      },
+      {
+        "id": 2359,
+        "word_name": "ححاند",
+        "transliteration": "Chaand"
+      },
+      {
+        "id": 2860,
+        "word_name": "خيمة-خيام",
+        "transliteration": "Khayma, khaymo - Kheyaam"
+      },
+      {
+        "id": 2953,
+        "word_name": "دريا",
+        "transliteration": "Darya"
+      },
+      {
+        "id": 3480,
+        "word_name": "زمين",
+        "transliteration": "Zameen"
+      },
+      {
+        "id": 3533,
+        "word_name": "ساحل",
+        "transliteration": "Saahil"
+      },
+      {
+        "id": 3812,
+        "word_name": "سورج",
+        "transliteration": "Sooraj"
+      },
+      {
+        "id": 4494,
+        "word_name": "غدير",
+        "transliteration": "Gadeer"
+      },
+      {
+        "id": 5726,
+        "word_name": "مححهي -  مححهيو",
+        "transliteration": "Machhi"
+      },
+      {
+        "id": 6421,
+        "word_name": "ميدان",
+        "transliteration": "Maidaan"
+      },
+      {
+        "id": 6571,
+        "word_name": "ندي -  نديو",
+        "transliteration": "Nadi"
+      },
+      {
+        "id": 6913,
+        "word_name": "وادل",
+        "transliteration": "Waadal"
+      },
+      {
+        "id": 7086,
+        "word_name": "ويجلي",
+        "transliteration": "Wijli"
+      },
+      {
+        "id": 7193,
+        "word_name": "ضضونحح",
+        "transliteration": "Tonch"
+      },
+      {
+        "id": 7363,
+        "word_name": "سمندر",
+        "transliteration": "Samandar"
+      },
+      {
+        "id": 7418,
+        "word_name": "بنجر",
+        "transliteration": "Banjar"
+      },
+      {
+        "id": 7707,
+        "word_name": "وهاو",
+        "transliteration": "Wahao"
+      },
+      {
+        "id": 7770,
+        "word_name": "رَبوَة",
+        "transliteration": "Rabwat"
+      },
+      {
+        "id": 8498,
+        "word_name": "معين",
+        "transliteration": "Maʿīn"
+      }
+    ]
+  },
+  {
+    "name": "mausam",
+    "word_count": 35,
+    "words": [
+      {
+        "id": 592,
+        "word_name": "اُنالو",
+        "transliteration": "Unaalo"
+      },
+      {
+        "id": 623,
+        "word_name": "اْندهي",
+        "transliteration": "Aandhi"
+      },
+      {
+        "id": 799,
+        "word_name": "بارش",
+        "transliteration": "Baarish"
+      },
+      {
+        "id": 1132,
+        "word_name": "بظظار",
+        "transliteration": "Bahaar"
+      },
+      {
+        "id": 1188,
+        "word_name": "بهينككاوو",
+        "transliteration": "Bhingaawu"
+      },
+      {
+        "id": 1623,
+        "word_name": "ضضهندٌي",
+        "transliteration": "Thandi"
+      },
+      {
+        "id": 1671,
+        "word_name": "ضضيثثو - ضضيثثاؤ",
+        "transliteration": "Tipo - Tipa, Tipao"
+      },
+      {
+        "id": 1734,
+        "word_name": "ثثانكهر",
+        "transliteration": "Paa(n)khar"
+      },
+      {
+        "id": 1741,
+        "word_name": "ثثت جهرٌ",
+        "transliteration": "Pat jhar"
+      },
+      {
+        "id": 1827,
+        "word_name": "ثثسينه",
+        "transliteration": "Pasina"
+      },
+      {
+        "id": 1937,
+        "word_name": "ثثون",
+        "transliteration": "Pavan"
+      },
+      {
+        "id": 2432,
+        "word_name": "ححهتري",
+        "transliteration": "Chhatri"
+      },
+      {
+        "id": 2526,
+        "word_name": "حرارة",
+        "transliteration": "Haraarat"
+      },
+      {
+        "id": 2741,
+        "word_name": "خريف",
+        "transliteration": "Khareef"
+      },
+      {
+        "id": 2743,
+        "word_name": "خزاطط",
+        "transliteration": "Khizaa"
+      },
+      {
+        "id": 2988,
+        "word_name": "دكال",
+        "transliteration": "Dukaal"
+      },
+      {
+        "id": 3068,
+        "word_name": "دهوثث",
+        "transliteration": "Dhoop"
+      },
+      {
+        "id": 3248,
+        "word_name": "ربيع",
+        "transliteration": "Rabi'"
+      },
+      {
+        "id": 3418,
+        "word_name": "ريح - رياح",
+        "transliteration": "Reeh - Riyaah"
+      },
+      {
+        "id": 3646,
+        "word_name": "سردي",
+        "transliteration": "Sardi"
+      },
+      {
+        "id": 3649,
+        "word_name": "سرسبز",
+        "transliteration": "Sarsabz"
+      },
+      {
+        "id": 3837,
+        "word_name": "سيالا",
+        "transliteration": "Sayaalaa"
+      },
+      {
+        "id": 3897,
+        "word_name": "شتاء",
+        "transliteration": "Shitaa"
+      },
+      {
+        "id": 4208,
+        "word_name": "طوفان",
+        "transliteration": "Tufaan"
+      },
+      {
+        "id": 5103,
+        "word_name": "ككرمي",
+        "transliteration": "Garmi"
+      },
+      {
+        "id": 5151,
+        "word_name": "ككهضضا",
+        "transliteration": "Ghataa"
+      },
+      {
+        "id": 5245,
+        "word_name": "كمبل",
+        "transliteration": "Cumble"
+      },
+      {
+        "id": 5371,
+        "word_name": "كيححرٌ",
+        "transliteration": "Keechad"
+      },
+      {
+        "id": 6824,
+        "word_name": "هريالي",
+        "transliteration": "Haryaali"
+      },
+      {
+        "id": 6913,
+        "word_name": "وادل",
+        "transliteration": "Waadal"
+      },
+      {
+        "id": 6995,
+        "word_name": "ورساد",
+        "transliteration": "Warsaad"
+      },
+      {
+        "id": 7347,
+        "word_name": "ثثتجهر",
+        "transliteration": "Patjhar"
+      },
+      {
+        "id": 7800,
+        "word_name": "ثثونم",
+        "transliteration": "Punam"
+      },
+      {
+        "id": 8028,
+        "word_name": "ككرج",
+        "transliteration": "Garaj"
+      },
+      {
+        "id": 8029,
+        "word_name": "ككرجوو",
+        "transliteration": "Garajwu"
+      }
+    ]
+  },
+  {
+    "name": "rasoru",
+    "word_count": 34,
+    "words": [
+      {
+        "id": 370,
+        "word_name": "اْضضو ككوندهوو",
+        "transliteration": "Aato gundhwu"
+      },
+      {
+        "id": 539,
+        "word_name": "الماري",
+        "transliteration": "Almaari"
+      },
+      {
+        "id": 952,
+        "word_name": "برني",
+        "transliteration": "Barni"
+      },
+      {
+        "id": 1234,
+        "word_name": "ككوندهوو",
+        "transliteration": "Goondhwu"
+      },
+      {
+        "id": 1341,
+        "word_name": "ضضثثيلا",
+        "transliteration": "Tapela"
+      },
+      {
+        "id": 1412,
+        "word_name": "ترختي",
+        "transliteration": "Tarakhti"
+      },
+      {
+        "id": 1596,
+        "word_name": "تهال",
+        "transliteration": "Thaal"
+      },
+      {
+        "id": 1638,
+        "word_name": "توا",
+        "transliteration": "Tawa"
+      },
+      {
+        "id": 1835,
+        "word_name": "ثثكاوو",
+        "transliteration": "Pakavoo"
+      },
+      {
+        "id": 1836,
+        "word_name": "ثثكّــرٌ",
+        "transliteration": "Pakkad"
+      },
+      {
+        "id": 1948,
+        "word_name": "ثثيالو",
+        "transliteration": "Pyaalo"
+      },
+      {
+        "id": 2131,
+        "word_name": "جكك",
+        "transliteration": "Jug"
+      },
+      {
+        "id": 2400,
+        "word_name": "ححلمححي لوضضو",
+        "transliteration": "Chilamchi Loto"
+      },
+      {
+        "id": 2407,
+        "word_name": "ححمححي",
+        "transliteration": "Chamchi"
+      },
+      {
+        "id": 2445,
+        "word_name": "ححهري",
+        "transliteration": "Chhuri"
+      },
+      {
+        "id": 2490,
+        "word_name": "ححولها",
+        "transliteration": "Chulha"
+      },
+      {
+        "id": 2916,
+        "word_name": "دٌبّا،  دٌبّي",
+        "transliteration": "Dabba, dabbi"
+      },
+      {
+        "id": 3337,
+        "word_name": "ركابي",
+        "transliteration": "Rikaabi"
+      },
+      {
+        "id": 3686,
+        "word_name": "سفره",
+        "transliteration": "Safra, safro"
+      },
+      {
+        "id": 3921,
+        "word_name": "شربة",
+        "transliteration": "Sherbat"
+      },
+      {
+        "id": 3965,
+        "word_name": "شكر",
+        "transliteration": "Shakar"
+      },
+      {
+        "id": 4004,
+        "word_name": "شير",
+        "transliteration": "Sheer"
+      },
+      {
+        "id": 4914,
+        "word_name": "كاضضوو",
+        "transliteration": "Kaatwu"
+      },
+      {
+        "id": 4969,
+        "word_name": "كباضض",
+        "transliteration": "Kabaat"
+      },
+      {
+        "id": 5119,
+        "word_name": "ككلاس",
+        "transliteration": "Glaas"
+      },
+      {
+        "id": 5208,
+        "word_name": "ككوندر",
+        "transliteration": "Goondar"
+      },
+      {
+        "id": 5284,
+        "word_name": "كهاندٌ",
+        "transliteration": "Khaand"
+      },
+      {
+        "id": 5370,
+        "word_name": "كيتلي",
+        "transliteration": "Ketli"
+      },
+      {
+        "id": 5656,
+        "word_name": "مضضكو",
+        "transliteration": "Matko"
+      },
+      {
+        "id": 5896,
+        "word_name": "مساله",
+        "transliteration": "Masala"
+      },
+      {
+        "id": 6927,
+        "word_name": "واسن",
+        "transliteration": "Waasan"
+      },
+      {
+        "id": 7093,
+        "word_name": "ويلن",
+        "transliteration": "Welan"
+      },
+      {
+        "id": 7612,
+        "word_name": "ححهيلوو",
+        "transliteration": "Chhilwu"
+      },
+      {
+        "id": 8395,
+        "word_name": "ثلاجة",
+        "transliteration": "Thallaajah"
+      }
+    ]
+  },
+  {
+    "name": "sabzi",
+    "word_count": 27,
+    "words": [
+      {
+        "id": 189,
+        "word_name": "اَدرَك",
+        "transliteration": "Adrak"
+      },
+      {
+        "id": 959,
+        "word_name": "بروكلي",
+        "transliteration": "Broccoli"
+      },
+      {
+        "id": 1047,
+        "word_name": "بضضيضضا",
+        "transliteration": "Bateta"
+      },
+      {
+        "id": 1129,
+        "word_name": "بهاجي",
+        "transliteration": "Bhaaji"
+      },
+      {
+        "id": 1153,
+        "word_name": "بُهــتّا",
+        "transliteration": "Bhutta"
+      },
+      {
+        "id": 1903,
+        "word_name": "ثثهول ككوبي",
+        "transliteration": "Phool gobi"
+      },
+      {
+        "id": 1911,
+        "word_name": "ثثهيثثسا مرححا",
+        "transliteration": "Phepsaa mircha"
+      },
+      {
+        "id": 1946,
+        "word_name": "ثثياز",
+        "transliteration": "Piyaaz"
+      },
+      {
+        "id": 2849,
+        "word_name": "خيار",
+        "transliteration": "Khiyaar"
+      },
+      {
+        "id": 3104,
+        "word_name": "دودهي",
+        "transliteration": "Dudhi"
+      },
+      {
+        "id": 3168,
+        "word_name": "ذُرّة",
+        "transliteration": "Zurrat"
+      },
+      {
+        "id": 3357,
+        "word_name": "رنِككنا",
+        "transliteration": "Ringna "
+      },
+      {
+        "id": 3857,
+        "word_name": "سيلري",
+        "transliteration": "Celery"
+      },
+      {
+        "id": 4169,
+        "word_name": "طاميضضا",
+        "transliteration": "Taameta"
+      },
+      {
+        "id": 4714,
+        "word_name": "فودينو",
+        "transliteration": "Fudino"
+      },
+      {
+        "id": 4926,
+        "word_name": "كاريلا",
+        "transliteration": "Kaarelaa"
+      },
+      {
+        "id": 4937,
+        "word_name": "كاكـرٌي",
+        "transliteration": "Kaakri"
+      },
+      {
+        "id": 5060,
+        "word_name": "ككاجر",
+        "transliteration": "Gaajar"
+      },
+      {
+        "id": 5193,
+        "word_name": "ككوبي",
+        "transliteration": "Gobi"
+      },
+      {
+        "id": 5350,
+        "word_name": "كوتهمير",
+        "transliteration": "Kothmir"
+      },
+      {
+        "id": 5361,
+        "word_name": "كولو",
+        "transliteration": "Kolu"
+      },
+      {
+        "id": 5466,
+        "word_name": "لظظسن",
+        "transliteration": "Lahsan"
+      },
+      {
+        "id": 5836,
+        "word_name": "مرححا",
+        "transliteration": "Marcha"
+      },
+      {
+        "id": 6401,
+        "word_name": "مولي",
+        "transliteration": "Mooli"
+      },
+      {
+        "id": 6956,
+        "word_name": "وضضانا",
+        "transliteration": "Watana"
+      },
+      {
+        "id": 8482,
+        "word_name": "شلجم",
+        "transliteration": "Shaljam"
+      },
+      {
+        "id": 8483,
+        "word_name": "ححقندر",
+        "transliteration": "Chaqandar"
+      }
+    ]
+  },
+  {
+    "name": "safar",
+    "word_count": 27,
+    "words": [
+      {
+        "id": 474,
+        "word_name": "اقطار",
+        "transliteration": "Aqtaar"
+      },
+      {
+        "id": 985,
+        "word_name": "بسس ثثظظّيا  ني ككارٌي",
+        "transliteration": "Be Pahiyya ni Gaadi"
+      },
+      {
+        "id": 1654,
+        "word_name": "توشه",
+        "transliteration": "Tosho"
+      },
+      {
+        "id": 1788,
+        "word_name": "ثثرديس",
+        "transliteration": "Perdais"
+      },
+      {
+        "id": 1818,
+        "word_name": "ثثسار تهاوو",
+        "transliteration": "Pasaar thaawu"
+      },
+      {
+        "id": 1894,
+        "word_name": "ثثظظنححاوو",
+        "transliteration": "Pohchaawu"
+      },
+      {
+        "id": 2860,
+        "word_name": "خيمة-خيام",
+        "transliteration": "Khayma, khaymo - Kheyaam"
+      },
+      {
+        "id": 2861,
+        "word_name": "خيمة ككاه",
+        "transliteration": "Khaimagaah"
+      },
+      {
+        "id": 3114,
+        "word_name": "دوستو",
+        "transliteration": "Dosto"
+      },
+      {
+        "id": 3270,
+        "word_name": "رحلة",
+        "transliteration": "Rehlat"
+      },
+      {
+        "id": 3271,
+        "word_name": "رحلة علمية",
+        "transliteration": "Rehlat Ilmiyah"
+      },
+      {
+        "id": 3336,
+        "word_name": "ركاب",
+        "transliteration": "Rikaab"
+      },
+      {
+        "id": 3558,
+        "word_name": "سامان",
+        "transliteration": "Saamaan"
+      },
+      {
+        "id": 3683,
+        "word_name": "سفر",
+        "transliteration": "Safar"
+      },
+      {
+        "id": 3797,
+        "word_name": "سوار",
+        "transliteration": "Sawaar"
+      },
+      {
+        "id": 3798,
+        "word_name": "سواري",
+        "transliteration": "Sawaari"
+      },
+      {
+        "id": 4369,
+        "word_name": "عطلة",
+        "transliteration": "Utlat"
+      },
+      {
+        "id": 4585,
+        "word_name": "فاصلة",
+        "transliteration": "Faasla"
+      },
+      {
+        "id": 4754,
+        "word_name": "قافلة",
+        "transliteration": "Qaafela, qaafelo"
+      },
+      {
+        "id": 4767,
+        "word_name": "قبطان",
+        "transliteration": "Qabtaan"
+      },
+      {
+        "id": 5065,
+        "word_name": "ككارٌي",
+        "transliteration": "Gaadi"
+      },
+      {
+        "id": 5467,
+        "word_name": "لشكر",
+        "transliteration": "Lashker"
+      },
+      {
+        "id": 5492,
+        "word_name": "لككام",
+        "transliteration": "Lagaam"
+      },
+      {
+        "id": 5891,
+        "word_name": "مسافر",
+        "transliteration": "Musafir"
+      },
+      {
+        "id": 7202,
+        "word_name": "اَقطار الارضين",
+        "transliteration": "Aqtaar ul Ardeen"
+      },
+      {
+        "id": 7397,
+        "word_name": "ثثرديسي",
+        "transliteration": "Pardesi"
+      },
+      {
+        "id": 7678,
+        "word_name": "دور دراز",
+        "transliteration": "Dur daraaz"
+      }
+    ]
+  },
+  {
+    "name": "ashkal",
+    "word_count": 20,
+    "words": [
+      {
+        "id": 731,
+        "word_name": "اوندٌهان",
+        "transliteration": "Undhaan"
+      },
+      {
+        "id": 1292,
+        "word_name": "تارا - تاراؤ",
+        "transliteration": "Taaraa - Taaraao"
+      },
+      {
+        "id": 1673,
+        "word_name": "تيركون",
+        "transliteration": "Trikon"
+      },
+      {
+        "id": 2473,
+        "word_name": "ححورٌان",
+        "transliteration": "Choraan"
+      },
+      {
+        "id": 2477,
+        "word_name": "ححورس",
+        "transliteration": "Choras"
+      },
+      {
+        "id": 2867,
+        "word_name": "دائرة",
+        "transliteration": "Daaerah"
+      },
+      {
+        "id": 3971,
+        "word_name": "شكل",
+        "transliteration": "Shakal"
+      },
+      {
+        "id": 4848,
+        "word_name": "قطرة",
+        "transliteration": "Qatro, qatra"
+      },
+      {
+        "id": 5200,
+        "word_name": "ككول",
+        "transliteration": "Gol"
+      },
+      {
+        "id": 5503,
+        "word_name": "لمبان",
+        "transliteration": "Lamban"
+      },
+      {
+        "id": 5505,
+        "word_name": "لمبـححورس",
+        "transliteration": "Lamb-choras"
+      },
+      {
+        "id": 5679,
+        "word_name": "مثلث",
+        "transliteration": "Muthallath"
+      },
+      {
+        "id": 5821,
+        "word_name": "مربع",
+        "transliteration": "Murabba'"
+      },
+      {
+        "id": 5927,
+        "word_name": "مسدس",
+        "transliteration": "Musaddas"
+      },
+      {
+        "id": 6838,
+        "word_name": "هلالي",
+        "transliteration": "Hilaali"
+      },
+      {
+        "id": 7869,
+        "word_name": "هرم",
+        "transliteration": "Haram"
+      },
+      {
+        "id": 7880,
+        "word_name": "مدَوَّر",
+        "transliteration": "Mudawwar"
+      },
+      {
+        "id": 8288,
+        "word_name": "مثمَّن",
+        "transliteration": "Musamman"
+      },
+      {
+        "id": 8289,
+        "word_name": "مخمس",
+        "transliteration": "Mukhammas"
+      },
+      {
+        "id": 8601,
+        "word_name": "مُختَلِف الطَّرَفَين",
+        "transliteration": "Mukhtalif al-ṭarafayn"
+      }
+    ]
+  },
+  {
+    "name": "hawas_khamsa",
+    "word_count": 19,
+    "words": [
+      {
+        "id": 142,
+        "word_name": "احساس",
+        "transliteration": "Ehsaas"
+      },
+      {
+        "id": 401,
+        "word_name": "اعضاء",
+        "transliteration": "Aazaa"
+      },
+      {
+        "id": 622,
+        "word_name": "اندهو",
+        "transliteration": "Andho"
+      },
+      {
+        "id": 646,
+        "word_name": "اْنككلي - اْنككليو",
+        "transliteration": "Aangli - Aangliyo"
+      },
+      {
+        "id": 655,
+        "word_name": "اْنكهـ - اْنكهو",
+        "transliteration": "aankh"
+      },
+      {
+        "id": 696,
+        "word_name": "اْواز",
+        "transliteration": "Aawaaz"
+      },
+      {
+        "id": 1167,
+        "word_name": "بظظرو",
+        "transliteration": "Behro"
+      },
+      {
+        "id": 2120,
+        "word_name": "جسم",
+        "transliteration": "Jism"
+      },
+      {
+        "id": 2834,
+        "word_name": "خوشبو",
+        "transliteration": "Khushbu"
+      },
+      {
+        "id": 2940,
+        "word_name": "درد",
+        "transliteration": "Dard"
+      },
+      {
+        "id": 3142,
+        "word_name": "ديكهوو",
+        "transliteration": "Dekhvu"
+      },
+      {
+        "id": 3407,
+        "word_name": "روؤو",
+        "transliteration": "Rowu"
+      },
+      {
+        "id": 3437,
+        "word_name": "زبان",
+        "transliteration": "Zabaan"
+      },
+      {
+        "id": 3570,
+        "word_name": "سانس",
+        "transliteration": "Saa(n)s"
+      },
+      {
+        "id": 3796,
+        "word_name": "سواد",
+        "transliteration": "Sawaad"
+      },
+      {
+        "id": 4952,
+        "word_name": "كان",
+        "transliteration": "Kaan"
+      },
+      {
+        "id": 5568,
+        "word_name": "ماتهو",
+        "transliteration": "Maathu"
+      },
+      {
+        "id": 6505,
+        "word_name": "ناك",
+        "transliteration": "naak"
+      },
+      {
+        "id": 8030,
+        "word_name": "ككونككا",
+        "transliteration": "Gunga"
+      }
+    ]
+  },
+  {
+    "name": "adwat",
+    "word_count": 16,
+    "words": [
+      {
+        "id": 197,
+        "word_name": "ادوات",
+        "transliteration": "Adawaat"
+      },
+      {
+        "id": 1988,
+        "word_name": "ثثينسل",
+        "transliteration": "Pencil"
+      },
+      {
+        "id": 3243,
+        "word_name": "ربرٌ",
+        "transliteration": "Rubber"
+      },
+      {
+        "id": 4864,
+        "word_name": "قلم",
+        "transliteration": "Qalam"
+      },
+      {
+        "id": 4913,
+        "word_name": "كاتر",
+        "transliteration": "Kaatar"
+      },
+      {
+        "id": 4932,
+        "word_name": "كاغذ",
+        "transliteration": "Kaagaz"
+      },
+      {
+        "id": 4979,
+        "word_name": "كتاب - كُتُب",
+        "transliteration": "Kitaab - Kutub"
+      },
+      {
+        "id": 5126,
+        "word_name": "ككُلُو",
+        "transliteration": " Glu"
+      },
+      {
+        "id": 5174,
+        "word_name": "ككهنضضي",
+        "transliteration": "Ghanti"
+      },
+      {
+        "id": 5483,
+        "word_name": "لفافه",
+        "transliteration": "Lifaafa, Lifaafo, Lifaafaao"
+      },
+      {
+        "id": 7428,
+        "word_name": "ححمكثثان",
+        "transliteration": "Chamakpaan"
+      },
+      {
+        "id": 7588,
+        "word_name": "ححهرٌي",
+        "transliteration": "Chhari"
+      },
+      {
+        "id": 7600,
+        "word_name": "ثثهاورٌو",
+        "transliteration": "Phaawro"
+      },
+      {
+        "id": 7900,
+        "word_name": "وائر",
+        "transliteration": "Wire"
+      },
+      {
+        "id": 8012,
+        "word_name": "اُكهلي مُسلي",
+        "transliteration": "Ukhli musli"
+      },
+      {
+        "id": 8355,
+        "word_name": "صانع",
+        "transliteration": "Saane'"
+      }
+    ]
+  },
+  {
+    "name": "aasmaan",
+    "word_count": 14,
+    "words": [
+      {
+        "id": 322,
+        "word_name": "اْسمان",
+        "transliteration": "Aasmaan"
+      },
+      {
+        "id": 799,
+        "word_name": "بارش",
+        "transliteration": "Baarish"
+      },
+      {
+        "id": 945,
+        "word_name": "برف باري",
+        "transliteration": "Baraf baari"
+      },
+      {
+        "id": 1292,
+        "word_name": "تارا - تاراؤ",
+        "transliteration": "Taaraa - Taaraao"
+      },
+      {
+        "id": 1747,
+        "word_name": "ثثتنكك",
+        "transliteration": "Patang"
+      },
+      {
+        "id": 1797,
+        "word_name": "ثثرنده - ثثرنداؤ",
+        "transliteration": "Parinda"
+      },
+      {
+        "id": 2359,
+        "word_name": "ححاند",
+        "transliteration": "Chaand"
+      },
+      {
+        "id": 3812,
+        "word_name": "سورج",
+        "transliteration": "Sooraj"
+      },
+      {
+        "id": 4700,
+        "word_name": "فلك",
+        "transliteration": "Falak"
+      },
+      {
+        "id": 4889,
+        "word_name": "قوس قـزح",
+        "transliteration": "Qaus-e-Qazah"
+      },
+      {
+        "id": 5102,
+        "word_name": "ككرم هوا نو غبارة",
+        "transliteration": "Garam Hawa Nu Gubbara "
+      },
+      {
+        "id": 6876,
+        "word_name": "هوائي جظظاز",
+        "transliteration": "Hawaai Jahaaz"
+      },
+      {
+        "id": 6913,
+        "word_name": "وادل",
+        "transliteration": "Waadal"
+      },
+      {
+        "id": 7086,
+        "word_name": "ويجلي",
+        "transliteration": "Wijli"
+      }
+    ]
+  },
+  {
+    "name": "rang",
+    "word_count": 11,
+    "words": [
+      {
+        "id": 1192,
+        "word_name": "بهورو",
+        "transliteration": "Bhooro"
+      },
+      {
+        "id": 1985,
+        "word_name": "ثثيلو",
+        "transliteration": "Pilu"
+      },
+      {
+        "id": 2041,
+        "word_name": "جاموني",
+        "transliteration": "Jamuni"
+      },
+      {
+        "id": 3346,
+        "word_name": "رمادي",
+        "transliteration": "Ramaadi"
+      },
+      {
+        "id": 3464,
+        "word_name": "زعفران",
+        "transliteration": "Za'faraan"
+      },
+      {
+        "id": 3688,
+        "word_name": "سفيد",
+        "transliteration": "Safaid"
+      },
+      {
+        "id": 5118,
+        "word_name": "ككلابي",
+        "transliteration": "Gulaabi"
+      },
+      {
+        "id": 5418,
+        "word_name": "لال",
+        "transliteration": "Laal"
+      },
+      {
+        "id": 6470,
+        "word_name": "نارنككي",
+        "transliteration": "Naarangi"
+      },
+      {
+        "id": 6767,
+        "word_name": "نيلو",
+        "transliteration": "Neelu"
+      },
+      {
+        "id": 6822,
+        "word_name": "هرو",
+        "transliteration": "Haru"
+      }
+    ]
+  }
+]

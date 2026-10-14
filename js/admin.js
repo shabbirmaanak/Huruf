@@ -1,0 +1,635 @@
+/**
+ * Lisan al-Dawat Editorial Studio & Orthography Desk Controller
+ */
+
+(function () {
+  'use strict';
+
+  let state = {
+    page: 1,
+    limit: 50,
+    totalPages: 1,
+    status: 'all',
+    search: '',
+    category: '',
+    alphabet: '',
+    level: '',
+    words: [],
+    selectedWordId: null,
+    currentWord: null,
+    audioPlaying: false
+  };
+
+  const API_BASE = '';
+
+  // Elements
+  const searchInput = document.getElementById('search-input');
+  const categoryFilter = document.getElementById('category-filter');
+  const alphabetFilter = document.getElementById('alphabet-filter');
+  const levelFilter = document.getElementById('level-filter');
+  const statusTabs = document.querySelectorAll('.status-tab');
+  const wordListEl = document.getElementById('word-list');
+  const pageIndicator = document.getElementById('page-indicator');
+  const btnPrevPage = document.getElementById('btn-prev-page');
+  const btnNextPage = document.getElementById('btn-next-page');
+
+  // Editor elements
+  const heroArabic = document.getElementById('hero-arabic');
+  const heroTranslit = document.getElementById('hero-translit');
+  const diffOriginal = document.getElementById('diff-original');
+  const diffCurrent = document.getElementById('diff-current');
+  const diagnosticBanner = document.getElementById('diagnostic-banner');
+  const diagTitle = document.getElementById('diag-title');
+  const diagMessage = document.getElementById('diag-message');
+  const diagSuggestedText = document.getElementById('diag-suggested-text');
+  const btnApplySuggestion = document.getElementById('btn-apply-suggestion');
+
+  // Form Fields
+  const fieldWordName = document.getElementById('field-word-name');
+  const fieldTranslit = document.getElementById('field-transliteration');
+  const fieldEnglish = document.getElementById('field-english-meaning');
+  const fieldFrench = document.getElementById('field-french-meaning');
+  const fieldLisan = document.getElementById('field-lisan-meaning');
+  const fieldSentence = document.getElementById('field-sentence');
+  const fieldLevel = document.getElementById('field-level');
+  const fieldReviewStatus = document.getElementById('field-review-status');
+  const fieldSingular = document.getElementById('field-singular');
+  const fieldPlural = document.getElementById('field-plural');
+  const fieldCategories = document.getElementById('field-categories');
+  const fieldCuratorNotes = document.getElementById('field-curator-notes');
+
+  // Buttons & Audio
+  const btnPlayAudio = document.getElementById('btn-play-audio');
+  const wordAudio = document.getElementById('word-audio');
+  const audioContainer = document.getElementById('audio-container');
+  const btnPrevWord = document.getElementById('btn-prev-word');
+  const btnNextWord = document.getElementById('btn-next-word');
+  const btnSaveChanges = document.getElementById('btn-save-changes');
+  const btnApproveWord = document.getElementById('btn-approve-word');
+  const btnDeleteWord = document.getElementById('btn-delete-word');
+  const btnSyncSpellbank = document.getElementById('btn-sync-spellbank');
+  const btnRunDiagnostics = document.getElementById('btn-run-diagnostics');
+  const btnNewWord = document.getElementById('btn-new-word');
+
+  // Modals
+  const authModal = document.getElementById('auth-modal');
+  const inputPasskey = document.getElementById('input-passkey');
+  const btnVerifyPasscode = document.getElementById('btn-verify-passcode');
+  const cloudModal = document.getElementById('cloud-modal');
+  const btnCloudModal = document.getElementById('btn-cloud-modal');
+  const btnCloseCloudModal = document.getElementById('btn-close-cloud-modal');
+  const btnSaveCloudConfig = document.getElementById('btn-save-cloud-config');
+  const btnCloudPush = document.getElementById('btn-cloud-push');
+  const btnCloudPull = document.getElementById('btn-cloud-pull');
+  const cloudProviderSelect = document.getElementById('cloud-provider-select');
+  const supaFields = document.getElementById('supa-fields');
+  const firebaseFields = document.getElementById('firebase-fields');
+
+  // Toast
+  const toastEl = document.getElementById('toast');
+
+  function showToast(msg, duration = 3000) {
+    toastEl.textContent = msg;
+    toastEl.style.display = 'block';
+    toastEl.style.opacity = '1';
+    setTimeout(() => {
+      toastEl.style.opacity = '0';
+      setTimeout(() => { toastEl.style.display = 'none'; }, 200);
+    }, duration);
+  }
+
+  // Auth Guard
+  function initAuth() {
+    if (!sessionStorage.getItem('editorial_authenticated')) {
+      authModal.style.display = 'flex';
+      inputPasskey.focus();
+    } else {
+      initApp();
+    }
+  }
+
+  btnVerifyPasscode.addEventListener('click', async () => {
+    const key = inputPasskey.value.trim();
+    try {
+      const res = await fetch('/api/auth/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ passkey: key })
+      });
+      const data = await res.json();
+      if (data.success) {
+        sessionStorage.setItem('editorial_authenticated', 'true');
+        authModal.style.display = 'none';
+        initApp();
+        showToast('✓ Editorial Studio Unlocked');
+      } else {
+        alert('Invalid passkey. Please try again.');
+      }
+    } catch (err) {
+      alert('Authentication error: ' + err.message);
+    }
+  });
+
+  inputPasskey.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') btnVerifyPasscode.click();
+  });
+
+  // App Initialization
+  async function initApp() {
+    await loadStats();
+    await loadCategories();
+    await loadWords();
+    setupEventListeners();
+  }
+
+  // Load Realtime Statistics
+  async function loadStats() {
+    try {
+      const res = await fetch('/api/stats');
+      const data = await res.json();
+      document.getElementById('stat-total').textContent = (data.total_words || 0).toLocaleString();
+      document.getElementById('stat-pending').textContent = (data.pending || 0).toLocaleString();
+      document.getElementById('stat-flagged').textContent = (data.flagged || 0).toLocaleString();
+      document.getElementById('stat-edited').textContent = (data.edited || 0).toLocaleString();
+      document.getElementById('stat-approved').textContent = (data.approved || 0).toLocaleString();
+      document.getElementById('stat-audio').textContent = (data.with_audio || 0).toLocaleString();
+      document.getElementById('stat-cloud').textContent = (data.cloud_synced || 0).toLocaleString();
+    } catch (err) {
+      console.error('Failed to load stats:', err);
+    }
+  }
+
+  // Load Thematic Categories
+  async function loadCategories() {
+    try {
+      const res = await fetch('/api/categories');
+      const data = await res.json();
+      categoryFilter.innerHTML = '<option value="">All Categories</option>';
+      for (const c of data.categories) {
+        const opt = document.createElement('option');
+        opt.value = c.name;
+        opt.textContent = `${c.name} (${c.count})`;
+        categoryFilter.appendChild(opt);
+      }
+    } catch (err) {
+      console.error('Failed to load categories:', err);
+    }
+  }
+
+  // Load Words Directory
+  async function loadWords(page = 1) {
+    state.page = page;
+    const params = new URLSearchParams({
+      page: state.page,
+      limit: state.limit,
+      status: state.status,
+      search: state.search,
+      category: state.category,
+      alphabet: state.alphabet,
+      level: state.level
+    });
+
+    try {
+      const res = await fetch(`/api/words?${params.toString()}`);
+      const data = await res.json();
+      state.words = data.words;
+      state.totalPages = data.total_pages;
+
+      pageIndicator.textContent = `Page ${data.page} of ${data.total_pages || 1} (${data.total.toLocaleString()} words)`;
+      btnPrevPage.disabled = data.page <= 1;
+      btnNextPage.disabled = data.page >= data.total_pages;
+
+      renderWordList();
+
+      if (state.words.length > 0) {
+        // If nothing is selected, select the first word
+        const found = state.words.find(w => w.id === state.selectedWordId);
+        if (found) {
+          selectWord(found.id);
+        } else {
+          selectWord(state.words[0].id);
+        }
+      } else {
+        wordListEl.innerHTML = '<div style="padding:24px; text-align:center; color:var(--ink-muted); font-size:13px;">No words match your filters.</div>';
+      }
+    } catch (err) {
+      console.error('Failed to load words:', err);
+    }
+  }
+
+  // Render Word List
+  function renderWordList() {
+    wordListEl.innerHTML = '';
+    for (const w of state.words) {
+      const item = document.createElement('div');
+      item.className = 'word-item' + (w.id === state.selectedWordId ? ' selected' : '');
+      item.onclick = () => selectWord(w.id);
+
+      let badgeClass = 'badge-pending';
+      let badgeLabel = w.review_status;
+      if (w.review_status === 'approved') badgeClass = 'badge-approved';
+      else if (w.review_status === 'edited') badgeClass = 'badge-edited';
+      else if (w.review_status === 'flagged') badgeClass = 'badge-flagged';
+
+      item.innerHTML = `
+        <div class="word-item-info">
+          <div class="word-item-arabic">${escapeHtml(w.word_name)}</div>
+          <div class="word-item-translit">${escapeHtml(w.transliteration || '—')}</div>
+          <div class="word-item-meta">${escapeHtml(w.english_meaning || '')}</div>
+        </div>
+        <span class="word-item-badge ${badgeClass}">${badgeLabel}</span>
+      `;
+      wordListEl.appendChild(item);
+    }
+  }
+
+  // Select and Populate Word Editor
+  async function selectWord(id) {
+    state.selectedWordId = id;
+    renderWordList();
+
+    try {
+      const res = await fetch(`/api/words/${id}`);
+      const word = await res.json();
+      state.currentWord = word;
+
+      // Header breadcrumbs
+      document.getElementById('crumb-id').textContent = word.id;
+      document.getElementById('crumb-status').textContent = word.review_status.toUpperCase();
+
+      // Hero
+      heroArabic.textContent = word.word_name;
+      heroTranslit.textContent = word.transliteration || '—';
+
+      // Diff
+      diffOriginal.textContent = word.original_word_name || word.word_name;
+      diffCurrent.textContent = word.word_name;
+
+      // Audio
+      if (word.audio_url) {
+        audioContainer.style.display = 'inline-flex';
+        wordAudio.src = word.audio_url;
+        btnPlayAudio.textContent = '▶';
+        state.audioPlaying = false;
+      } else {
+        audioContainer.style.display = 'none';
+        wordAudio.src = '';
+      }
+
+      // Diagnostics & Suggestions
+      if (word.suggested_spelling && word.suggested_spelling !== word.word_name) {
+        diagnosticBanner.style.display = 'block';
+        const flags = word.orthography_flags || [];
+        diagTitle.textContent = flags.length > 0 ? flags[0].label : 'Orthography Review';
+        diagMessage.textContent = flags.length > 0 ? flags[0].message : 'An automated spelling improvement is available for this headword.';
+        diagSuggestedText.textContent = word.suggested_spelling;
+      } else {
+        diagnosticBanner.style.display = 'none';
+      }
+
+      // Populate Form
+      fieldWordName.value = word.word_name || '';
+      fieldTranslit.value = word.transliteration || '';
+      fieldEnglish.value = word.english_meaning || '';
+      fieldFrench.value = word.french_meaning || '';
+      fieldLisan.value = (word.meanings || []).join('\n');
+      fieldSentence.value = word.sentence || '';
+      fieldLevel.value = word.level || 'intermediate';
+      fieldReviewStatus.value = word.review_status || 'pending';
+      fieldSingular.value = word.singular || '';
+      fieldPlural.value = word.plural || '';
+      fieldCategories.value = (word.categories || []).join(', ');
+      fieldCuratorNotes.value = word.curator_notes || '';
+
+    } catch (err) {
+      console.error('Failed to load word details:', err);
+    }
+  }
+
+  // Audio Playback
+  function toggleAudio() {
+    if (!wordAudio.src) return;
+    if (wordAudio.paused) {
+      wordAudio.play();
+      btnPlayAudio.textContent = '❚❚';
+      state.audioPlaying = true;
+    } else {
+      wordAudio.pause();
+      btnPlayAudio.textContent = '▶';
+      state.audioPlaying = false;
+    }
+  }
+
+  wordAudio.onended = () => {
+    btnPlayAudio.textContent = '▶';
+    state.audioPlaying = false;
+  };
+
+  btnPlayAudio.addEventListener('click', toggleAudio);
+
+  // Apply Auto-Suggestion
+  btnApplySuggestion.addEventListener('click', async () => {
+    if (!state.selectedWordId) return;
+    try {
+      const res = await fetch(`/api/words/${state.selectedWordId}/apply-suggestion`, { method: 'POST' });
+      const updated = await res.json();
+      showToast(`✓ Applied suggestion: ${updated.word_name}`);
+      await selectWord(state.selectedWordId);
+      await loadStats();
+      await loadWords(state.page);
+    } catch (err) {
+      alert('Error applying suggestion: ' + err.message);
+    }
+  });
+
+  // Save Word Changes
+  async function saveWord(newStatus = null) {
+    if (!state.selectedWordId) return;
+
+    const payload = {
+      word_name: fieldWordName.value.trim(),
+      transliteration: fieldTranslit.value.trim(),
+      english_meaning: fieldEnglish.value.trim(),
+      french_meaning: fieldFrench.value.trim(),
+      meanings: fieldLisan.value.split('\n').map(s => s.trim()).filter(Boolean),
+      sentence: fieldSentence.value.trim(),
+      level: fieldLevel.value,
+      review_status: newStatus || fieldReviewStatus.value,
+      singular: fieldSingular.value.trim(),
+      plural: fieldPlural.value.trim(),
+      categories: fieldCategories.value.split(',').map(s => s.trim()).filter(Boolean),
+      curator_notes: fieldCuratorNotes.value.trim()
+    };
+
+    try {
+      const res = await fetch(`/api/words/${state.selectedWordId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const updated = await res.json();
+      showToast(`✓ Word ${updated.id} (${updated.word_name}) saved`);
+      await selectWord(state.selectedWordId);
+      await loadStats();
+      await loadWords(state.page);
+    } catch (err) {
+      alert('Save error: ' + err.message);
+    }
+  }
+
+  btnSaveChanges.addEventListener('click', () => saveWord());
+
+  // Mark as Approved
+  btnApproveWord.addEventListener('click', async () => {
+    await saveWord('approved');
+    nextWord();
+  });
+
+  // Next / Previous Navigation
+  function nextWord() {
+    const idx = state.words.findIndex(w => w.id === state.selectedWordId);
+    if (idx >= 0 && idx < state.words.length - 1) {
+      selectWord(state.words[idx + 1].id);
+    } else if (state.page < state.totalPages) {
+      loadWords(state.page + 1);
+    }
+  }
+
+  function prevWord() {
+    const idx = state.words.findIndex(w => w.id === state.selectedWordId);
+    if (idx > 0) {
+      selectWord(state.words[idx - 1].id);
+    } else if (state.page > 1) {
+      loadWords(state.page - 1);
+    }
+  }
+
+  btnNextWord.addEventListener('click', nextWord);
+  btnPrevWord.addEventListener('click', prevWord);
+  btnNextPage.addEventListener('click', () => loadWords(state.page + 1));
+  btnPrevPage.addEventListener('click', () => loadWords(state.page - 1));
+
+  // Sync to Public Spell Bank
+  btnSyncSpellbank.addEventListener('click', async () => {
+    if (!confirm('Sync all approved and edited words to the public Spell Bank lexicon? This will update data/lexicon.json and rebuild the offline app.')) {
+      return;
+    }
+
+    try {
+      btnSyncSpellbank.disabled = true;
+      btnSyncSpellbank.textContent = 'Syncing...';
+      const res = await fetch('/api/sync/spellbank', { method: 'POST' });
+      const data = await res.json();
+      showToast(`✓ Published ${data.approved_synced} words to Spell Bank! (Total in lexicon: ${data.total_in_lexicon})`, 4000);
+    } catch (err) {
+      alert('Sync failed: ' + err.message);
+    } finally {
+      btnSyncSpellbank.disabled = false;
+      btnSyncSpellbank.textContent = '✓ Sync Approved to Spell Bank';
+    }
+  });
+
+  // Run Diagnostics
+  btnRunDiagnostics.addEventListener('click', async () => {
+    btnRunDiagnostics.disabled = true;
+    btnRunDiagnostics.textContent = 'Scanning...';
+    try {
+      const res = await fetch('/api/diagnostics/run', { method: 'POST' });
+      const data = await res.json();
+      showToast('✓ Orthography diagnostics completed!');
+      await loadStats();
+      await loadWords(1);
+    } catch (err) {
+      alert('Diagnostics failed: ' + err.message);
+    } finally {
+      btnRunDiagnostics.disabled = false;
+      btnRunDiagnostics.textContent = '✦ Run Diagnostics';
+    }
+  });
+
+  // Cloud Sync Modal Logic
+  btnCloudModal.addEventListener('click', async () => {
+    cloudModal.style.display = 'flex';
+    try {
+      const res = await fetch('/api/cloud/config');
+      const cfg = await res.json();
+      if (cfg.provider) cloudProviderSelect.value = cfg.provider;
+      if (cfg.supabase) {
+        document.getElementById('supa-url').value = cfg.supabase.url || '';
+        document.getElementById('supa-key').value = cfg.supabase.anonKey || '';
+      }
+      if (cfg.firebase) {
+        document.getElementById('fb-project').value = cfg.firebase.projectId || '';
+        document.getElementById('fb-collection').value = cfg.firebase.collection || 'qamoos_words';
+      }
+      toggleCloudProviderFields();
+    } catch (err) {
+      console.error('Failed to load cloud config:', err);
+    }
+  });
+
+  btnCloseCloudModal.addEventListener('click', () => {
+    cloudModal.style.display = 'none';
+  });
+
+  cloudProviderSelect.addEventListener('change', toggleCloudProviderFields);
+
+  function toggleCloudProviderFields() {
+    if (cloudProviderSelect.value === 'supabase') {
+      supaFields.style.display = 'block';
+      firebaseFields.style.display = 'none';
+    } else {
+      supaFields.style.display = 'none';
+      firebaseFields.style.display = 'block';
+    }
+  }
+
+  btnSaveCloudConfig.addEventListener('click', async () => {
+    const payload = {
+      provider: cloudProviderSelect.value,
+      supabase: {
+        url: document.getElementById('supa-url').value.trim(),
+        anonKey: document.getElementById('supa-key').value.trim(),
+        table: 'qamoos_words'
+      },
+      firebase: {
+        projectId: document.getElementById('fb-project').value.trim(),
+        collection: document.getElementById('fb-collection').value.trim()
+      }
+    };
+
+    try {
+      const res = await fetch('/api/cloud/config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      showToast('✓ Cloud credentials saved!');
+    } catch (err) {
+      alert('Error saving cloud config: ' + err.message);
+    }
+  });
+
+  btnCloudPush.addEventListener('click', async () => {
+    btnCloudPush.disabled = true;
+    btnCloudPush.textContent = 'Pushing...';
+    try {
+      const res = await fetch('/api/cloud/push', { method: 'POST' });
+      const data = await res.json();
+      if (data.success) {
+        showToast(`✓ ${data.message}`);
+        await loadStats();
+      } else {
+        alert(data.message);
+      }
+    } catch (err) {
+      alert('Cloud Push Error: ' + err.message);
+    } finally {
+      btnCloudPush.disabled = false;
+      btnCloudPush.textContent = '↑ Push to Cloud';
+    }
+  });
+
+  btnCloudPull.addEventListener('click', async () => {
+    btnCloudPull.disabled = true;
+    btnCloudPull.textContent = 'Pulling...';
+    try {
+      const res = await fetch('/api/cloud/pull', { method: 'POST' });
+      const data = await res.json();
+      if (data.success) {
+        showToast(`✓ ${data.message}`);
+        await loadStats();
+        await loadWords(state.page);
+      } else {
+        alert(data.message);
+      }
+    } catch (err) {
+      alert('Cloud Pull Error: ' + err.message);
+    } finally {
+      btnCloudPull.disabled = false;
+      btnCloudPull.textContent = '↓ Pull from Cloud';
+    }
+  });
+
+  // Setup Event Listeners
+  function setupEventListeners() {
+    // Search input with debounce
+    let debounceTimer;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        state.search = searchInput.value.trim();
+        loadWords(1);
+      }, 250);
+    });
+
+    categoryFilter.addEventListener('change', () => {
+      state.category = categoryFilter.value;
+      loadWords(1);
+    });
+
+    alphabetFilter.addEventListener('change', () => {
+      state.alphabet = alphabetFilter.value;
+      loadWords(1);
+    });
+
+    levelFilter.addEventListener('change', () => {
+      state.level = levelFilter.value;
+      loadWords(1);
+    });
+
+    statusTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        statusTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        state.status = tab.getAttribute('data-status');
+        loadWords(1);
+      });
+    });
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      const isInput = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName);
+
+      // Play audio with Spacebar (only when not typing in text field)
+      if (e.code === 'Space' && !isInput) {
+        e.preventDefault();
+        toggleAudio();
+      }
+
+      // Save: Cmd+S / Ctrl+S
+      if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+        e.preventDefault();
+        saveWord();
+      }
+
+      // Approve: Alt+A
+      if (e.altKey && (e.key === 'a' || e.key === 'A')) {
+        e.preventDefault();
+        btnApproveWord.click();
+      }
+
+      // Next Word: Alt + Right
+      if (e.altKey && e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextWord();
+      }
+
+      // Prev Word: Alt + Left
+      if (e.altKey && e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevWord();
+      }
+    });
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // Start Auth Check
+  initAuth();
+
+})();
