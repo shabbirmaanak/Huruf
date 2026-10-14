@@ -153,20 +153,55 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    // Route: /api/lexicon (approved & edited words for public lexicon and spell bank)
+    // Route: /api/lexicon (words for public lexicon and spell bank from Turso cloud)
     if (pathname === '/api/lexicon' && req.method === 'GET') {
-      const sql = `
-        SELECT 
-          w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
-          w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
-          w.alphabet, w.audio_url, w.image_url, w.review_status,
-          w.suggested_spelling, w.orthography_flags, w.curator_notes,
-          (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
-        FROM words w
-        WHERE w.review_status IN ('approved', 'edited')
-        ORDER BY w.id ASC;
-      `;
-      const rows = await tursoQuery(sql);
+      const search = (query.search || '').trim();
+      let sql;
+      let params = [];
+
+      if (search) {
+        const sp = `%${search}%`;
+        sql = `
+          SELECT 
+            w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+            w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+            w.alphabet, w.audio_url, w.image_url, w.review_status,
+            w.suggested_spelling, w.orthography_flags, w.curator_notes,
+            (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+          FROM words w
+          WHERE (w.word_name LIKE ? OR w.original_word_name LIKE ? OR w.transliteration LIKE ? OR w.english_meaning LIKE ? OR w.french_meaning LIKE ?)
+          ORDER BY 
+            CASE 
+              WHEN w.review_status = 'approved' THEN 1 
+              WHEN w.review_status = 'edited' THEN 2 
+              WHEN w.review_status = 'flagged' THEN 3 
+              ELSE 4 
+            END ASC,
+            w.id ASC
+          LIMIT 60;
+        `;
+        params = [sp, sp, sp, sp, sp];
+      } else {
+        sql = `
+          SELECT 
+            w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+            w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+            w.alphabet, w.audio_url, w.image_url, w.review_status,
+            w.suggested_spelling, w.orthography_flags, w.curator_notes,
+            (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+          FROM words w
+          ORDER BY 
+            CASE 
+              WHEN w.review_status = 'approved' THEN 1 
+              WHEN w.review_status = 'edited' THEN 2 
+              WHEN w.review_status = 'flagged' THEN 3 
+              ELSE 4 
+            END ASC, 
+            w.id ASC
+          LIMIT 100;
+        `;
+      }
+      const rows = await tursoQuery(sql, params);
       const words = rows.map(formatLexiconEntry);
       return res.status(200).json({ total: words.length, words });
     }

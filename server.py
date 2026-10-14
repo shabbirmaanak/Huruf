@@ -254,18 +254,53 @@ class EditorialAPIHandler(http.server.SimpleHTTPRequestHandler):
 
     def handle_get_lexicon(self):
         try:
-            sql = """
-                SELECT 
-                    w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
-                    w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
-                    w.alphabet, w.audio_url, w.image_url, w.review_status,
-                    w.suggested_spelling, w.orthography_flags, w.curator_notes,
-                    (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
-                FROM words w
-                WHERE w.review_status IN ('approved', 'edited')
-                ORDER BY w.id ASC;
-            """
-            rows = db.query(sql)
+            parsed = urllib.parse.urlparse(self.path)
+            query_params = urllib.parse.parse_qs(parsed.query)
+            search = query_params.get('search', [''])[0].strip()
+
+            params = []
+            if search:
+                sp = f"%{search}%"
+                sql = """
+                    SELECT 
+                        w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+                        w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+                        w.alphabet, w.audio_url, w.image_url, w.review_status,
+                        w.suggested_spelling, w.orthography_flags, w.curator_notes,
+                        (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+                    FROM words w
+                    WHERE (w.word_name LIKE ? OR w.original_word_name LIKE ? OR w.transliteration LIKE ? OR w.english_meaning LIKE ? OR w.french_meaning LIKE ?)
+                    ORDER BY 
+                        CASE 
+                            WHEN w.review_status = 'approved' THEN 1 
+                            WHEN w.review_status = 'edited' THEN 2 
+                            WHEN w.review_status = 'flagged' THEN 3 
+                            ELSE 4 
+                        END ASC,
+                        w.id ASC
+                    LIMIT 60;
+                """
+                params = [sp, sp, sp, sp, sp]
+            else:
+                sql = """
+                    SELECT 
+                        w.id, w.word_name, w.original_word_name, w.transliteration, w.level,
+                        w.english_meaning, w.french_meaning, w.sentence, w.singular, w.plural,
+                        w.alphabet, w.audio_url, w.image_url, w.review_status,
+                        w.suggested_spelling, w.orthography_flags, w.curator_notes,
+                        (SELECT GROUP_CONCAT(category_name, ', ') FROM word_categories WHERE word_id = w.id) as categories_list
+                    FROM words w
+                    ORDER BY 
+                        CASE 
+                            WHEN w.review_status = 'approved' THEN 1 
+                            WHEN w.review_status = 'edited' THEN 2 
+                            WHEN w.review_status = 'flagged' THEN 3 
+                            ELSE 4 
+                        END ASC, 
+                        w.id ASC
+                    LIMIT 100;
+                """
+            rows = db.query(sql, params)
             words = []
             for r in rows:
                 flags = []

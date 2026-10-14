@@ -105,18 +105,51 @@ async function loadCloudLexicon() {
   }
 }
 
+let searchDebounceTimer = null;
+
 /**
- * Get unified lexicon combining curated seed, cloud database, and user additions
+ * Perform live dynamic search against Turso cloud database for the full 8,587 lexicon
+ */
+function searchCloudLexicon(query) {
+  clearTimeout(searchDebounceTimer);
+  const q = (query || '').trim();
+  if (!q) return;
+
+  searchDebounceTimer = setTimeout(async () => {
+    try {
+      const res = await fetch(`/api/lexicon?search=${encodeURIComponent(q)}`);
+      if (!res.ok) return;
+      const data = await res.json();
+      const rawWords = Array.isArray(data) ? data : (data.words || []);
+      if (rawWords.length > 0) {
+        const existingIds = new Set(state.cloudLexicon.map(w => w.id));
+        let added = false;
+        for (const w of rawWords) {
+          if (!existingIds.has(w.id)) {
+            state.cloudLexicon.push({
+              ...w,
+              arabicNormalized: normalizeArabic(w.arabic),
+              transliterationNormalized: normalizeTransliteration(w.transliteration)
+            });
+            existingIds.add(w.id);
+            added = true;
+          }
+        }
+        if (added) {
+          render();
+        }
+      }
+    } catch (err) {
+      console.log('Remote search unavailable:', err.message);
+    }
+  }, 250);
+}
+
+/**
+ * Get unified lexicon sourced purely from Turso cloud database and user additions (zero dummy data)
  */
 function getActiveLexicon() {
-  const list = [...state.customEntries, ...state.cloudLexicon];
-  const seen = new Set(list.map(e => normalizeArabic(e.arabic)));
-  for (const seed of SEED_LEXICON) {
-    if (!seen.has(normalizeArabic(seed.arabic))) {
-      list.push(seed);
-    }
-  }
-  return list;
+  return [...state.customEntries, ...state.cloudLexicon];
 }
 
 /**
@@ -187,7 +220,8 @@ function render() {
 
   // Update Badge Counts
   dom.countAll.textContent = allEntries.length;
-  dom.countSpellBank.textContent = state.spellBankRecords.length;
+  const validSavedCount = state.spellBankRecords.filter(r => allEntries.some(e => e.id === r.entryId)).length;
+  dom.countSpellBank.textContent = validSavedCount;
 
   // Toggle Spell Bank Sub-Filters Visibility
   if (state.activeTab === 'spellbank') {
@@ -392,6 +426,7 @@ function setupEventListeners() {
     if (state.searchQuery.length > 0) {
       dom.clearSearchBtn.style.display = 'block';
       dom.searchShortcutHint.style.display = 'none';
+      searchCloudLexicon(state.searchQuery);
     } else {
       dom.clearSearchBtn.style.display = 'none';
       dom.searchShortcutHint.style.display = 'flex';
